@@ -254,6 +254,30 @@ img {
 }
 
 /* =========================
+   REVIEWS
+   ========================= */
+
+.review-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 30px 0;
+  border-left: 5px solid var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.review-stars {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.review-author {
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 15px;
+}
+
+/* =========================
    FOOTER
    ========================= */
 
