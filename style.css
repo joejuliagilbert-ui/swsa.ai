@@ -138,11 +138,15 @@ nav a {
   height: auto;
   display: block;
   margin: 0 auto 20px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
 }
 
 .logo-adt {
-  width: 320px;
-  max-width: 90%;
+  width: 180px;
+  max-width: 80%;
   height: auto;
   display: block;
   margin: 20px auto;
@@ -156,7 +160,6 @@ nav a {
   border-radius: 18px;
   box-shadow: var(--shadow);
 }
-
 /* =========================
    CARDS
    ========================= */
@@ -185,20 +188,6 @@ ul {
 
 li {
   margin-bottom: 10px;
-}
-
-/* =========================
-   CONTENT BLOCKS
-   ========================= */
-
-h2 + p,
-h2 + ul,
-h2 + div,
-h2 + h3 {
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
 }
 
 /* =========================
@@ -267,13 +256,13 @@ footer {
     margin: 10px 0;
   }
 
-  .logo-main {
-    width: 220px;
-  }
+.logo-main {
+  width: 220px;
+}
 
-  .logo-adt {
-    width: 260px;
-  }
+.logo-adt {
+  width: 140px;
+}
 
   .headshot {
     width: 220px;
