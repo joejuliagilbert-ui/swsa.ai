@@ -206,19 +206,12 @@ h2 + h3 {
    ========================= */
 
 #faq h3 {
-  background: #ffffff;
-  padding: 18px 20px;
-  border-radius: 12px 12px 0 0;
-  margin-bottom: 0;
-  box-shadow: var(--shadow);
+  margin-top: 30px;
+  margin-bottom: 8px;
 }
 
-#faq h3 + p {
-  background: #ffffff;
-  padding: 0 20px 20px;
-  margin-top: 0;
-  border-radius: 0 0 12px 12px;
-  box-shadow: var(--shadow);
+#faq p {
+  margin-bottom: 20px;
 }
 
 /* =========================
