@@ -277,6 +277,29 @@ img {
   margin-top: 15px;
 }
 
+.install-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin: 20px 0;
+}
+
+.install-card img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.install-card-content {
+  flex: 1;
+}
+
 /* =========================
    FOOTER
    ========================= */
