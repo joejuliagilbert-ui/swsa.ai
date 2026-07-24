@@ -214,6 +214,22 @@ section { padding-block: var(--space-12); }
 .prototype-banner { background: var(--navy); color: var(--white); padding: var(--space-4); border-radius: var(--radius); margin-top: var(--space-6); }
 .pending { display: inline-block; color: var(--slate); font-size: .875rem; font-weight: 600; }
 
+/* Planning-principles list (statements separated by rules) */
+.principle-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
+.principle-list li { padding-top: var(--space-4); border-top: 1px solid #E6E6E0; color: var(--slate); max-width: 70ch; }
+.principle-list li strong { color: var(--navy); }
+
+/* Short outcome-led list */
+.outcome-list { margin: 0; padding-left: 1.1em; display: grid; gap: var(--space-2); max-width: 66ch; }
+
+/* Related-path rail (descriptive text links, not cards) */
+.related-rail ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.related-rail a { font-weight: 600; }
+
+/* Compact FAQ */
+.faq h3 { font-size: 1.15rem; margin-top: var(--space-6); }
+.faq p { color: var(--slate); max-width: 66ch; }
+
 /* Proof grid (Recent Work index) */
 .proof-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-8); }
 @media (min-width: 700px) { .proof-grid { grid-template-columns: repeat(3, 1fr); } }

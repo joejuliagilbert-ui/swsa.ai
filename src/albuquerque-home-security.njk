@@ -1,0 +1,75 @@
+---
+layout: layouts/base.njk
+permalink: "/albuquerque-home-security.html"
+title: "Home Security Installation in Albuquerque"
+description: "Home security and camera installation in Albuquerque and surrounding communities, planned for straightforward use and supported locally."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Home Security", url: "/home-security.html" }
+  - { name: "Albuquerque" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Albuquerque, New Mexico</p>
+    <h1 class="hero-title">Straightforward home security in Albuquerque.</h1>
+    <p class="lede">SWSA plans and installs home security and cameras for Albuquerque households, with service available in surrounding communities.</p>
+    <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+  </div>
+  <div class="hero-media">
+    {% image "src/assets/img-src/generated-context.jpg", "Synthetic placeholder standing in for approved Albuquerque installation photography", "(min-width: 900px) 45vw, 100vw", "media-frame", true %}
+  </div>
+</section>
+
+<section class="band wrap">
+  <h2>Common starting points</h2>
+  {{ m.fitList([
+    {h:"New home or move-in", t:"start with entry protection and a front-entry camera."},
+    {h:"A recent concern", t:"add coverage where it matters day to day."},
+    {h:"An old or partial system", t:"modernize without over-buying equipment."},
+    {h:"Cameras and convenience", t:"clear visibility and simple smart-home basics."}
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>Cameras and useful convenience</h2>
+  <p>Most Albuquerque homes start with dependable entry protection and clear visibility at the front door and key outdoor areas. From there, coverage and simple automations expand around how you actually live. See <a href="/security-cameras-new-mexico.html">how camera placement is planned</a>.</p>
+</section>
+
+<section class="proof wrap">
+  <p class="eyebrow">Local proof</p>
+  <h2>Albuquerque work, shown safely</h2>
+  <div class="proof-lead">
+    {% image "src/assets/img-src/generated-detail.jpg", "Synthetic placeholder standing in for a sanitized Albuquerque project image", "(min-width: 900px) 45vw, 100vw", "media-frame" %}
+    <div class="proof-body">
+      <p class="proof-outcome">Synthetic preview — approved Albuquerque proof pending.</p>
+      <p>A real local example is added here only after consent and privacy review. No customer media, names, or locations are used in this preview. <a href="/recent-installations.html">See recent work &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+{{ m.processSteps() }}
+
+<section class="wrap">
+  <h2>Serving Albuquerque and nearby communities</h2>
+  <p>Albuquerque is our primary New Mexico metro service hub, with installation also available in surrounding communities. We confirm scheduling and availability directly when you reach out.</p>
+  {{ m.relatedRail("Explore next", [
+    {label:"Home Security", url:"/home-security.html"},
+    {label:"Cameras", url:"/security-cameras-new-mexico.html"},
+    {label:"Business Security", url:"/commercial-security.html"},
+    {label:"Recent Work", url:"/recent-installations.html"}
+  ]) }}
+</section>
+
+{{ m.faqs([
+  {q:"Do you serve areas around Albuquerque?", a:"Yes. Service is available in surrounding communities; we confirm scheduling and availability when you contact us."},
+  {q:"How do I get started?", a:"Call or text with your city and what you want (security, cameras, or both). We ask a few quick questions and suggest a clear next step."},
+  {q:"Do cameras require monitoring?", a:"Not always. Cameras and monitoring solve different problems; we help you decide what fits your goals."}
+]) }}
+
+<section class="area wrap">
+  <h2>Talk to SWSA</h2>
+  <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+</section>

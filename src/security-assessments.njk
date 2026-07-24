@@ -1,0 +1,78 @@
+---
+layout: layouts/base.njk
+permalink: "/security-assessments.html"
+title: "Commercial Security Assessments in New Mexico"
+description: "Practical commercial security assessments for existing systems, camera coverage, entry points, alarm needs, and future improvements."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Business Security", url: "/commercial-security.html" }
+  - { name: "Security Assessments" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Business Security · Planning</p>
+    <h1 class="hero-title">Start with the property, not a product list.</h1>
+    <p class="lede">A practical assessment helps identify useful coverage, existing gaps, priorities, and the improvements that make sense now.</p>
+    <div class="actions">
+      <a class="cta" href="/contact.html">Plan a business assessment</a>
+      {% include "partials/contact-actions.njk" %}
+    </div>
+  </div>
+  <div class="hero-media">
+    {% image "src/assets/img-src/generated-context.jpg", "Synthetic placeholder standing in for an approved business assessment visit", "(min-width: 900px) 45vw, 100vw", "media-frame", true %}
+  </div>
+</section>
+
+<section class="band wrap">
+  <h2>When an assessment helps</h2>
+  {{ m.fitList([
+    {h:"Uncertain camera placement", t:"you are not sure where coverage matters."},
+    {h:"An old or inherited system", t:"you want to know what is worth keeping."},
+    {h:"Phased improvements", t:"you want a sensible order of priorities."},
+    {h:"A new space or comparing priorities", t:"before committing to equipment."}
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>How an assessment works</h2>
+  {{ m.principles([
+    "<strong>Goals and concerns</strong> — what you are trying to protect and why.",
+    "<strong>Property walk-through</strong> — entries, activity areas, and conditions.",
+    "<strong>Existing system review</strong> — what is worth keeping or changing.",
+    "<strong>Priorities and constraints</strong> — what matters now and what can wait.",
+    "<strong>Recommended next step</strong> — a clear, practical path forward."
+  ]) }}
+</section>
+
+<section class="proof wrap">
+  <p class="eyebrow">Proof</p>
+  <h2>What project proof will look like</h2>
+  <div class="proof-lead">
+    {% image "src/assets/img-src/generated-detail.jpg", "Synthetic placeholder standing in for a sanitized assessment example", "(min-width: 900px) 45vw, 100vw", "media-frame" %}
+    <div class="proof-body">
+      <p class="proof-outcome">Synthetic preview — not a real project.</p>
+      <p>Real examples will describe the situation and outcome without customer names, images, or locations. <a href="/recent-installations.html">See recent work &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  {{ m.relatedRail("Related decisions", [
+    {label:"Business Security overview", url:"/commercial-security.html"},
+    {label:"Video surveillance", url:"/video-surveillance.html"},
+    {label:"Commercial alarm systems", url:"/commercial-alarm-systems.html"},
+    {label:"Access control", url:"/access-control.html"}
+  ]) }}
+</section>
+
+<section class="area wrap">
+  <h2>Serving New Mexico &amp; the Four Corners</h2>
+  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
+  <div class="actions">
+    <a class="cta" href="/contact.html">Plan a business assessment</a>
+    {% include "partials/contact-actions.njk" %}
+  </div>
+</section>

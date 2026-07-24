@@ -1,0 +1,53 @@
+{# Shared C4A content macros. No runtime JS; native semantics only. #}
+
+{% macro processSteps() %}
+<section class="process wrap">
+  <h2>How SWSA.ai works</h2>
+  <ol class="steps">
+    <li><span class="step-n">1</span><strong>Assess</strong><span>Understand the property, entry points, and goals.</span></li>
+    <li><span class="step-n">2</span><strong>Plan</strong><span>Decide what matters and where it goes.</span></li>
+    <li><span class="step-n">3</span><strong>Install</strong><span>Clean placement and careful setup.</span></li>
+    <li><span class="step-n">4</span><strong>Support</strong><span>Training and a clear point of contact.</span></li>
+  </ol>
+</section>
+{% endmacro %}
+
+{# Two-column fit list. items = [{h, t}] #}
+{% macro fitList(items) %}
+<ul class="feature-list">
+{% for it in items %}  <li><strong>{{ it.h }}</strong> — {{ it.t }}</li>
+{% endfor %}</ul>
+{% endmacro %}
+
+{# Planning-principles list separated by rules. items = [string] #}
+{% macro principles(items) %}
+<ul class="principle-list">
+{% for it in items %}  <li>{{ it | safe }}</li>
+{% endfor %}</ul>
+{% endmacro %}
+
+{# Short outcome-led list. items = [string] #}
+{% macro outcomes(items) %}
+<ul class="outcome-list">
+{% for it in items %}  <li>{{ it }}</li>
+{% endfor %}</ul>
+{% endmacro %}
+
+{# Related-path rail (text links, not cards). items = [{label, url}] #}
+{% macro relatedRail(heading, items) %}
+<nav class="related-rail" aria-label="{{ heading }}">
+  <h2>{{ heading }}</h2>
+  <ul>
+{% for it in items %}    <li><a href="{{ it.url }}">{{ it.label }}</a></li>
+{% endfor %}  </ul>
+</nav>
+{% endmacro %}
+
+{# Compact FAQ (native headings, no accordion JS). items = [{q, a}] #}
+{% macro faqs(items) %}
+<section class="faq wrap">
+  <h2>Questions</h2>
+{% for it in items %}  <h3>{{ it.q }}</h3>
+  <p>{{ it.a }}</p>
+{% endfor %}</section>
+{% endmacro %}
