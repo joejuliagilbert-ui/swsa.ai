@@ -28,6 +28,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });
   eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "assets/fonts" });
 
+  // Exact-file allowlist for the two approved static brand/partner assets ONLY.
+  // The containing brand/ and partners/ directories are NOT passthrough-copied,
+  // so no unapproved sibling asset can reach _site.
+  eleventyConfig.addPassthroughCopy({ "src/assets/brand/components/swsa-ai-navy.png": "assets/brand/swsa-ai-navy.png" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/partners/secure24-adt-authorized-dealer-blue.svg": "assets/partners/secure24-adt-authorized-dealer-blue.svg" });
+
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
 
   return {

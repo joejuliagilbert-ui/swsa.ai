@@ -23,14 +23,23 @@ function outputFileFor(urlPath) {
   return join(SITE, rel);
 }
 
-test("every current sitemap URL is emitted with a correct canonical", () => {
+// C4B: two name-bearing legacy routes are preserved as transition pages that
+// canonicalize to Recent Work (not self).
+const TRANSITION = new Set([
+  "/installs/albuquerque-security-installation-june-2026-diego.html",
+  "/installs/albuquerque-security-installation-march-2026-annette.html"
+]);
+
+test("every current URL is emitted; content routes self-canonical, transitions point to Recent Work", () => {
   const paths = sitemapPaths();
   assert.equal(paths.length, 19, "expected 19 current sitemap URLs");
   for (const p of paths) {
     const file = outputFileFor(p);
     assert.ok(existsSync(file), `missing output for ${p} (${file})`);
     const html = readFileSync(file, "utf8");
-    const expected = `<link rel="canonical" href="${ORIGIN}${p}">`;
+    const expected = TRANSITION.has(p)
+      ? `<link rel="canonical" href="${ORIGIN}/recent-installations.html">`
+      : `<link rel="canonical" href="${ORIGIN}${p}">`;
     assert.ok(html.includes(expected), `wrong/absent canonical for ${p}`);
   }
 });

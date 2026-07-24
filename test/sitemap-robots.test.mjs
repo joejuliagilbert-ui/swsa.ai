@@ -15,13 +15,25 @@ test("robots.txt is generated and references the sitemap", () => {
   assert.match(robots, new RegExp(`Sitemap: ${ORIGIN}/sitemap\\.xml`));
 });
 
-test("generated sitemap preserves every current URL and excludes non-indexable pages", () => {
+// C4B: the two name-bearing transition routes are intentionally removed from the
+// sitemap; every other current URL is preserved.
+const TRANSITION = [
+  "/installs/albuquerque-security-installation-june-2026-diego.html",
+  "/installs/albuquerque-security-installation-march-2026-annette.html"
+];
+
+test("generated sitemap preserves current content URLs and excludes non-indexable/transition pages", () => {
   const current = [...readFileSync(join(ROOT, "sitemap.xml"), "utf8").matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => m[1]);
   const generated = readFileSync(join(SITE, "sitemap.xml"), "utf8");
   for (const url of current) {
-    assert.ok(generated.includes(`<loc>${url}</loc>`), `sitemap missing current URL ${url}`);
+    const path = url.replace(ORIGIN, "");
+    if (TRANSITION.includes(path)) {
+      assert.ok(!generated.includes(`<loc>${url}</loc>`), `sitemap must exclude transition route ${url}`);
+    } else {
+      assert.ok(generated.includes(`<loc>${url}</loc>`), `sitemap missing current URL ${url}`);
+    }
   }
-  for (const excluded of ["/404.html", "/review.html", "/recent-work/sample-installation.html"]) {
+  for (const excluded of ["/404.html", "/review.html", ...TRANSITION]) {
     assert.ok(!generated.includes(`<loc>${ORIGIN}${excluded}</loc>`), `sitemap should exclude ${excluded}`);
   }
 });

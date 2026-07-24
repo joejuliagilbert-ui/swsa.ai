@@ -35,7 +35,8 @@ test("no duplicate element IDs", () => {
 test("public brand identity is SWSA.ai (wordmark + title)", () => {
   for (const f of files) {
     const html = readFileSync(f, "utf8");
-    assert.ok(html.includes('class="brand-name">SWSA.ai<'), `wordmark not SWSA.ai in ${f}`);
+    // Header wordmark is an image whose accessible name is SWSA.ai.
+    assert.ok(/class="brand-wordmark"[^>]*alt="SWSA\.ai"/.test(html), `header wordmark missing accessible SWSA.ai in ${f}`);
     const title = (html.match(/<title>([^<]*)<\/title>/i) || [])[1] || "";
     assert.ok(title.includes("SWSA.ai"), `title missing SWSA.ai in ${f}: "${title}"`);
   }

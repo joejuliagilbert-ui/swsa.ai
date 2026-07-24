@@ -100,6 +100,7 @@ p { margin: 0 0 var(--space-4); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding-block: var(--space-4); }
 .brand { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--navy); font-weight: 700; text-decoration: none; font-size: 1.125rem; }
 .brand-mark { width: 14px; height: 14px; border-radius: 50%; border: 3px solid var(--sky); display: inline-block; }
+.brand-wordmark { height: 28px; width: auto; display: block; }
 .primary-nav ul, .mobile-nav-panel ul { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-6); margin: 0; padding: 0; }
 .primary-nav ul a, .mobile-nav-panel ul a { color: var(--navy); text-decoration: none; font-weight: 500; }
 .primary-nav ul a[aria-current="page"], .mobile-nav-panel ul a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--sky); text-decoration-thickness: 3px; }
@@ -231,6 +232,30 @@ section { padding-block: var(--space-12); }
 /* Compact FAQ */
 .faq h3 { font-size: 1.15rem; margin-top: var(--space-6); }
 .faq p { color: var(--slate); max-width: 66ch; }
+
+/* Partner mark (ADT route only) — light background, clearspace >= half height.
+   Aspect ratio is always preserved; the mark scales down proportionally on
+   narrow screens (the ADT octagon stays >= 30px at 320px). */
+.partner-mark { display: inline-block; background: var(--white); padding: clamp(24px, 6vw, 48px); border: 1px solid #E6E6E0; border-radius: var(--radius); }
+.partner-mark img { display: block; width: 340px; max-width: 100%; height: auto; }
+.partner-note { color: var(--slate); max-width: 62ch; margin-top: var(--space-6); }
+
+/* Project-story media */
+.story-media img { width: 100%; border-radius: var(--radius); display: block; }
+.story-media { margin: var(--space-6) 0; }
+.story-media-pair { display: grid; gap: var(--space-4); }
+@media (min-width: 640px) { .story-media-pair { grid-template-columns: 1fr 1fr; } }
+.media-caption { color: var(--slate); font-size: .8125rem; margin-top: var(--space-2); }
+
+/* Transition (moved) page */
+.moved-note { background: var(--white); border-left: 4px solid var(--sky); padding: var(--space-4); border-radius: var(--radius); margin: var(--space-6) 0; }
+
+/* About ownership portrait — restrained, not a hero */
+.owner-block { display: grid; gap: var(--space-6); align-items: start; }
+@media (min-width: 640px) { .owner-block { grid-template-columns: 220px 1fr; } }
+.owner-portrait { margin: 0; }
+.owner-portrait img { width: 100%; max-width: 220px; border-radius: var(--radius); display: block; }
+.owner-portrait figcaption { color: var(--slate); font-size: .875rem; margin-top: var(--space-2); }
 
 /* Proof grid (Recent Work index) */
 .proof-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-8); }
