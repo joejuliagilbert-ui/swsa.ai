@@ -1,0 +1,52 @@
+# =============================================================================
+# INACTIVE — SCAFFOLD ONLY. Future GitHub Actions → Pages artifact deployment.
+#
+# This workflow is triggered ONLY by manual `workflow_dispatch` and will not run
+# on push. It is committed as documentation of the approved future deploy model
+# (build in CI, deploy the artifact — source/artifact separation, preview-first).
+#
+# It must NOT be enabled until, and only when, the owner authorizes:
+#   1. GitHub Pages "Source" is switched from "Deploy from a branch (main)" to
+#      "GitHub Actions" (a Pages-settings change — NOT authorized in C1), and
+#   2. branch protection / required checks are in place on main.
+# Enabling this changes production. Do not merge into that flow without the
+# explicit Production Gate authorization.
+# =============================================================================
+name: Build and deploy to GitHub Pages (INACTIVE)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

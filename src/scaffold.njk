@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: routes
+  size: 1
+  alias: route
+permalink: "{{ route.permalink }}"
+eleventyComputed:
+  title: "{{ route.title }}"
+  description: "{{ route.description }}"
+---
+<div class="wrap prose">
+  <p class="eyebrow">{{ route.section }}</p>
+  <h1>{{ route.title }}</h1>
+  <p class="lede">{{ route.description }}</p>
+
+  <div class="scaffold-note" role="note">
+    <p><strong>C1 route-preservation scaffold.</strong> This page proves the URL
+    <code>{{ route.permalink }}</code> is emitted by the new build with a correct
+    canonical, the shared shell, and generated metadata. Approved copy{% if route.install %}, consented and sanitized media,{% endif %}
+    and final design composition are delivered in Work Package C2 and remain owner-gated.</p>
+  </div>
+
+  <p class="actions">
+    <a class="cta" href="tel:{{ site.phone_tel }}">Call or Text {{ site.phone_display }}</a>
+    <a class="cta cta-quiet" href="/contact.html">Send a message</a>
+  </p>
+</div>

@@ -1,0 +1,66 @@
+---
+layout: layouts/base.njk
+title: ""
+description: "Practical security, professionally installed and supported locally. Business and home security, cameras, and smart-home installation across New Mexico and the Four Corners region."
+---
+{# NOTE: C1 demonstrates the shell, tokens, image pipeline, and metadata.
+   Copy below uses the approved message territory; final homepage copy,
+   real proof, and photography are owner-gated in Work Package C2. #}
+
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow">New Mexico &amp; the Four Corners</p>
+    <h1 class="hero-title">Practical security.<br>Professionally installed.<br>Supported locally.</h1>
+    <p class="lede">Business and home security, cameras, and smart-home setup — planned around what you actually need, installed cleanly, and supported by the person accountable for the work.</p>
+    <div class="actions">
+      <a class="cta" href="tel:{{ site.phone_tel }}">Call or Text {{ site.phone_display }}</a>
+      <a class="cta cta-quiet" href="/contact.html">Send a message</a>
+    </div>
+  </div>
+  <div class="hero-media">
+    {% image "src/assets/img-src/generated-context.jpg", "Placeholder composition standing in for approved SWSA installation photography", "(min-width: 900px) 40vw, 100vw", "media-frame", true %}
+    <p class="media-note">Synthetic placeholder — real, consented photography is delivered in C2.</p>
+  </div>
+</section>
+
+<section class="audience wrap" aria-label="Choose your path">
+  <div class="audience-path">
+    <h2>Business Security</h2>
+    <p>Cameras and security for businesses that need visibility without unnecessary complexity.</p>
+    <a href="/commercial-security.html">Explore business security &rarr;</a>
+  </div>
+  <div class="audience-path">
+    <h2>Home Security</h2>
+    <p>Straightforward protection, clean installation, and patient setup for daily life.</p>
+    <a href="/home-security.html">Explore home security &rarr;</a>
+  </div>
+</section>
+
+<section class="proof wrap">
+  <p class="eyebrow">Recent work</p>
+  <h2>Proof before breadth</h2>
+  <div class="proof-lead">
+    {% image "src/assets/img-src/generated-context.jpg", "Placeholder proof image standing in for a real, sanitized installation photograph", "(min-width: 900px) 55vw, 100vw", "media-frame" %}
+    <div class="proof-body">
+      <p class="proof-outcome">Example proof module — content pending approval.</p>
+      <p>Each real project will lead with the situation and outcome, show one sanitized image, and link to the related service and location. No customer media is used in this C1 proof.</p>
+      <a href="/recent-installations.html">See recent work &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="process wrap">
+  <h2>How SWSA works</h2>
+  <ol class="steps">
+    <li><span class="step-n">1</span><strong>Assess</strong><span>Understand the property, entry points, and goals.</span></li>
+    <li><span class="step-n">2</span><strong>Plan</strong><span>Decide what matters and where it goes.</span></li>
+    <li><span class="step-n">3</span><strong>Install</strong><span>Clean placement and careful setup.</span></li>
+    <li><span class="step-n">4</span><strong>Support</strong><span>Walkthrough and clear next-step support.</span></li>
+  </ol>
+</section>
+
+<section class="area wrap">
+  <h2>Where we work</h2>
+  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
+  <p><a class="cta" href="tel:{{ site.phone_tel }}">Call or Text {{ site.phone_display }}</a></p>
+</section>
