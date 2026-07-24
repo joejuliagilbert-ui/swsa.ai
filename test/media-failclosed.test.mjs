@@ -29,5 +29,5 @@ test("manifested but unapproved source -> rejected", async () => {
 });
 
 test("manifested + approved + clean source -> allowed", async () => {
-  assert.equal(await assertSourceAllowed("src/assets/img-src/generated-context.jpg", { baseDir }), true);
+  assert.equal(await assertSourceAllowed("src/assets/img-src/recent-work/santa-fe-camera.jpg", { baseDir }), true);
 });

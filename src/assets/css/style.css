@@ -135,9 +135,18 @@ section { padding-block: var(--space-12); }
 /* Hero (asymmetric split) */
 .hero { display: grid; gap: var(--space-8); }
 @media (min-width: 900px) { .hero { grid-template-columns: 1fr 1fr; align-items: center; } }
+/* Text-led hero: single spacious column, no empty phantom media column. */
+@media (min-width: 900px) { .hero-textled { grid-template-columns: 1fr; } }
+.hero-textled .hero-text { max-width: 760px; }
 .hero-title { font-size: clamp(2.1rem, 1.4rem + 3.5vw, 3.5rem); }
 .media-frame img { width: 100%; border-radius: var(--radius); display: block; }
-.media-note, .media-frame + .media-note { color: var(--slate); font-size: .8125rem; margin-top: var(--space-2); }
+
+/* Homepage service signal — rules + typography, not a tile or icon grid. */
+.service-signal { margin-top: var(--space-8); }
+.service-signal ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
+.service-signal li { padding-top: var(--space-4); border-top: 1px solid #E6E6E0; color: var(--slate); }
+.service-signal li:first-child { padding-top: 0; border-top: 0; }
+.service-signal strong { color: var(--navy); }
 
 /* Audience paths (text, not cards) */
 .audience { display: grid; gap: var(--space-8); border-top: 1px solid #E6E6E0; }
@@ -158,25 +167,9 @@ section { padding-block: var(--space-12); }
 .steps strong { color: var(--navy); }
 .steps span:last-child { color: var(--slate); }
 
-/* Scaffold + form notices */
-.scaffold-note, .form-planned { background: var(--white); border-left: 4px solid var(--sky); padding: var(--space-4); border-radius: var(--radius); }
-.scaffold-note { margin: var(--space-6) 0; }
+/* Scaffold notice */
+.scaffold-note { background: var(--white); border-left: 4px solid var(--sky); padding: var(--space-4); border-radius: var(--radius); margin: var(--space-6) 0; }
 .scaffold-note code, .prose code { background: #EDEEE9; padding: 1px 6px; border-radius: 3px; }
-
-/* Contact form */
-.inquiry { max-width: 34rem; margin-top: var(--space-8); display: grid; gap: var(--space-4); }
-.field { display: grid; gap: var(--space-2); }
-.field label { font-weight: 600; color: var(--navy); }
-.field input, .field textarea {
-  font: inherit; padding: 10px 12px; border: 1px solid var(--slate);
-  border-radius: var(--radius); background: var(--white); color: var(--ink); width: 100%;
-}
-.field input:focus, .field textarea:focus { border-color: var(--action); }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-.form-privacy { color: var(--slate); font-size: .875rem; }
-.quiet-note { color: var(--slate); font-size: .9375rem; }
-.inquiry input:disabled, .inquiry textarea:disabled { background: #F0F0EC; color: var(--slate); cursor: not-allowed; }
-.cta:disabled, .cta[disabled] { background: var(--slate); border-color: var(--slate); cursor: not-allowed; }
 
 /* Install/proof card — responsive (fixes the 320px overflow: stacks + min-width:0) */
 .install-card { display: flex; flex-direction: column; gap: var(--space-4); background: var(--white); padding: var(--space-4); border-radius: var(--radius); }

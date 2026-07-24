@@ -1,47 +1,18 @@
 ---
 layout: layouts/base.njk
 permalink: "/contact.html"
-title: "Contact SWSA.ai"
-description: "Call or text SWSA.ai, or use the message form. Serving New Mexico and the Four Corners region."
+title: "Contact"
+description: "Call, text, or email SWSA.ai about security, camera, and smart-home installation across New Mexico and the Four Corners region."
 ---
 <div class="wrap prose">
   <p class="eyebrow">Contact</p>
-  <h1>Call, text, or send a message</h1>
-  <p class="lede">Call or text is the fastest way to reach us. A short message form is coming as the lower-pressure option.</p>
+  <h1>Call, text, or email</h1>
+  <p class="lede">Call or text is the fastest way to reach us. Email is available when you would rather send the details in writing.</p>
 
-  {# Public hierarchy: Call, Text, then the future minimal form. #}
   <div class="actions">
     {% include "partials/contact-actions.njk" %}
+    <a class="cta cta-quiet" href="mailto:{{ site.email }}">Email {{ site.email }}</a>
   </div>
 
-  {#
-    MESSAGE SCAFFOLD — intentionally NON-SUBMITTING.
-    No form action and no third-party endpoint are emitted. The control is a
-    disabled, non-submitting button. The real SWSA Formspree endpoint (and its
-    privacy notice) is wired only in a later, separately authorized step.
-    Native validation attributes are kept and valid; `novalidate` is not used.
-  #}
-  <form class="inquiry" aria-describedby="form-status">
-    <p id="form-status" class="form-planned" role="note"><strong>Message form (coming soon):</strong> not yet active on this preview. Please call or text for now.</p>
-
-    <div class="field">
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" autocomplete="name" required disabled>
-    </div>
-
-    <div class="field">
-      <label for="contact">Phone or email</label>
-      <input id="contact" name="contact" type="text" autocomplete="off" required disabled>
-    </div>
-
-    <div class="field">
-      <label for="message">How can we help?</label>
-      <textarea id="message" name="message" rows="4" autocomplete="off" required disabled></textarea>
-    </div>
-
-    <button class="cta" type="button" disabled aria-disabled="true">Send message (coming soon)</button>
-    <p class="form-privacy">When active, messages will go to {{ site.form_email }} and be used only to respond to your inquiry.</p>
-  </form>
-
-  <p class="quiet-note">Prefer email? Write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
 </div>

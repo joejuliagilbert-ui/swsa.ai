@@ -1,25 +1,5 @@
 [
   {
-    "file": "src/assets/img-src/generated-context.jpg",
-    "approval": {
-      "sourceId": "synthetic-context-c2",
-      "provenance": "Build-time synthetic gradient (scripts/make-sample.mjs) — not customer media",
-      "publicUseApproved": true,
-      "approvalDate": "2026-07-24",
-      "privacyReview": "passed"
-    }
-  },
-  {
-    "file": "src/assets/img-src/generated-detail.jpg",
-    "approval": {
-      "sourceId": "synthetic-detail-c2",
-      "provenance": "Build-time synthetic gradient (scripts/make-sample.mjs) — not customer media",
-      "publicUseApproved": true,
-      "approvalDate": "2026-07-24",
-      "privacyReview": "passed"
-    }
-  },
-  {
     "file": "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg",
     "approval": {
       "sourceId": "c4b-abq-march-doorbell",

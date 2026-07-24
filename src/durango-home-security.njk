@@ -11,15 +11,12 @@ breadcrumbs:
 {% import "macros.njk" as m %}
 <div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
 
-<section class="hero wrap">
+<section class="hero hero-textled wrap">
   <div class="hero-text">
     <p class="eyebrow">Durango, Colorado</p>
     <h1 class="hero-title">Practical home security in Durango.</h1>
     <p class="lede">SWSA serves Durango and surrounding Four Corners communities with security and camera systems planned for straightforward daily use.</p>
     <div class="actions">{% include "partials/contact-actions.njk" %}</div>
-  </div>
-  <div class="hero-media">
-    {% image "src/assets/img-src/generated-context.jpg", "Synthetic placeholder standing in for approved Durango installation photography", "(min-width: 900px) 45vw, 100vw", "media-frame", true %}
   </div>
 </section>
 
@@ -38,16 +35,11 @@ breadcrumbs:
   <p>Planning can combine entry protection with useful outdoor coverage and straightforward operation, based on the property and household priorities. See <a href="/security-cameras-new-mexico.html">how camera placement is planned</a>.</p>
 </section>
 
-<section class="proof wrap">
-  <p class="eyebrow">Local proof</p>
-  <h2>Durango work, shown safely</h2>
-  <div class="proof-lead">
-    {% image "src/assets/img-src/generated-detail.jpg", "Synthetic placeholder standing in for a sanitized Durango project image", "(min-width: 900px) 45vw, 100vw", "media-frame" %}
-    <div class="proof-body">
-      <p class="proof-outcome">Synthetic preview — approved Durango proof pending.</p>
-      <p>A real local example is added here only after consent and privacy review. No customer media, names, or locations are used in this preview. <a href="/recent-installations.html">See recent work &rarr;</a></p>
-    </div>
-  </div>
+<section class="wrap">
+  <p class="eyebrow">Recent work</p>
+  <h2>See how SWSA documents installations</h2>
+  <p>Recent work is shown with sanitized detail and no customer-identifying information.</p>
+  <p><a href="/recent-installations.html">See recent work &rarr;</a></p>
 </section>
 
 {{ m.processSteps() }}

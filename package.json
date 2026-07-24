@@ -8,12 +8,11 @@
   "scripts": {
     "clean": "rm -rf _site",
     "fonts": "node scripts/copy-fonts.mjs",
-    "sample": "node scripts/make-sample.mjs",
     "checkmedia": "node scripts/check-source-media.mjs",
     "fixtures": "node scripts/make-fixtures.mjs",
-    "prebuild": "npm run fonts && npm run sample && npm run checkmedia",
+    "prebuild": "npm run fonts && npm run checkmedia",
     "build": "eleventy",
-    "serve": "npm run fonts && npm run sample && npm run checkmedia && eleventy --serve --quiet",
+    "serve": "npm run fonts && npm run checkmedia && eleventy --serve --quiet",
     "test": "npm run build && npm run fixtures && node --test"
   },
   "devDependencies": {
