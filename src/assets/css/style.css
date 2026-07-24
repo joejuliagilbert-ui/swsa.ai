@@ -190,6 +190,37 @@ section { padding-block: var(--space-12); }
 .footer-brand { color: var(--navy); font-weight: 700; margin: 0; }
 .footer-contact { color: var(--slate); font-size: .9375rem; }
 
+/* ---- C2 slice components ---- */
+.prose-wide { max-width: 900px; padding-block: var(--space-8) 0; }
+.section-intro { color: var(--slate); max-width: 60ch; }
+
+/* Breadcrumbs */
+.breadcrumbs { padding-top: var(--space-6); }
+.breadcrumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; font-size: .875rem; }
+.breadcrumbs li + li::before { content: "/"; color: var(--slate); margin-right: var(--space-2); }
+.breadcrumbs [aria-current="page"] { color: var(--slate); }
+
+/* Alternating band */
+.band { background: var(--white); border-top: 1px solid #E6E6E0; border-bottom: 1px solid #E6E6E0; }
+
+/* Feature list (needs, not product cards) */
+.feature-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
+@media (min-width: 720px) { .feature-list { grid-template-columns: 1fr 1fr; gap: var(--space-6); } }
+.feature-list li { padding-left: var(--space-4); border-left: 3px solid var(--sky); }
+.feature-list strong { color: var(--navy); }
+
+/* Boundary / prototype notices */
+.boundary-note { background: var(--mineral); border-left: 4px solid var(--sky); padding: var(--space-4); border-radius: var(--radius); }
+.prototype-banner { background: var(--navy); color: var(--white); padding: var(--space-4); border-radius: var(--radius); margin-top: var(--space-6); }
+.pending { display: inline-block; color: var(--slate); font-size: .875rem; font-weight: 600; }
+
+/* Proof grid (Recent Work index) */
+.proof-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-8); }
+@media (min-width: 700px) { .proof-grid { grid-template-columns: repeat(3, 1fr); } }
+.proof-card h2 { font-size: 1.25rem; margin-top: var(--space-4); }
+.proof-card p { color: var(--slate); }
+.proof-card .media-frame img { width: 100%; }
+
 /* ---- Reduced motion: remove all non-essential motion ---- */
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }

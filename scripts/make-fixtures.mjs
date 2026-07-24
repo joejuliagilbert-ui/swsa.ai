@@ -14,6 +14,9 @@ const clean = await sharp({
 }).jpeg().toBuffer();
 writeFileSync(`${DIR}/clean-source.jpg`, clean);
 
+// 1b) Clean source that is deliberately NOT in any approval manifest (fail-closed).
+writeFileSync(`${DIR}/unmanifested.jpg`, clean);
+
 // 2) GPS-tagged source: build a minimal little-endian TIFF/EXIF with a GPS IFD.
 // IFD0 holds one entry: GPSInfo pointer (tag 0x8825) -> GPS IFD offset.
 const tiff = Buffer.alloc(44);

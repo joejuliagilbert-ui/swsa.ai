@@ -1,0 +1,12 @@
+{% if breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+  {% for c in breadcrumbs %}
+    <li>{% if c.url %}<a href="{{ c.url }}">{{ c.name }}</a>{% else %}<span aria-current="page">{{ c.name }}</span>{% endif %}</li>
+  {% endfor %}
+  </ol>
+</nav>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{% for c in breadcrumbs %}{"@type":"ListItem","position":{{ loop.index }},"name":{{ c.name | dump | safe }}{% if c.url %},"item":"{{ site.origin }}{{ c.url }}"{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>
+{% endif %}

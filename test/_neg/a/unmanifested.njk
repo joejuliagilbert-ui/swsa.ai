@@ -1,0 +1,6 @@
+---
+permalink: "/neg-unmanifested.html"
+---
+{# Negative build fixture A: references a source image absent from the manifest.
+   The fail-closed image gate must throw and break the build. #}
+{% image "test/fixtures/unmanifested.jpg", "unmanifested negative fixture" %}
