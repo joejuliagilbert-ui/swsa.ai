@@ -12,7 +12,7 @@ export async function imageShortcode(src, alt, sizes = "100vw", className = "", 
   if (alt === undefined || alt === null) {
     throw new Error(`Missing required alt text for image: ${src}`);
   }
-  assertSourceAllowed(src, { baseDir: process.cwd() }); // fail-closed gate
+  await assertSourceAllowed(src, { baseDir: process.cwd() }); // fail-closed, format-aware gate
   const metadata = await Image(src, {
     widths: [400, 800, 1200, 1600],
     formats: ["avif", "webp", "jpeg"],

@@ -3,7 +3,7 @@
 //  - gps-tagged-source.jpg : clean JPEG with a hand-crafted EXIF APP1 + GPS IFD
 import sharp from "sharp";
 import { mkdirSync, writeFileSync } from "node:fs";
-import { detectExifGps } from "./check-source-media.mjs";
+import { detectExifGps, inspectSourceMetadata } from "./check-source-media.mjs";
 
 const DIR = "test/fixtures";
 mkdirSync(DIR, { recursive: true });
@@ -47,10 +47,27 @@ const app1 = Buffer.concat([
 const gpsTagged = Buffer.concat([Buffer.from([0xff, 0xd8]), app1, clean.subarray(2)]);
 writeFileSync(`${DIR}/gps-tagged-source.jpg`, gpsTagged);
 
+// 3) Non-JPEG sources carrying EXIF metadata (format-aware gate must reject).
+const exif = { IFD0: { Copyright: "synthetic-fixture", ImageDescription: "synthetic" } };
+const solid = () => sharp({ create: { width: 48, height: 48, channels: 3, background: { r: 30, g: 40, b: 60 } } });
+const pngExif = await solid().withExif(exif).png().toBuffer();
+writeFileSync(`${DIR}/exif-png.png`, pngExif);
+const webpExif = await solid().withExif(exif).webp().toBuffer();
+writeFileSync(`${DIR}/exif-webp.webp`, webpExif);
+// 4) A clean but UNSUPPORTED source format (validator must reject on format).
+const tiffClean = await solid().tiff().toBuffer();
+writeFileSync(`${DIR}/unsupported.tiff`, tiffClean);
+
 // Self-check
 const c = detectExifGps(clean);
 const g = detectExifGps(gpsTagged);
+const pm = await inspectSourceMetadata(pngExif);
+const wm = await inspectSourceMetadata(webpExif);
+const tm = await inspectSourceMetadata(tiffClean);
 console.log(`  clean-source.jpg      -> hasExif=${c.hasExif} hasGps=${c.hasGps}`);
 console.log(`  gps-tagged-source.jpg -> hasExif=${g.hasExif} hasGps=${g.hasGps}`);
-if (c.hasGps || !g.hasGps) { console.error("Fixture self-check FAILED"); process.exit(1); }
+console.log(`  exif-png.png          -> ok=${pm.ok} reasons=[${pm.reasons.join("; ")}]`);
+console.log(`  exif-webp.webp        -> ok=${wm.ok} reasons=[${wm.reasons.join("; ")}]`);
+console.log(`  unsupported.tiff      -> ok=${tm.ok} reasons=[${tm.reasons.join("; ")}]`);
+if (c.hasGps || !g.hasGps || pm.ok || wm.ok || tm.ok) { console.error("Fixture self-check FAILED"); process.exit(1); }
 console.log("Fixtures generated and self-checked.");

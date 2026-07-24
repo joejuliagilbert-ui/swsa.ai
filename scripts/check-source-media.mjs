@@ -1,18 +1,24 @@
-// Build-time SOURCE-media gate. FAIL-CLOSED: any source image consumed by the
-// image pipeline must be present in the approval manifest AND carry no EXIF/GPS
-// AND have a complete, approved consent/provenance record. A missing or
-// malformed manifest, or an unmanifested source, blocks the build.
-// Derivative metadata stripping remains as defense #2.
-//
-// Dependency-free: EXIF/GPS is detected by parsing the JPEG APP1/TIFF structure.
+// Build-time SOURCE-media gate. FAIL-CLOSED and FORMAT-AWARE: any source image
+// consumed by the image pipeline must be
+//   (a) present in the approval manifest,
+//   (b) a supported raster format (jpeg / png / webp),
+//   (c) free of EXIF, GPS, XMP, and IPTC metadata, and
+//   (d) covered by a complete, approved consent/provenance record.
+// A missing/malformed manifest, an unmanifested source, an unsupported/unreadable
+// format, or any embedded metadata blocks the build. Derivative metadata
+// stripping remains as defense #2.
 import { readFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 
 const REQUIRED_APPROVAL_FIELDS = ["sourceId", "provenance", "publicUseApproved", "approvalDate", "privacyReview"];
 const DEFAULT_MANIFEST = "src/_data/media-approvals.json";
+// Raster source formats the validator is able to inspect. Anything else is
+// rejected rather than silently trusted.
+const SUPPORTED_FORMATS = new Set(["jpeg", "png", "webp"]);
 
-/** Parse a JPEG buffer for an EXIF APP1 block and a GPS IFD (tag 0x8825). */
+/** JPEG-specific byte scan for a GPS IFD (tag 0x8825). Kept as extra defense. */
 export function detectExifGps(buf) {
   const out = { hasExif: false, hasGps: false };
   if (buf.length < 4 || buf[0] !== 0xff || buf[1] !== 0xd8) return out;
@@ -49,6 +55,29 @@ function tiffHasGps(tiff) {
   return false;
 }
 
+/**
+ * Format-aware metadata inspection using sharp. Rejects unsupported/unreadable
+ * formats and any embedded EXIF/GPS/XMP/IPTC across jpeg/png/webp.
+ */
+export async function inspectSourceMetadata(buffer) {
+  let meta;
+  try {
+    meta = await sharp(buffer).metadata();
+  } catch {
+    return { ok: false, reasons: ["source unreadable or not a supported raster image"] };
+  }
+  const fmt = meta.format;
+  if (!SUPPORTED_FORMATS.has(fmt)) {
+    return { ok: false, reasons: [`unsupported source format: ${fmt || "unknown"}`], format: fmt };
+  }
+  const reasons = [];
+  if (meta.exif) reasons.push("source contains EXIF metadata");
+  if (meta.xmp) reasons.push("source contains XMP metadata");
+  if (meta.iptc) reasons.push("source contains IPTC metadata");
+  if (fmt === "jpeg" && detectExifGps(buffer).hasGps) reasons.push("source contains GPS metadata");
+  return { ok: reasons.length === 0, reasons, format: fmt };
+}
+
 /** Validate one consent/provenance record. */
 export function validateApproval(approval) {
   const reasons = [];
@@ -62,14 +91,12 @@ export function validateApproval(approval) {
   return { ok: reasons.length === 0, reasons };
 }
 
-/** Validate a single source file + its approval record. */
-export function validateSource({ file, approval, baseDir = "." }) {
-  const reasons = [];
+/** Validate a single source file + its approval record (format-aware, async). */
+export async function validateSource({ file, approval, baseDir = "." }) {
   const abs = join(baseDir, file);
   if (!existsSync(abs)) return { ok: false, reasons: [`file not found: ${file}`] };
-  const meta = detectExifGps(readFileSync(abs));
-  if (meta.hasGps) reasons.push("source contains GPS metadata");
-  else if (meta.hasExif) reasons.push("source contains EXIF metadata");
+  const reasons = [];
+  reasons.push(...(await inspectSourceMetadata(readFileSync(abs))).reasons);
   reasons.push(...validateApproval(approval).reasons);
   return { ok: reasons.length === 0, reasons };
 }
@@ -95,31 +122,32 @@ export function loadManifest(manifestPath) {
 const normalize = (p) => p.replace(/^\.?\//, "");
 
 /**
- * FAIL-CLOSED choke point used by the image pipeline. Throws unless `file` is
- * manifested, metadata-clean, and approved. Manifest path may be overridden via
- * the SWSA_MEDIA_MANIFEST env var (used by negative build tests).
+ * FAIL-CLOSED choke point used by the image pipeline (async). Throws unless
+ * `file` is manifested, a supported metadata-clean format, and approved.
+ * Manifest path may be overridden via SWSA_MEDIA_MANIFEST (negative build tests).
  */
-export function assertSourceAllowed(file, { baseDir = ".", manifestPath } = {}) {
+export async function assertSourceAllowed(file, { baseDir = ".", manifestPath } = {}) {
   const mPath = join(baseDir, process.env.SWSA_MEDIA_MANIFEST || manifestPath || DEFAULT_MANIFEST);
   const manifest = loadManifest(mPath); // throws on missing/malformed
   const entry = manifest.find((e) => normalize(e.file) === normalize(file));
   if (!entry) throw new Error(`SOURCE MEDIA REJECTED (unmanifested source): ${file}`);
-  const r = validateSource({ file: entry.file, approval: entry.approval, baseDir });
+  const r = await validateSource({ file: entry.file, approval: entry.approval, baseDir });
   if (!r.ok) throw new Error(`SOURCE MEDIA REJECTED (${file}): ${r.reasons.join("; ")}`);
   return true;
 }
 
-export function validateManifest(entries, baseDir = ".") {
-  return entries.map((e) => ({ file: e.file, ...validateSource({ file: e.file, approval: e.approval, baseDir }) }));
+export async function validateManifest(entries, baseDir = ".") {
+  const out = [];
+  for (const e of entries) out.push({ file: e.file, ...(await validateSource({ file: e.file, approval: e.approval, baseDir })) });
+  return out;
 }
 
 // ---- CLI: load + validate the real manifest; fail the build on any issue ----
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];
 if (isMain) {
   const root = dirname(dirname(fileURLToPath(import.meta.url)));
-  const manifestPath = join(root, DEFAULT_MANIFEST);
-  const entries = loadManifest(manifestPath); // throws (fail-closed) on missing/malformed
-  const results = validateManifest(entries, root);
+  const entries = loadManifest(join(root, DEFAULT_MANIFEST)); // fail-closed on missing/malformed
+  const results = await validateManifest(entries, root);
   let failed = 0;
   for (const r of results) {
     if (r.ok) console.log(`  OK      ${r.file}`);

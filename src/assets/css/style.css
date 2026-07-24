@@ -1,6 +1,6 @@
 /* =========================================================================
    SWSA.ai — Quiet Precision (+ two Human Signal additions)
-   C1 technical-proof stylesheet. Implements the approved B4.1 design tokens.
+   Design-token stylesheet. Implements the approved B4.1 design tokens.
    ========================================================================= */
 
 /* ---- Self-hosted fonts (no third-party origins) ---- */
@@ -190,7 +190,7 @@ section { padding-block: var(--space-12); }
 .footer-brand { color: var(--navy); font-weight: 700; margin: 0; }
 .footer-contact { color: var(--slate); font-size: .9375rem; }
 
-/* ---- C2 slice components ---- */
+/* ---- Slice components ---- */
 .prose-wide { max-width: 900px; padding-block: var(--space-8) 0; }
 .section-intro { color: var(--slate); max-width: 60ch; }
 

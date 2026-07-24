@@ -1,0 +1,12 @@
+[
+  {
+    "file": "test/fixtures/exif-png.png",
+    "approval": {
+      "sourceId": "neg-png-approved",
+      "provenance": "synthetic",
+      "publicUseApproved": true,
+      "approvalDate": "2026-07-24",
+      "privacyReview": "passed"
+    }
+  }
+]

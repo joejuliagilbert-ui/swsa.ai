@@ -1,12 +1,13 @@
-// Route table that drives scaffold generation. Its purpose in C1 is to PROVE
-// URL preservation: every current content URL is emitted at its exact path with
-// a correct self-canonical and the shared shell. Titles/descriptions here are
-// neutral, non-fabricated placeholders — approved copy and final composition
-// are Work Package C2 and stay owner-gated. Home (/), Contact (/contact.html),
-// 404 and Review have dedicated templates and are intentionally NOT listed here.
+// Route table that drives scaffold generation. Its purpose is to PROVE URL
+// preservation: every current content URL is emitted at its exact path with a
+// correct self-canonical and the shared shell. Titles/descriptions here are
+// neutral, non-fabricated placeholders — approved copy and final composition are
+// owner-gated and are not part of this synthetic preview. Home (/), Contact
+// (/contact.html), 404 and Review have dedicated templates and are intentionally
+// NOT listed here.
 // NOTE: /commercial-security.html, /home-security.html and /recent-installations.html
-// are now full C2 slice pages (dedicated templates), so they are intentionally
-// NOT scaffolded here — that would collide on permalink.
+// are now full slice pages (dedicated templates), so they are intentionally NOT
+// scaffolded here — that would collide on permalink.
 export default [
   // --- Preserved current BUSINESS routes ---
   { permalink: "/video-surveillance.html", section: "Business Security", title: "Video Surveillance", description: "Business camera and video systems planned around real sightlines and daily operation." },
@@ -26,11 +27,11 @@ export default [
   { permalink: "/durango-home-security.html", section: "Service Area", title: "Durango Home Security", description: "Security-system and camera installation in Durango and the Four Corners." },
 
   // --- Preserved current PROOF routes (scaffolds only: no media, no PII) ---
-  { permalink: "/installs/albuquerque-security-installation-june-2026-diego.html", section: "Recent Work", title: "Recent Installation", description: "Project proof page. Route preserved; approved content and sanitized media pending Work Package C2.", install: true },
-  { permalink: "/installs/albuquerque-security-installation-june-2026.html", section: "Recent Work", title: "Recent Installation", description: "Project proof page. Route preserved; approved content and sanitized media pending Work Package C2.", install: true },
-  { permalink: "/installs/albuquerque-security-installation-march-2026.html", section: "Recent Work", title: "Recent Installation", description: "Project proof page. Route preserved; approved content and sanitized media pending Work Package C2.", install: true },
-  { permalink: "/installs/albuquerque-security-installation-march-2026-annette.html", section: "Recent Work", title: "Recent Installation", description: "Project proof page. Route preserved; approved content and sanitized media pending Work Package C2.", install: true },
-  { permalink: "/installs/santa-fe-security-installation-march-2026.html", section: "Recent Work", title: "Recent Installation", description: "Project proof page. Route preserved; approved content and sanitized media pending Work Package C2.", install: true },
+  { permalink: "/installs/albuquerque-security-installation-june-2026-diego.html", section: "Recent Work", title: "Recent Installation", description: "Preserved project route. This synthetic preview shows no real customer content.", install: true },
+  { permalink: "/installs/albuquerque-security-installation-june-2026.html", section: "Recent Work", title: "Recent Installation", description: "Preserved project route. This synthetic preview shows no real customer content.", install: true },
+  { permalink: "/installs/albuquerque-security-installation-march-2026.html", section: "Recent Work", title: "Recent Installation", description: "Preserved project route. This synthetic preview shows no real customer content.", install: true },
+  { permalink: "/installs/albuquerque-security-installation-march-2026-annette.html", section: "Recent Work", title: "Recent Installation", description: "Preserved project route. This synthetic preview shows no real customer content.", install: true },
+  { permalink: "/installs/santa-fe-security-installation-march-2026.html", section: "Recent Work", title: "Recent Installation", description: "Preserved project route. This synthetic preview shows no real customer content.", install: true },
 
   // --- New supporting route approved at the Foundation Gate ---
   { permalink: "/about.html", section: "About", title: "About SWSA.ai", description: "A company-led local security team, with Joseph Gilbert as owner and accountability." }

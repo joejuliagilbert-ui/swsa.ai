@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "SWSA.ai static site — Eleventy technical foundation (Work Package C1 local proof).",
+  "description": "SWSA.ai static site — Eleventy static build (local, non-production).",
   "license": "UNLICENSED",
   "scripts": {
     "clean": "rm -rf _site",
