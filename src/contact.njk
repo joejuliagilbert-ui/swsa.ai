@@ -1,51 +1,47 @@
 ---
 layout: layouts/base.njk
 permalink: "/contact.html"
-title: "Contact SWSA"
-description: "Call or text SWSA, or send a short message. Serving New Mexico and the Four Corners region."
+title: "Contact SWSA.ai"
+description: "Call or text SWSA.ai, or use the message form. Serving New Mexico and the Four Corners region."
 ---
 <div class="wrap prose">
   <p class="eyebrow">Contact</p>
-  <h1>Call, text, or send a short message</h1>
-  <p class="lede">Call or text is the fastest way to reach SWSA. Prefer to write? Use the short form below.</p>
+  <h1>Call, text, or send a message</h1>
+  <p class="lede">Call or text is the fastest way to reach us. A short message form is coming as the lower-pressure option.</p>
 
-  <div class="contact-actions">
-    <a class="cta" href="tel:{{ site.phone_tel }}">Call or Text {{ site.phone_display }}</a>
-    <a class="cta cta-quiet" href="mailto:{{ site.email }}">Email {{ site.email }}</a>
+  {# Public hierarchy: Call, Text, then the future minimal form. #}
+  <div class="actions">
+    {% include "partials/contact-actions.njk" %}
   </div>
 
   {#
-    PLANNED inquiry processor: Formspree (approved as the planned processor).
-    The action below is a PLACEHOLDER — it is NOT a live Formspree account and
-    must not be treated as functional. Wiring the real endpoint + privacy notice
-    is a later, separately authorized step. No client JavaScript is used.
+    C1 MESSAGE SCAFFOLD — intentionally NON-SUBMITTING.
+    No form action and no third-party endpoint are emitted. The control is a
+    disabled, non-submitting button. The real SWSA Formspree endpoint (and its
+    privacy notice) is wired only in a later, separately authorized step.
+    Native validation attributes are kept and valid; `novalidate` is not used.
   #}
-  <form class="inquiry" action="https://formspree.io/f/PLACEHOLDER-C1-NOT-LIVE" method="POST" novalidate>
-    <p class="form-planned" role="note"><strong>Planned form (C1 scaffold):</strong> endpoint is a placeholder and is not connected.</p>
+  <form class="inquiry" aria-describedby="form-status">
+    <p id="form-status" class="form-planned" role="note"><strong>Message form (coming soon):</strong> not yet active on this preview. Please call or text for now.</p>
 
     <div class="field">
       <label for="name">Name</label>
-      <input id="name" name="name" type="text" autocomplete="name" required>
+      <input id="name" name="name" type="text" autocomplete="name" required disabled>
     </div>
 
     <div class="field">
       <label for="contact">Phone or email</label>
-      <input id="contact" name="contact" type="text" autocomplete="tel email" required>
+      <input id="contact" name="contact" type="text" autocomplete="off" required disabled>
     </div>
 
     <div class="field">
       <label for="message">How can we help?</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+      <textarea id="message" name="message" rows="4" autocomplete="off" required disabled></textarea>
     </div>
 
-    {# Honeypot: hidden from people, catches basic bots. No JS required. #}
-    <div class="field hp" aria-hidden="true">
-      <label for="company">Company (leave blank)</label>
-      <input id="company" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
-    </div>
-
-    <input type="hidden" name="_subject" value="SWSA.ai website inquiry">
-    <button class="cta" type="submit">Send message</button>
-    <p class="form-privacy">Your details are used only to respond to your inquiry. Messages are sent to {{ site.form_email }}.</p>
+    <button class="cta" type="button" disabled aria-disabled="true">Send message (coming soon)</button>
+    <p class="form-privacy">When active, messages will go to {{ site.form_email }} and be used only to respond to your inquiry.</p>
   </form>
+
+  <p class="quiet-note">Prefer email? Write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
 </div>

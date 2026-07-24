@@ -1,6 +1,6 @@
 {# Nav links defined once, rendered in both the desktop bar and the mobile
-   disclosure. One of the two containers is always display:none for the current
-   breakpoint, so only one Primary landmark is exposed to assistive tech. #}
+   disclosure. One container is always display:none for the current breakpoint,
+   so only one Primary landmark is exposed to assistive tech. #}
 {% set navlinks %}
   {% for item in site.nav %}
     <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
@@ -11,21 +11,27 @@
   <div class="wrap header-inner">
     <a class="brand" href="/">
       <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-name">{{ site.name_short }}</span>
+      <span class="brand-name">{{ site.brand }}</span>
     </a>
 
-    {# Desktop: always-visible inline navigation #}
+    {# Desktop: always-visible inline navigation with truthful Call/Text #}
     <nav class="primary-nav desktop-nav" aria-label="Primary">
       <ul>{{ navlinks | safe }}</ul>
-      <a class="header-cta" href="tel:{{ site.phone_tel }}">Call or Text</a>
+      <span class="header-actions">
+        <a class="header-cta" href="tel:{{ site.phone_tel }}">Call</a>
+        <a class="header-cta header-cta-quiet" href="sms:{{ site.phone_tel }}">Text</a>
+      </span>
     </nav>
 
-    {# Mobile: near-zero-JS <details> disclosure (shown only under 769px) #}
+    {# Mobile: near-zero-JS <details> disclosure (shown only below the breakpoint) #}
     <details class="mobile-nav">
       <summary class="nav-summary">Menu</summary>
       <nav class="mobile-nav-panel" aria-label="Primary">
         <ul>{{ navlinks | safe }}</ul>
-        <a class="header-cta" href="tel:{{ site.phone_tel }}">Call or Text</a>
+        <span class="header-actions">
+          <a class="header-cta" href="tel:{{ site.phone_tel }}">Call</a>
+          <a class="header-cta header-cta-quiet" href="sms:{{ site.phone_tel }}">Text</a>
+        </span>
       </nav>
     </details>
   </div>

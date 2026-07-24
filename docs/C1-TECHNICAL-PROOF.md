@@ -1,69 +1,106 @@
 # SWSA.ai — Work Package C1 Technical Proof (local)
 
 **Branch:** `codex/swsa-overhaul-c1`
-**Scope:** Local technical proof only. No push, PR, merge, Pages-settings change,
-deployment, DNS change, production-data change, or customer-media inspection.
-**Framework decision:** **Eleventy** (recorded here per the C1 gate).
+**Scope:** Local technical proof + one Codex correction cycle. No push, PR, merge,
+Pages-settings change, deployment, DNS change, production-data change, or
+customer-media inspection.
+**Framework decision:** **Eleventy** (recorded per the C1 gate).
 
 ## What this proves
 
 A compile-time static build that reproduces the current URL surface, ends the
 per-file drift, and adds the pipelines the audit said were missing — with no
-client JavaScript and no third-party asset origins.
+client JavaScript and no third-party asset origins — plus a build-time
+source-media consent/EXIF gate.
 
-| Capability | Result |
+## Evidence — automated (`npm test`, 18/18 pass, `node --test`)
+
+| Gate (test file) | Result |
 |---|---|
-| Shared shell | `src/_includes/layouts/base.njk` + partials (head, header, footer) — one semantic `header`/`nav`/`main`/`footer`, skip link, single H1 per page |
-| URL preservation | All **19** current sitemap URLs emitted at exact paths with correct self-canonicals (`test/routes.test.mjs`) + new `/home-security`, `/about`, `/contact`, `/404`, `/review` |
-| Self-hosted fonts | Inter (variable) **47.1 KB** + Newsreader 400 **22.0 KB** = **69.1 KB**; no Google Fonts request |
-| Responsive image pipeline | AVIF/WebP/JPEG at 400/800/1200/1600 with `srcset`/`sizes`, intrinsic `width`/`height`, lazy by default, hero `fetchpriority="high"`; metadata stripped on re-encode |
-| Generated metadata/entity | Per-page title/description/canonical, OpenGraph/Twitter, one stable `LocalBusiness` `@id` (`#organization`) |
-| Near-zero JS | 0 runtime scripts (only `ld+json`); verified by `test/no-runtime-js.test.mjs` |
-| 320px reflow | No horizontal overflow at 320 CSS px (measured: scrollWidth == clientWidth == 320) — resolves `AUD-RESP-001` |
-| Homepage payload | ≈ **70 KB** mobile (placeholder imagery) vs 1.5 MB budget; current production ≈ 36.8 MB |
+| Route/canonical snapshot (`routes.test.mjs`) | ✅ all **19** current sitemap URLs at exact paths + correct canonicals; new routes present |
+| No runtime JS / no third-party asset or **form** origin (`no-runtime-js.test.mjs`) | ✅ 0 external/inline scripts (only `ld+json`); no `googleapis`/`gstatic`/`formspree`; no `<form action>` |
+| No broken internal links (`links.test.mjs`) | ✅ every internal href resolves to a built file |
+| One H1, no duplicate IDs (`html-quality.test.mjs`) | ✅ per page |
+| Public brand = SWSA.ai wordmark + title (`html-quality.test.mjs`) | ✅ |
+| Truthful Call=`tel:` / Text=`sms:` controls (`html-quality.test.mjs`) | ✅ |
+| Contact form non-submitting: no action, no submit, no `novalidate` (`html-quality.test.mjs`) | ✅ |
+| No executable deploy workflow in repo (`html-quality.test.mjs`) | ✅ |
+| Source-media gate: **reject** EXIF/GPS source (`source-media-gate.test.mjs`) | ✅ synthetic GPS fixture rejected |
+| Source-media gate: **reject** missing/false/incomplete consent (`source-media-gate.test.mjs`) | ✅ |
+| Source-media gate: **accept** clean + complete approval (`source-media-gate.test.mjs`) | ✅ |
+| Derivatives carry no EXIF/GPS — defense #2 (`no-forbidden-metadata.test.mjs`) | ✅ |
 
-## Test gates (all pass — `npm test`)
+## Evidence — manual / browser observation (not automated)
 
-- `routes.test.mjs` — every current sitemap URL emitted + correct canonical; new routes present.
-- `no-runtime-js.test.mjs` — no external/inline JS (except `ld+json`); no `fonts.googleapis`/`gstatic`.
-- `no-forbidden-metadata.test.mjs` — no EXIF/GPS in any generated derivative.
+- **Intermediate-width navigation (correction 6).** Measured `documentElement` and
+  `.header-inner` overflow at each width; breakpoint set to **1024px** (content-safe):
+
+  | Width | Nav state | Doc overflow | Header-row overflow |
+  |---|---|---|---|
+  | 769 | compact menu | none | none |
+  | 800 | compact menu | none | none |
+  | 900 | compact menu | none | none |
+  | 1023 | compact menu (widest) | none | none |
+  | 1024 | full nav (narrowest) | none | none (nav content 744px in 1009px row) |
+  | 1280 | full nav | none | none |
+
+  Screenshots captured for the narrowest desktop-nav (1024) and widest compact-menu
+  (1023) states.
+- **320px reflow:** no horizontal overflow (scrollWidth == clientWidth == 320) after the
+  header refactor — resolves `AUD-RESP-001`.
+- **Contact form:** rendered fields disabled; submit is a disabled `type="button"`;
+  `autocomplete` = `name` / `off` (valid).
+- **Homepage mobile payload:** ≈ 70 KB (synthetic placeholder imagery) vs 1.5 MB budget.
+- Self-hosted fonts: Inter 47.1 KB + Newsreader 400 22.0 KB = 69.1 KB.
+
+## Future deploy model — documentation only (correction 1)
+
+There is **no executable workflow in this branch.** GitHub Actions/Pages are not
+configured. The intended future model (recorded here as documentation, not as a
+runnable file) is: build in CI → upload the `_site` artifact → deploy the artifact
+(source/artifact separation, preview-first). It must not be created or enabled until
+the owner authorizes (a) switching the Pages source to GitHub Actions and (b) branch
+protection / required checks on `main`. Enabling it changes production and requires the
+Production Gate.
+
+## Source-media gate (correction 2)
+
+- `scripts/check-source-media.mjs` runs in **prebuild, before image processing**. It
+  rejects any manifested source that carries EXIF/GPS or lacks a complete, approved
+  consent/provenance record. Dependency-free EXIF/GPS detection parses the JPEG
+  APP1/TIFF structure (GPS IFD tag `0x8825`).
+- Approval record (`src/_data/media-approvals.json`): `sourceId`, `provenance`,
+  `publicUseApproved` (must be `true`), `approvalDate`, `privacyReview` (must be
+  `passed`).
+- Synthetic fixtures (`scripts/make-fixtures.mjs`) prove reject/accept. **No customer
+  media is inspected or used**; the pipeline demo uses a synthetic placeholder only.
+- Derivative metadata stripping remains as defense #2.
 
 ## Deliberate boundaries honored
 
-- **No customer media inspected.** The image pipeline is proven on a **synthetic
-  placeholder** (`scripts/make-sample.mjs`); the current `installs/` originals were
-  never opened. Install routes are **route-preservation scaffolds** with no media/PII.
-- **No fabricated claims.** ADT relationship and `sameAs` are omitted (owner-verification
-  dependencies); proof content is placeholder-labeled pending C2.
-- **Formspree is planned only.** `src/contact.njk` posts to a clearly-marked placeholder
-  endpoint; not a live account. Wiring + privacy notice is a later authorized step.
-- **Actions workflow is INACTIVE.** `.github/workflows/pages.yml` runs on `workflow_dispatch`
-  only and requires an owner-authorized Pages-settings change before it can deploy.
-- Current root `*.html`/`style.css`/images are untouched (production baseline preserved).
-  New build lives in `src/` → `_site/` (gitignored), giving source/artifact separation.
-
-## Bug found and fixed during verification
-
-- Header "Call or Text" CTA rendered navy-on-navy (invisible) because a nav-link
-  color rule out-specified `.header-cta`. Scoped nav-link color to `ul a`. Verified
-  white-on-navy after fix.
-- Initial `<details>`-only nav hid links on desktop (UA collapses closed `<details>`).
-  Refactored to always-visible desktop nav + a mobile-only `<details>` disclosure.
+- No customer media inspected. Install routes remain route-preservation scaffolds with
+  no media/PII.
+- No fabricated claims. ADT relationship and `sameAs` omitted; entity `name` = `SWSA.ai`,
+  `legalName` = full LLC, stable `@id`.
+- No Formspree account/endpoint; the message form is non-submitting in C1.
+- The four untracked Codex asset-intake paths (`docs/brand-assets/`, `src/assets/brand/`,
+  `src/assets/partners/`, `src/assets/people/`) were not inspected, edited, or committed.
+- Current production-root files unchanged. New build lives in `src/` → `_site/` (gitignored).
 
 ## Build / run
 
 ```
 npm install
-npm run build      # prebuild copies fonts + generates the synthetic sample, then eleventy
-npm test           # build + node --test gates
-npm run serve      # local preview (http://localhost:8080)
+npm run build      # prebuild: fonts + synthetic sample + source-media gate, then eleventy
+npm test           # build + fixtures + node --test (18 gates)
+npm run serve      # local preview
 ```
 
 ## Open items for Codex/owner before C2
 
-1. Contact-form delivery: confirm Formspree endpoint + privacy notice, or choose an
-   alternative (mailto / serverless). Static host has no mail backend.
-2. Repo governance: protect `main`, enable the Actions→Pages artifact deploy + preview
-   (Pages-settings change) — required before any production-bound build.
-3. Confirm the Newsreader accent stays (22 KB) and where it is used.
+1. Contact-form delivery: authorize the real SWSA Formspree endpoint (+ privacy notice)
+   or choose an alternative. Static host has no mail backend.
+2. Repo governance: protect `main`; when authorized, (re)introduce the Actions→Pages
+   artifact deploy + preview (a Pages-settings change) before any production-bound build.
+3. Confirm the Newsreader accent (22 KB) stays and where it is used.
 4. C2 content, consented/sanitized media, and final composition remain owner-gated.

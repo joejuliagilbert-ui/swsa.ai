@@ -3,8 +3,8 @@
 // the recorded clarifications: ADT relationship/mark (owner-verification
 // dependency) and any sameAs profile links (unverified).
 export default {
-  name: "Southwest Security & Automation LLC",
-  name_short: "SWSA",
+  brand: "SWSA.ai",                              // public wordmark + site/OG identity
+  name: "Southwest Security & Automation LLC",    // full legal name (entity context only)
   origin: "https://swsa.ai",
   phone_display: "505-331-7834",
   phone_tel: "5053317834",
@@ -23,15 +23,16 @@ export default {
   ],
 
   // One stable business entity, referenced site-wide by @id.
+  // One stable business entity. sameAs omitted until approved profiles exist.
   jsonld: {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://swsa.ai/#organization",
-    name: "Southwest Security & Automation LLC",
+    name: "SWSA.ai",
+    legalName: "Southwest Security & Automation LLC",
     url: "https://swsa.ai/",
     telephone: "505-331-7834",
     email: "joe@swsa.ai",
-    areaServed: ["Albuquerque, NM", "Santa Fe, NM", "Farmington, NM", "Durango, CO", "Four Corners Region"],
-    sameAs: []
+    areaServed: ["Albuquerque, NM", "Santa Fe, NM", "Farmington, NM", "Durango, CO", "Four Corners Region"]
   }
 };

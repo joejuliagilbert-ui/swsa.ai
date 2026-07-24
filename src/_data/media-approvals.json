@@ -1,0 +1,12 @@
+[
+  {
+    "file": "src/assets/img-src/generated-context.jpg",
+    "approval": {
+      "sourceId": "synthetic-placeholder-c1",
+      "provenance": "Build-time synthetic gradient (scripts/make-sample.mjs) — not customer media",
+      "publicUseApproved": true,
+      "approvalDate": "2026-07-24",
+      "privacyReview": "passed"
+    }
+  }
+]

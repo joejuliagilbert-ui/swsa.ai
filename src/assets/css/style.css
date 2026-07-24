@@ -103,26 +103,28 @@ p { margin: 0 0 var(--space-4); }
 .primary-nav ul, .mobile-nav-panel ul { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-6); margin: 0; padding: 0; }
 .primary-nav ul a, .mobile-nav-panel ul a { color: var(--navy); text-decoration: none; font-weight: 500; }
 .primary-nav ul a[aria-current="page"], .mobile-nav-panel ul a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--sky); text-decoration-thickness: 3px; }
-.header-cta { display: inline-block; background: var(--navy); color: var(--white); padding: 8px 16px; border-radius: var(--radius); text-decoration: none; font-weight: 600; }
+.header-cta { display: inline-block; background: var(--navy); color: var(--white); padding: 8px 14px; border-radius: var(--radius); text-decoration: none; font-weight: 600; }
+.header-cta-quiet { background: transparent; color: var(--navy); border: 1px solid var(--navy); }
+.header-actions { display: inline-flex; align-items: center; gap: var(--space-2); }
 
-/* Desktop inline nav */
-.desktop-nav { display: flex; align-items: center; gap: var(--space-6); }
-.desktop-nav .header-cta { margin-left: var(--space-2); }
-.mobile-nav { display: none; position: relative; }
+/* Mobile-first: the compact <details> menu is the default state. */
+.desktop-nav { display: none; }
+.mobile-nav { display: block; position: relative; }
 .nav-summary { cursor: pointer; list-style: none; padding: 8px 14px; border: 1px solid var(--navy); border-radius: var(--radius); color: var(--navy); font-weight: 600; }
 .nav-summary::-webkit-details-marker { display: none; }
+.mobile-nav-panel {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 40;
+  background: var(--white); border: 1px solid #E6E6E0; border-radius: var(--radius);
+  padding: var(--space-4); min-width: 240px; box-shadow: 0 8px 24px rgba(11,20,36,.08);
+}
+.mobile-nav-panel ul { flex-direction: column; gap: var(--space-4); }
+.mobile-nav-panel .header-actions { margin-top: var(--space-4); }
 
-/* Mobile: hide the inline nav, show the <details> disclosure */
-@media (max-width: 768px) {
-  .desktop-nav { display: none; }
-  .mobile-nav { display: block; }
-  .mobile-nav-panel {
-    position: absolute; right: 0; top: calc(100% + 8px); z-index: 40;
-    background: var(--white); border: 1px solid #E6E6E0; border-radius: var(--radius);
-    padding: var(--space-4); min-width: 220px; box-shadow: 0 8px 24px rgba(11,20,36,.08);
-  }
-  .mobile-nav-panel ul { flex-direction: column; gap: var(--space-4); }
-  .mobile-nav-panel .header-cta { margin-top: var(--space-4); }
+/* Full inline navigation only once it genuinely fits (content-safe breakpoint,
+   verified against the widest nav content at 769/800/900/1024/1280). */
+@media (min-width: 1024px) {
+  .desktop-nav { display: flex; align-items: center; gap: var(--space-6); }
+  .mobile-nav { display: none; }
 }
 
 /* ---- Sections ---- */
@@ -171,6 +173,9 @@ section { padding-block: var(--space-12); }
 .field input:focus, .field textarea:focus { border-color: var(--action); }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form-privacy { color: var(--slate); font-size: .875rem; }
+.quiet-note { color: var(--slate); font-size: .9375rem; }
+.inquiry input:disabled, .inquiry textarea:disabled { background: #F0F0EC; color: var(--slate); cursor: not-allowed; }
+.cta:disabled, .cta[disabled] { background: var(--slate); border-color: var(--slate); cursor: not-allowed; }
 
 /* Install/proof card — responsive (fixes the 320px overflow: stacks + min-width:0) */
 .install-card { display: flex; flex-direction: column; gap: var(--space-4); background: var(--white); padding: var(--space-4); border-radius: var(--radius); }

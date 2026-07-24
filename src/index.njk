@@ -13,7 +13,7 @@ description: "Practical security, professionally installed and supported locally
     <h1 class="hero-title">Practical security.<br>Professionally installed.<br>Supported locally.</h1>
     <p class="lede">Business and home security, cameras, and smart-home setup — planned around what you actually need, installed cleanly, and supported by the person accountable for the work.</p>
     <div class="actions">
-      <a class="cta" href="tel:{{ site.phone_tel }}">Call or Text {{ site.phone_display }}</a>
+      {% include "partials/contact-actions.njk" %}
       <a class="cta cta-quiet" href="/contact.html">Send a message</a>
     </div>
   </div>
@@ -62,5 +62,5 @@ description: "Practical security, professionally installed and supported locally
 <section class="area wrap">
   <h2>Where we work</h2>
   <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
-  <p><a class="cta" href="tel:{{ site.phone_tel }}">Call or Text {{ site.phone_display }}</a></p>
+  <div class="actions">{% include "partials/contact-actions.njk" %}</div>
 </section>
