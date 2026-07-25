@@ -61,8 +61,8 @@ test("Call/Text action controls are truthful (Call=tel:, Text=sms:)", () => {
 // Call/Text/Email actions. The no-form + working-actions assertions live in
 // test/c5-preview.test.mjs.
 
-test("no executable deploy workflow present in the repo", () => {
+test("only the two approved release-readiness workflows are present", () => {
   const wf = join(ROOT, ".github", "workflows");
-  const yml = existsSync(wf) ? readdirSync(wf).filter((n) => /\.ya?ml$/i.test(n)) : [];
-  assert.equal(yml.length, 0, `unexpected workflow file(s): ${yml.join(", ")}`);
+  const yml = (existsSync(wf) ? readdirSync(wf).filter((n) => /\.ya?ml$/i.test(n)) : []).sort();
+  assert.deepEqual(yml, ["deploy-pages.yml", "validate.yml"], `unexpected workflow file(s): ${yml.join(", ")}`);
 });

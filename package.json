@@ -5,6 +5,9 @@
   "type": "module",
   "description": "SWSA.ai static site — Eleventy static build (local, non-production).",
   "license": "UNLICENSED",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "clean": "rm -rf _site",
     "fonts": "node scripts/copy-fonts.mjs",
