@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+permalink: "/adt-installation-new-mexico.html"
+title: "ADT System Referrals in New Mexico"
+description: "Talk with SWSA about your security needs and ADT system options through Secure24, an ADT Authorized Dealer. Serving New Mexico and the Four Corners."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Home Security", url: "/home-security.html" }
+  - { name: "ADT referrals" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="wrap prose-wide">
+  <p class="eyebrow">Home Security · ADT referrals</p>
+  <h1>Looking for an ADT system? Start with a local conversation.</h1>
+  <p class="lede">If you're looking for an ADT system, you've found the right place. SWSA helps homeowners discuss their security needs and handles ADT referrals through Secure24, an ADT Authorized Dealer.</p>
+  <div class="actions">
+    <a class="cta" href="/contact.html">Ask about ADT options</a>
+    {% include "partials/contact-actions.njk" %}
+  </div>
+</section>
+
+<section class="band wrap">
+  <div class="partner-mark">
+    <img src="/assets/partners/secure24-adt-authorized-dealer-blue.svg" alt="ADT Authorized Dealer — Secure24" width="340" height="75">
+  </div>
+  <p class="partner-note">SWSA is your local point of contact for the initial conversation. Secure24 is the ADT Authorized Dealer associated with the referral.</p>
+</section>
+
+<section class="wrap">
+  <h2>How a referral works</h2>
+  {{ m.principles([
+    "<strong>Discuss the property and priorities</strong> with SWSA.",
+    "<strong>Determine whether ADT options fit</strong> what you're looking for.",
+    "<strong>Connect through the Secure24 referral relationship</strong> when it's the right fit.",
+    "<strong>Confirm next steps directly</strong> so you know what happens next."
+  ]) }}
+</section>
+
+<section class="area wrap">
+  <h2>Ask about ADT options</h2>
+  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
+  <div class="actions">
+    <a class="cta" href="/contact.html">Ask about ADT options</a>
+    {% include "partials/contact-actions.njk" %}
+  </div>
+</section>

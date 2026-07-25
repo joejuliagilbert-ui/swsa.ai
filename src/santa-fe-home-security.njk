@@ -1,0 +1,73 @@
+---
+layout: layouts/base.njk
+permalink: "/santa-fe-home-security.html"
+title: "Home Security Installation in Santa Fe"
+description: "Home security and camera installation in Santa Fe and surrounding communities, with practical planning, clean installation, and patient setup."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Home Security", url: "/home-security.html" }
+  - { name: "Santa Fe" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="hero hero-textled wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Santa Fe, New Mexico</p>
+    <h1 class="hero-title">Home security planned clearly in Santa Fe.</h1>
+    <p class="lede">SWSA helps Santa Fe households plan practical protection and camera coverage, then provides a careful setup and straightforward handoff.</p>
+    <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+  </div>
+</section>
+
+<section class="band wrap">
+  <h2>Common starting points</h2>
+  {{ m.fitList([
+    {h:"A considered plan first", t:"decide what matters before choosing equipment."},
+    {h:"Clean, careful installation", t:"placement that respects the home."},
+    {h:"Cameras at key points", t:"clear visibility where it is useful."},
+    {h:"A patient walkthrough", t:"so the system is easy to run."}
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>Cameras and useful convenience</h2>
+  <p>Planning begins with the property, useful entry and outdoor coverage, and a clean installation that is straightforward to use. See <a href="/security-cameras-new-mexico.html">how camera placement is planned</a>.</p>
+</section>
+
+<section class="proof wrap">
+  <p class="eyebrow">Recent work</p>
+  <h2>A security upgrade built around what could be reused</h2>
+  <div class="proof-lead">
+    {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Installed exterior camera under an eave", "(min-width: 900px) 45vw, 100vw", "media-frame" %}
+    <div class="proof-body">
+      <p class="proof-outcome">Santa Fe — security upgrade</p>
+      <p>Suitable existing wiring was reused, camera coverage was updated, and life-safety devices were added as part of one practical upgrade.</p>
+      <a href="/installs/santa-fe-security-installation-march-2026.html">See the Santa Fe project &rarr;</a>
+    </div>
+  </div>
+</section>
+
+{{ m.processSteps() }}
+
+<section class="wrap">
+  <h2>Serving Santa Fe and northern New Mexico</h2>
+  <p>Santa Fe is our northern New Mexico service hub, with installation also available in surrounding communities. We confirm scheduling and availability directly when you reach out.</p>
+  {{ m.relatedRail("Explore next", [
+    {label:"Home Security", url:"/home-security.html"},
+    {label:"Cameras", url:"/security-cameras-new-mexico.html"},
+    {label:"Recent Work", url:"/recent-installations.html"},
+    {label:"Contact", url:"/contact.html"}
+  ]) }}
+</section>
+
+{{ m.faqs([
+  {q:"Can we plan before committing to equipment?", a:"Yes. We start with your goals and the property, then recommend a practical plan and a clear next step."},
+  {q:"Can I add cameras or sensors later?", a:"Yes. Many households start with core protection and expand once they live with the system."},
+  {q:"How do I get started?", a:"Call or text with your city and what you want. We ask a few quick questions and suggest a clear next step."}
+]) }}
+
+<section class="area wrap">
+  <h2>Talk to SWSA</h2>
+  <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+</section>

@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+permalink: "/recent-installations.html"
+title: "Recent Work"
+description: "A small, edited set of recent SWSA.ai residential projects across New Mexico, shown with sanitized detail and no customer-identifying information."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Recent Work" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="wrap prose-wide">
+  <p class="eyebrow">Recent Work</p>
+  <h1>Recent work</h1>
+  <p class="lede">A small, edited set of recent SWSA.ai projects. Each is shown with sanitized detail and leads with the situation and outcome — no customer names, addresses, or identifying property views.</p>
+</section>
+
+<section class="wrap">
+  <ul class="proof-grid">
+    <li class="proof-card">
+      <h2><a href="/installs/albuquerque-security-installation-june-2026.html">Albuquerque — coordinated security and low-voltage</a></h2>
+      <p>Intrusion protection and cameras planned together, life-safety planning, low-voltage improvements, and a clear handoff.</p>
+    </li>
+    <li class="proof-card">
+      {% image "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg", "Installed doorbell camera at a residential entry", "(min-width: 700px) 33vw, 100vw", "media-frame" %}
+      <h2><a href="/installs/albuquerque-security-installation-march-2026.html">Albuquerque — cameras and smart entry</a></h2>
+      <p>Doorbell and outdoor cameras, smart entry, intrusion protection, and customer training.</p>
+    </li>
+    <li class="proof-card">
+      {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Installed exterior camera under an eave", "(min-width: 700px) 33vw, 100vw", "media-frame" %}
+      <h2><a href="/installs/santa-fe-security-installation-march-2026.html">Santa Fe — security upgrade</a></h2>
+      <p>An upgrade that reused suitable existing wiring, updated camera coverage, and added life-safety devices.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="area wrap">
+  <h2>Have a similar project?</h2>
+  <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+</section>

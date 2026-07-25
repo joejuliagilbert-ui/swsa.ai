@@ -1,0 +1,100 @@
+---
+layout: layouts/base.njk
+permalink: "/security-cameras-new-mexico.html"
+title: "Security Camera Installation in New Mexico"
+description: "Camera planning and installation for homes and small businesses across New Mexico and the Four Corners, focused on useful placement and simple operation."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Cameras" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="hero hero-textled wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Security Cameras</p>
+    <h1 class="hero-title">Camera coverage planned around what you need to see.</h1>
+    <p class="lede">Start with the view, the property, and how footage will be used. Then choose cameras and placement that support those needs.</p>
+    <div class="actions">
+      <a class="cta" href="/contact.html">Discuss camera needs</a>
+      <a class="cta cta-quiet" href="/recent-installations.html">View Recent Work</a>
+    </div>
+  </div>
+</section>
+
+<section class="audience wrap" aria-label="Choose your context">
+  <div class="audience-path">
+    <h2>Business cameras</h2>
+    <p>Coverage for entries, customer and work areas, parking, and operational visibility.</p>
+    <a href="/video-surveillance.html">Business video surveillance &rarr;</a>
+  </div>
+  <div class="audience-path">
+    <h2>Home cameras</h2>
+    <p>Front-entry visibility, approaches, and selected exterior areas for daily life.</p>
+    <a href="/home-security.html">Home security &rarr;</a>
+  </div>
+</section>
+
+<section class="band wrap">
+  <h2>How SWSA plans placement</h2>
+  {{ m.principles([
+    "<strong>Sightline and light</strong> so each camera returns a useful image.",
+    "<strong>Useful detail and mounting position</strong> matched to what matters.",
+    "<strong>Privacy and considered placement</strong> — not every area should be recorded.",
+    "<strong>Network and daily review</strong> — how footage is stored and actually used."
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>Common home situations</h2>
+  {{ m.outcomes([
+    "Front entry and doorbell visibility.",
+    "Driveways, approaches, and key outdoor areas.",
+    "Selected exterior coverage where it helps.",
+    "Indoor cameras only where they are appropriate."
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>Common business situations</h2>
+  {{ m.outcomes([
+    "Entry and exit visibility.",
+    "Customer and work areas.",
+    "Parking and perimeter awareness.",
+    "Operational visibility for the people who review video."
+  ]) }}
+</section>
+
+<section class="proof wrap">
+  <p class="eyebrow">Recent work</p>
+  <h2>Camera coverage updated around the property</h2>
+  <div class="proof-lead">
+    {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Installed exterior camera under an eave", "(min-width: 900px) 45vw, 100vw", "media-frame" %}
+    <div class="proof-body">
+      <p class="proof-outcome">Santa Fe — security upgrade</p>
+      <p>Suitable existing wiring was reused while camera coverage and life-safety devices were updated.</p>
+      <a href="/installs/santa-fe-security-installation-march-2026.html">See the Santa Fe project &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  {{ m.relatedRail("Related decisions", [
+    {label:"Home Security", url:"/home-security.html"},
+    {label:"Business video surveillance", url:"/video-surveillance.html"},
+    {label:"Recent work", url:"/recent-installations.html"}
+  ]) }}
+  <p class="area-cue">Camera installation across our service area:
+    <a href="/albuquerque-home-security.html">Albuquerque</a>,
+    <a href="/santa-fe-home-security.html">Santa Fe</a>,
+    <a href="/farmington-home-security.html">Farmington</a>, and
+    <a href="/durango-home-security.html">Durango</a>, plus surrounding communities.</p>
+</section>
+
+<section class="area wrap">
+  <h2>Talk through your cameras</h2>
+  <div class="actions">
+    <a class="cta" href="/contact.html">Discuss camera needs</a>
+    {% include "partials/contact-actions.njk" %}
+  </div>
+</section>

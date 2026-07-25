@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+permalink: "/remote-monitoring.html"
+title: "Commercial Monitoring Options in New Mexico"
+description: "Discuss commercial alarm and camera monitoring needs, alert expectations, and practical response planning with SWSA.ai."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Business Security", url: "/commercial-security.html" }
+  - { name: "Remote Monitoring" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="hero hero-textled wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Business Security · Monitoring</p>
+    <h1 class="hero-title">Know what needs attention after hours.</h1>
+    <p class="lede">SWSA helps businesses discuss monitoring needs, alerts, and response expectations as part of a practical security plan.</p>
+    <div class="actions">
+      <a class="cta" href="/contact.html">Discuss monitoring needs</a>
+      {% include "partials/contact-actions.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="band wrap">
+  <h2>What monitoring decisions involve</h2>
+  {{ m.principles([
+    "<strong>What you want to know about</strong> — which events actually need attention.",
+    "<strong>Alert and escalation questions</strong> — who is notified, in what order, and how.",
+    "<strong>Day-to-day practicality</strong> so alerts stay useful instead of ignored."
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>How this connects to your alarm and camera plan</h2>
+  <p>Monitoring choices depend on how your <a href="/commercial-alarm-systems.html">alarm coverage</a> and <a href="/video-surveillance.html">cameras</a> are planned. We look at these together so the monitoring conversation fits the rest of the system rather than sitting apart from it. For a broader view, start with <a href="/commercial-security.html">Business Security</a> or a <a href="/security-assessments.html">security assessment</a>.</p>
+</section>
+
+<section class="wrap">
+  <h2>What we confirm during an assessment</h2>
+  {{ m.outcomes([
+    "Which events matter for your property.",
+    "How alerts should reach the right people.",
+    "How monitoring fits your alarm and camera plan.",
+    "The practical next step for your situation."
+  ]) }}
+</section>
+
+<section class="band wrap">
+  <div class="boundary-note" role="note">
+    <p><strong>Future-service boundary:</strong> Video remote guarding is a planned future service and is not currently offered.</p>
+  </div>
+</section>
+
+{{ m.processSteps() }}
+
+<section class="area wrap">
+  <h2>Serving New Mexico &amp; the Four Corners</h2>
+  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
+  <div class="actions">
+    <a class="cta" href="/contact.html">Discuss monitoring needs</a>
+    {% include "partials/contact-actions.njk" %}
+  </div>
+</section>

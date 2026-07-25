@@ -1,0 +1,23 @@
+name: Validate SWSA.ai
+
+# Runs the full local test suite for pull requests into main. Read-only; no
+# secrets, no write permissions, no deployment.
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test

@@ -1,0 +1,28 @@
+{
+  "name": "swsa-ai",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SWSA.ai static site — Eleventy static build (local, non-production).",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "clean": "rm -rf _site",
+    "fonts": "node scripts/copy-fonts.mjs",
+    "checkmedia": "node scripts/check-source-media.mjs",
+    "fixtures": "node scripts/make-fixtures.mjs",
+    "prebuild": "npm run fonts && npm run checkmedia",
+    "build": "eleventy",
+    "serve": "npm run fonts && npm run checkmedia && eleventy --serve --quiet",
+    "test": "npm run build && npm run fixtures && node --test"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.0",
+    "@fontsource-variable/inter": "^5.1.1",
+    "@fontsource/newsreader": "^5.1.0",
+    "sharp": "^0.33.5"
+  }
+}

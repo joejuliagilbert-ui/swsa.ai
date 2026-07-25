@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+permalink: "/installs/santa-fe-security-installation-march-2026.html"
+title: "Residential Security Upgrade in Santa Fe"
+description: "A Santa Fe residential security upgrade using suitable existing infrastructure, updated camera coverage, life-safety devices, and customer training."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Recent Work", url: "/recent-installations.html" }
+  - { name: "Santa Fe — security upgrade" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<article class="wrap prose">
+  <p class="eyebrow">Recent Work · Santa Fe</p>
+  <h1>Updating security while making thoughtful use of what was already there.</h1>
+
+  <div class="story-media story-media-pair">
+    <div>
+      {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Installed exterior camera under an eave", "(min-width: 640px) 45vw, 100vw", "" %}
+    </div>
+    <div>
+      {% image "src/assets/img-src/recent-work/santa-fe-life-safety.jpg", "Installed life-safety detector in a ceiling corner", "(min-width: 640px) 45vw, 100vw", "" %}
+    </div>
+  </div>
+  <p class="media-caption">Installed exterior camera and life-safety device. Sanitized crops — no customer or property-identifying context.</p>
+
+  <h2>What needed attention</h2>
+  <p>A residential Santa Fe home wanted to upgrade an existing system while making use of suitable existing wiring rather than starting over.</p>
+
+  <h2>What we installed</h2>
+  <p>SWSA evaluated the existing system, reused suitable existing wiring, added outdoor camera coverage, and installed smoke and carbon monoxide protection. The work included setup, testing, and a customer walkthrough.</p>
+
+  <h2>The handoff</h2>
+  <p>The home ended with updated security and life-safety coverage and a clear customer handoff.</p>
+
+  <div class="actions">
+    <a class="cta" href="/contact.html">Plan a similar project</a>
+    {% include "partials/contact-actions.njk" %}
+  </div>
+
+  {{ m.relatedRail("Related", [
+    {label:"Home security in Santa Fe", url:"/santa-fe-home-security.html"},
+    {label:"Cameras", url:"/security-cameras-new-mexico.html"},
+    {label:"Home Security", url:"/home-security.html"},
+    {label:"More recent work", url:"/recent-installations.html"}
+  ]) }}
+</article>

@@ -1,0 +1,66 @@
+---
+layout: layouts/base.njk
+permalink: "/about.html"
+title: "About · Security Installation & Local Support"
+description: "SWSA.ai is a locally accountable security and automation company serving New Mexico and the Four Corners with practical planning, professional installation, and ongoing support."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "About" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="wrap prose-wide">
+  <p class="eyebrow">About SWSA.ai</p>
+  <h1>A practical security company built around accountable work.</h1>
+  <p class="lede">SWSA plans, installs, explains, and supports security systems for homes and small businesses across New Mexico and the Four Corners.</p>
+  <div class="actions">
+    {% include "partials/contact-actions.njk" %}
+    <a class="cta cta-quiet" href="/recent-installations.html">View Recent Work</a>
+  </div>
+</section>
+
+<section class="band wrap">
+  <h2>How we work</h2>
+  {{ m.principles([
+    "<strong>Practical planning</strong> — decide what matters before choosing equipment.",
+    "<strong>Clean installation</strong> — placement that respects the home or business.",
+    "<strong>Patient setup</strong> — a walkthrough so you can actually use the system.",
+    "<strong>Continuing support</strong> — a clear path when you need help later."
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>What accountability means</h2>
+  <div class="owner-block">
+    <figure class="owner-portrait">
+      {% image "src/assets/img-src/joseph-gilbert-about.jpg", "Joseph Gilbert, owner of SWSA.ai", "(min-width: 640px) 220px, 60vw", "" %}
+      <figcaption>Joseph Gilbert, owner</figcaption>
+    </figure>
+    <p>You have one clear point of contact, and SWSA owns the work from planning through follow-up. Decisions are explained, installations are done carefully, and there is a straightforward way to reach us afterward.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Our operating model</h2>
+  <p>SWSA is owner-led, supported by a small operating team and qualified contractors as projects require. Joseph Gilbert is the owner and the accountable point of contact for the work.</p>
+</section>
+
+<section class="wrap">
+  <h2>Where we work</h2>
+  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
+  {{ m.relatedRail("Explore next", [
+    {label:"Business Security", url:"/commercial-security.html"},
+    {label:"Home Security", url:"/home-security.html"},
+    {label:"Recent Work", url:"/recent-installations.html"},
+    {label:"Contact", url:"/contact.html"}
+  ]) }}
+</section>
+
+<section class="area wrap">
+  <h2>Talk to SWSA</h2>
+  <div class="actions">
+    {% include "partials/contact-actions.njk" %}
+    <a class="cta cta-quiet" href="/recent-installations.html">View Recent Work</a>
+  </div>
+</section>

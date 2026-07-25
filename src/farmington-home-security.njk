@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+permalink: "/farmington-home-security.html"
+title: "Home Security Installation in Farmington"
+description: "Home security and camera installation in Farmington, the Four Corners, and surrounding communities, supported by SWSA.ai."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Home Security", url: "/home-security.html" }
+  - { name: "Farmington" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="hero hero-textled wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Farmington &amp; the Four Corners</p>
+    <h1 class="hero-title">Local security support across Farmington and the Four Corners.</h1>
+    <p class="lede">SWSA serves Farmington and surrounding Four Corners communities with practical home-security and camera planning.</p>
+    <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+  </div>
+</section>
+
+<section class="band wrap">
+  <h2>Common starting points</h2>
+  {{ m.fitList([
+    {h:"Entry and property coverage", t:"protect doors and key outdoor areas."},
+    {h:"Regional service", t:"support for households across the Four Corners."},
+    {h:"An old or partial system", t:"bring coverage up to how you live now."},
+    {h:"Cameras where they help", t:"clear visibility at approaches and entries."}
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>Cameras and useful convenience</h2>
+  <p>Planning can combine dependable entry protection with useful outdoor visibility, then expand around the property and daily use. See <a href="/security-cameras-new-mexico.html">how camera placement is planned</a>.</p>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Recent work</p>
+  <h2>See how SWSA documents installations</h2>
+  <p>Recent work is shown with sanitized detail and no customer-identifying information.</p>
+  <p><a href="/recent-installations.html">See recent work &rarr;</a></p>
+</section>
+
+{{ m.processSteps() }}
+
+<section class="wrap">
+  <h2>Serving Farmington and the Four Corners</h2>
+  <p>Farmington is our Four Corners regional hub, with service across surrounding communities. We confirm scheduling and availability directly when you reach out.</p>
+  {{ m.relatedRail("Explore next", [
+    {label:"Home Security", url:"/home-security.html"},
+    {label:"Cameras", url:"/security-cameras-new-mexico.html"},
+    {label:"Durango", url:"/durango-home-security.html"},
+    {label:"Recent Work", url:"/recent-installations.html"}
+  ]) }}
+</section>
+
+{{ m.faqs([
+  {q:"Do you serve communities around Farmington?", a:"Yes. We serve Farmington and surrounding Four Corners communities; we confirm availability for your area when you contact us."},
+  {q:"Do you install in Durango too?", a:"Yes. We serve the Colorado side of the Four Corners as well — see our Durango page."},
+  {q:"How do I get started?", a:"Call or text with your city and what you want. We ask a few quick questions and suggest a clear next step."}
+]) }}
+
+<section class="area wrap">
+  <h2>Talk to SWSA</h2>
+  <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+</section>

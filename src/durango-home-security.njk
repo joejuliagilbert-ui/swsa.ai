@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+permalink: "/durango-home-security.html"
+title: "Home Security Installation in Durango"
+description: "Home security and camera installation in Durango and surrounding Four Corners communities, with practical planning and local support."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Home Security", url: "/home-security.html" }
+  - { name: "Durango" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="hero hero-textled wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Durango, Colorado</p>
+    <h1 class="hero-title">Practical home security in Durango.</h1>
+    <p class="lede">SWSA serves Durango and surrounding Four Corners communities with security and camera systems planned for straightforward daily use.</p>
+    <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+  </div>
+</section>
+
+<section class="band wrap">
+  <h2>Common starting points</h2>
+  {{ m.fitList([
+    {h:"Solid entry protection", t:"cover the doors and windows that matter."},
+    {h:"Clear outdoor visibility", t:"cameras at approaches and key areas."},
+    {h:"A new or updated system", t:"planned for how the home is used."},
+    {h:"Simple daily operation", t:"set up so it is easy to run."}
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>Cameras and useful convenience</h2>
+  <p>Planning can combine entry protection with useful outdoor coverage and straightforward operation, based on the property and household priorities. See <a href="/security-cameras-new-mexico.html">how camera placement is planned</a>.</p>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Recent work</p>
+  <h2>See how SWSA documents installations</h2>
+  <p>Recent work is shown with sanitized detail and no customer-identifying information.</p>
+  <p><a href="/recent-installations.html">See recent work &rarr;</a></p>
+</section>
+
+{{ m.processSteps() }}
+
+<section class="wrap">
+  <h2>Serving Durango and the Colorado Four Corners</h2>
+  <p>Durango is our Colorado-side Four Corners service hub. Service for surrounding communities and specific travel expectations are confirmed directly during scheduling rather than promised online.</p>
+  {{ m.relatedRail("Explore next", [
+    {label:"Home Security", url:"/home-security.html"},
+    {label:"Cameras", url:"/security-cameras-new-mexico.html"},
+    {label:"Farmington", url:"/farmington-home-security.html"},
+    {label:"Recent Work", url:"/recent-installations.html"}
+  ]) }}
+</section>
+
+{{ m.faqs([
+  {q:"Do you serve areas around Durango?", a:"Yes. We serve Durango and surrounding Four Corners communities; we confirm availability and scheduling directly when you contact us."},
+  {q:"Do you work on both sides of the Four Corners?", a:"Yes. We serve New Mexico and the Colorado side around Durango — see our Farmington page for the New Mexico hub."},
+  {q:"How do I get started?", a:"Call or text with your city and what you want. We ask a few quick questions and suggest a clear next step."}
+]) }}
+
+<section class="area wrap">
+  <h2>Talk to SWSA</h2>
+  <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+</section>

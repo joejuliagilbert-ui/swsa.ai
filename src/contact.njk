@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+permalink: "/contact.html"
+title: "Contact"
+description: "Call, text, or email SWSA.ai about security, camera, and smart-home installation across New Mexico and the Four Corners region."
+---
+<div class="wrap prose">
+  <p class="eyebrow">Contact</p>
+  <h1>Call, text, or email</h1>
+  <p class="lede">Call or text is the fastest way to reach us. Email is available when you would rather send the details in writing.</p>
+
+  <div class="actions">
+    {% include "partials/contact-actions.njk" %}
+    <a class="cta cta-quiet" href="mailto:{{ site.email }}">Email {{ site.email }}</a>
+  </div>
+
+  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
+</div>

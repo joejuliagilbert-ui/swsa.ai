@@ -1,0 +1,42 @@
+[
+  {
+    "file": "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg",
+    "approval": {
+      "sourceId": "c4b-abq-march-doorbell",
+      "provenance": "Sanitized tight device-detail crop of installs/albuquerque-security-installation-march-2026-1.jpeg; property context and manufacturer mark excluded; metadata removed",
+      "publicUseApproved": true,
+      "approvalDate": "2026-07-24",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/santa-fe-camera.jpg",
+    "approval": {
+      "sourceId": "c4b-santa-fe-camera",
+      "provenance": "Sanitized tight device-detail crop of installs/santa-fe-security-installation-march-2026-3.jpeg; broad facade and property context excluded; metadata removed",
+      "publicUseApproved": true,
+      "approvalDate": "2026-07-24",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/santa-fe-life-safety.jpg",
+    "approval": {
+      "sourceId": "c4b-santa-fe-life-safety",
+      "provenance": "Sanitized tight device-detail crop of installs/santa-fe-security-installation-march-2026-4.jpeg; interior layout excluded; metadata removed",
+      "publicUseApproved": true,
+      "approvalDate": "2026-07-24",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/joseph-gilbert-about.jpg",
+    "approval": {
+      "sourceId": "c4b-joseph-about-portrait",
+      "provenance": "Sanitized tight head-and-shoulders crop of src/assets/people/joseph-gilbert-headshot-square.jpg; apparel dealer mark excluded; metadata removed; owner-approved July 24 2026",
+      "publicUseApproved": true,
+      "approvalDate": "2026-07-24",
+      "privacyReview": "passed"
+    }
+  }
+]

@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+permalink: "/video-surveillance.html"
+title: "Video Surveillance for New Mexico Businesses"
+description: "Commercial camera planning and installation focused on useful sightlines, simple operation, and local support across New Mexico and the Four Corners."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Business Security", url: "/commercial-security.html" }
+  - { name: "Video Surveillance" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="hero hero-textled wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Business Security · Video</p>
+    <h1 class="hero-title">See what matters. Keep operation simple.</h1>
+    <p class="lede">Camera coverage planned around entries, activity areas, parking, and the way your team actually reviews video — not around the largest possible device count.</p>
+    <div class="actions">
+      <a class="cta" href="/contact.html">Plan a business assessment</a>
+      {% include "partials/contact-actions.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="band wrap">
+  <h2>Where cameras help</h2>
+  {{ m.fitList([
+    {h:"Entry visibility", t:"clear views of who arrives and leaves."},
+    {h:"Customer and work areas", t:"awareness where daily activity happens."},
+    {h:"Parking and perimeter", t:"coverage of approaches and outdoor areas."},
+    {h:"Replacing an unclear system", t:"cameras that are hard to view or trust."}
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>What SWSA plans first</h2>
+  {{ m.principles([
+    "<strong>Sightlines and lighting</strong> so each camera returns a useful image.",
+    "<strong>Mounting position and image detail</strong> matched to what you need to see.",
+    "<strong>Recording expectations and network constraints</strong> discussed openly.",
+    "<strong>Who needs access</strong> to live and recorded video, and how they will use it."
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>What good coverage enables</h2>
+  {{ m.outcomes([
+    "Useful coverage of the areas that matter.",
+    "Straightforward review for the people who need it.",
+    "Clean, considered placement.",
+    "A staff handoff and training so the system is usable."
+  ]) }}
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">How we work</p>
+  <h2>Planning first, then a clean install</h2>
+  <p>A business assessment starts with your property and how your team operates, then becomes a practical plan and a clean installation. SWSA documents recent work with sanitized detail and no customer-identifying information; those examples are residential.</p>
+  <p><a href="/recent-installations.html">See recent SWSA installations &rarr;</a></p>
+</section>
+
+<section class="wrap">
+  {{ m.relatedRail("Related decisions", [
+    {label:"Business Security overview", url:"/commercial-security.html"},
+    {label:"Start with a security assessment", url:"/security-assessments.html"},
+    {label:"Cameras for home or business", url:"/security-cameras-new-mexico.html"}
+  ]) }}
+</section>
+
+{{ m.processSteps() }}
+
+<section class="area wrap">
+  <h2>Serving New Mexico &amp; the Four Corners</h2>
+  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
+  <div class="actions">
+    <a class="cta" href="/contact.html">Plan a business assessment</a>
+    {% include "partials/contact-actions.njk" %}
+  </div>
+</section>

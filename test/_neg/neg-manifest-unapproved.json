@@ -1,0 +1,12 @@
+[
+  {
+    "file": "test/fixtures/clean-source.jpg",
+    "approval": {
+      "sourceId": "neg-unapproved",
+      "provenance": "synthetic",
+      "publicUseApproved": false,
+      "approvalDate": "2026-07-24",
+      "privacyReview": "pending"
+    }
+  }
+]

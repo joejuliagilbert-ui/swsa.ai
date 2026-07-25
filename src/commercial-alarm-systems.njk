@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+permalink: "/commercial-alarm-systems.html"
+title: "Commercial Alarm Systems in New Mexico"
+description: "Commercial alarm planning and installation organized around entry points, property layout, daily use, and clear support across New Mexico and the Four Corners."
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Business Security", url: "/commercial-security.html" }
+  - { name: "Commercial Alarm Systems" }
+---
+{% import "macros.njk" as m %}
+<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+
+<section class="hero hero-textled wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Business Security · Alarms</p>
+    <h1 class="hero-title">Alarm coverage planned around the property.</h1>
+    <p class="lede">Start with how the building is entered, used, opened, and closed so protection fits the operation and remains straightforward for staff.</p>
+    <div class="actions">
+      <a class="cta" href="/contact.html">Discuss alarm coverage</a>
+      {% include "partials/contact-actions.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="band wrap">
+  <h2>Where alarm coverage fits</h2>
+  {{ m.fitList([
+    {h:"Main and secondary entries", t:"protect the ways people come and go."},
+    {h:"After-hours access", t:"know when a space is opened outside normal hours."},
+    {h:"Storage or restricted areas", t:"add coverage where it matters most."},
+    {h:"Replacing an old or partial system", t:"bring coverage up to how the business runs."}
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>What SWSA plans first</h2>
+  {{ m.principles([
+    "<strong>Entry points and motion areas</strong> mapped to daily use.",
+    "<strong>Glass and perimeter conditions</strong> considered where relevant.",
+    "<strong>User routines and notification expectations</strong> for staff.",
+    "<strong>A monitoring discussion</strong> so you can decide what fits."
+  ]) }}
+</section>
+
+<section class="wrap">
+  <h2>What good alarm coverage enables</h2>
+  {{ m.outcomes([
+    "Practical, property-fit coverage.",
+    "Operation staff can understand.",
+    "Clean installation.",
+    "A clear staff handoff."
+  ]) }}
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">How we work</p>
+  <h2>Planning first, then a clean install</h2>
+  <p>A business assessment starts with your property and how your team operates, then becomes a practical plan and a clean installation. SWSA documents recent work with sanitized detail and no customer-identifying information; those examples are residential.</p>
+  <p><a href="/recent-installations.html">See recent SWSA installations &rarr;</a></p>
+</section>
+
+<section class="wrap">
+  {{ m.relatedRail("Related decisions", [
+    {label:"Business Security overview", url:"/commercial-security.html"},
+    {label:"Monitoring options", url:"/remote-monitoring.html"},
+    {label:"Start with a security assessment", url:"/security-assessments.html"},
+    {label:"Video surveillance", url:"/video-surveillance.html"}
+  ]) }}
+</section>
+
+{{ m.processSteps() }}
+
+<section class="area wrap">
+  <h2>Serving New Mexico &amp; the Four Corners</h2>
+  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
+  <div class="actions">
+    <a class="cta" href="/contact.html">Discuss alarm coverage</a>
+    {% include "partials/contact-actions.njk" %}
+  </div>
+</section>

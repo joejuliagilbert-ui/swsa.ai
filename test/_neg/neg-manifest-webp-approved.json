@@ -1,0 +1,12 @@
+[
+  {
+    "file": "test/fixtures/exif-webp.webp",
+    "approval": {
+      "sourceId": "neg-webp-approved",
+      "provenance": "synthetic",
+      "publicUseApproved": true,
+      "approvalDate": "2026-07-24",
+      "privacyReview": "passed"
+    }
+  }
+]
