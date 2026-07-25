@@ -91,3 +91,23 @@ test("no workflow references secrets, Formspree, or a third-party deploy target"
     assert.ok(!/(cloudflare|netlify|vercel|amazonaws|s3-|rsync|ftp-deploy|surge\.sh)/i.test(wf), "no third-party deploy target");
   }
 });
+
+test("workflows pin the exact official major action versions", () => {
+  // Required exact pins in the correct workflows.
+  assert.match(validate, /actions\/checkout@v7\b/);
+  assert.match(validate, /actions\/setup-node@v7\b/);
+  assert.match(deploy, /actions\/checkout@v7\b/);
+  assert.match(deploy, /actions\/setup-node@v7\b/);
+  assert.match(deploy, /actions\/configure-pages@v6\b/);
+  assert.match(deploy, /actions\/upload-pages-artifact@v5\b/);
+  assert.match(deploy, /actions\/deploy-pages@v5\b/);
+  // No superseded pin may remain in either workflow.
+  const superseded = [
+    /actions\/checkout@v[1-6]\b/, /actions\/setup-node@v[1-6]\b/,
+    /actions\/configure-pages@v[1-5]\b/, /actions\/upload-pages-artifact@v[1-4]\b/,
+    /actions\/deploy-pages@v[1-4]\b/
+  ];
+  for (const wf of [validate, deploy]) {
+    for (const re of superseded) assert.ok(!re.test(wf), `superseded pin present: ${re}`);
+  }
+});
