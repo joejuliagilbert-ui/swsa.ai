@@ -1139,3 +1139,62 @@ h1, h2, h3 { letter-spacing: -.04em; }
   box-shadow: none;
 }
 .home-system-choice-monitored { border-bottom-color: #c7cecf !important; }
+
+/* ========================================================================
+   Release 16 — meaningful labels replace decorative sequence numbers
+   ======================================================================== */
+
+.process-steps li { grid-template-columns: minmax(92px, 112px) 1fr; gap: clamp(18px, 3vw, 34px); }
+.process-steps > li > span,
+.home-needs-list li > span,
+.home-smart-devices li > span,
+.placement-checks li > span,
+.work-standards li > span,
+.adt-layer-grid article > span {
+  font-size: .7rem;
+  font-weight: 750;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+/* One editorial promise band reads more human than three numbered cards. */
+.about-promise-grid {
+  gap: 0;
+  background: transparent;
+  border-top: 1px solid rgba(255,255,255,.22);
+  border-bottom: 1px solid rgba(255,255,255,.22);
+}
+.about-promise-grid article {
+  min-height: 280px;
+  padding: clamp(30px, 4vw, 48px) 0;
+  background: transparent;
+}
+.about-promise-grid article + article { border-top: 1px solid rgba(255,255,255,.22); }
+.about-promise-grid span { text-transform: uppercase; }
+.about-promise-grid h3 { margin-top: clamp(54px, 8vw, 92px); }
+
+.work-standards li { grid-template-columns: minmax(82px, 100px) 1fr; }
+.placement-checks li { grid-template-columns: minmax(58px, 72px) 1fr; }
+.home-needs-list li { grid-template-columns: minmax(82px, 105px) 1fr; }
+.home-smart-devices li { grid-template-columns: minmax(68px, 82px) minmax(0,1fr) auto; }
+
+@media (min-width: 800px) {
+  .about-promise-grid article { padding-inline: clamp(24px, 3vw, 42px); }
+  .about-promise-grid article:first-child { padding-left: 0; }
+  .about-promise-grid article:last-child { padding-right: 0; }
+  .about-promise-grid article + article { border-top: 0; border-left: 1px solid rgba(255,255,255,.22); }
+}
+
+@media (max-width: 520px) {
+  .process-steps li { grid-template-columns: 88px 1fr; }
+  .home-smart-devices li { grid-template-columns: 72px 1fr; }
+  .home-smart-devices small { grid-column: 2; }
+}
+
+@media (max-width: 560px) {
+  .about-editorial .about-hero h1 { font-size: clamp(3rem, 14vw, 4.4rem); }
+}
+
+@media (max-width: 360px) {
+  .about-editorial .about-hero h1 { font-size: 12vw; }
+}

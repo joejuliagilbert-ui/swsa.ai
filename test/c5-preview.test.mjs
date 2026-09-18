@@ -82,8 +82,8 @@ test("homepage emits the camera-first production title", () => {
 test("homepage presents the two core services and both security-system paths", () => {
   const h = readSite("index.html");
   for (const copy of [
-    "01 / Cameras",
-    "02 / Security systems + cameras",
+    "Cameras only",
+    "Cameras + security",
     "Local system",
     "ADT monitored",
     "Door &amp; window sensors",
