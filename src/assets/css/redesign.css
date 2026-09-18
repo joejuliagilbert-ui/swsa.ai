@@ -1052,3 +1052,64 @@ h1, h2, h3 { letter-spacing: -.04em; }
   .mobile-nav-panel .header-actions { grid-template-columns: 1fr; }
   .contact-simple h1 { font-size: 13vw; }
 }
+
+/* ========================================================================
+   Release 14 — concrete language and a more cinematic motion signature
+   ======================================================================== */
+
+/* The opening sequence should feel authored, not like a generic fade-in. */
+.home-hero .eyebrow,
+.home-hero h1,
+.home-hero .lede,
+.home-hero .hero-offer-row,
+.home-hero .hero-trust {
+  animation: swsa-hero-rise .75s cubic-bezier(.16, 1, .3, 1) both;
+}
+.home-hero h1 { animation-delay: .08s; }
+.home-hero .lede { animation-delay: .18s; }
+.home-hero .hero-offer-row { animation-delay: .27s; }
+.home-hero .hero-trust { animation-delay: .36s; }
+.home-hero-stage {
+  animation: swsa-stage-unveil 1.15s cubic-bezier(.16, 1, .3, 1) .12s both;
+  transform-origin: 100% 50%;
+}
+@keyframes swsa-hero-rise {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes swsa-stage-unveil {
+  from { opacity: .25; clip-path: inset(0 0 0 100%); transform: translateX(34px) scale(1.025); }
+  to { opacity: 1; clip-path: inset(0); transform: none; }
+}
+
+/* Different content enters differently: specifications slide, photographs open. */
+@supports (animation-timeline: view()) {
+  .pricing-options article[data-reveal] {
+    animation-name: swsa-spec-enter;
+    animation-range: entry 0% cover 24%;
+  }
+  .proof-tile[data-reveal] {
+    animation-name: swsa-proof-unveil;
+    animation-range: entry 0% cover 32%;
+  }
+  @keyframes swsa-spec-enter {
+    from { opacity: .55; transform: translateX(-44px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes swsa-proof-unveil {
+    from { opacity: .35; clip-path: inset(18% 0 0); transform: translateY(38px); }
+    to { opacity: 1; clip-path: inset(0); transform: none; }
+  }
+}
+
+.home-process .section-intro > p:last-child { max-width: 46ch; }
+.home-path h3 { max-width: 10ch; }
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero .eyebrow,
+  .home-hero h1,
+  .home-hero .lede,
+  .home-hero .hero-offer-row,
+  .home-hero .hero-trust,
+  .home-hero-stage { animation: none; }
+}
