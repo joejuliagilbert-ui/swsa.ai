@@ -14,7 +14,7 @@ export default {
   areaServed: ["Albuquerque, NM", "Santa Fe, NM", "Farmington, NM", "Durango, CO", "Four Corners Region"],
   message_territory: "Professional camera installation for New Mexico and the Four Corners.",
 
-  // Camera installation is primary; camera-inclusive security systems are second.
+  // Camera installation is primary; security systems with cameras are second.
   nav: [
     { label: "Camera Installation", url: "/security-cameras-new-mexico.html" },
     { label: "Security Systems", url: "/home-security.html" },
@@ -34,6 +34,14 @@ export default {
     url: "https://swsa.ai/",
     telephone: "505-331-7834",
     email: "joe@swsa.ai",
-    areaServed: ["Albuquerque, NM", "Santa Fe, NM", "Farmington, NM", "Durango, CO", "Four Corners Region"]
+    areaServed: ["Albuquerque, NM", "Santa Fe, NM", "Farmington, NM", "Durango, CO", "Four Corners Region"],
+    knowsAbout: [
+      "Security camera installation",
+      "Video doorbell installation",
+      "Home security systems",
+      "Smart lock integration",
+      "Garage controls",
+      "Nest thermostat integration"
+    ]
   }
 };
