@@ -1005,6 +1005,34 @@ section { padding-block: var(--space-12); }
 .local-final p { max-width: 56ch; color: #D3E0EB; }
 @media (min-width: 800px) { .local-final-grid { grid-template-columns: 1fr 1fr; } }
 
+/* Four Corners coverage diagram — explanatory, not project evidence */
+.regional-coverage-stage { position: relative; min-height: 590px; overflow: hidden; border: 1px solid rgba(255,255,255,.22); background: radial-gradient(circle at 50% 50%,rgba(99,199,255,.12),transparent 48%),rgba(255,255,255,.035); box-shadow: 0 30px 80px rgba(0,0,0,.3); }
+.regional-coverage-stage::before { content: ""; position: absolute; inset: 0; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px); background-size: 38px 38px; }
+.regional-stage-label { position: absolute; z-index: 4; top: 22px; left: 22px; padding: 7px 10px; color: #CBEAFF; border: 1px solid rgba(255,255,255,.24); background: rgba(8,17,31,.72); font-size: .69rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.regional-property { position: absolute; z-index: 2; left: 24%; top: 24%; width: 54%; height: 50%; border: 2px solid rgba(255,255,255,.7); background: rgba(12,42,69,.5); }
+.regional-roof { position: absolute; left: -7%; top: -23%; width: 114%; height: 42%; border: 2px solid rgba(255,255,255,.7); border-bottom: 0; transform: skewY(-10deg); }
+.regional-door { position: absolute; left: 42%; bottom: 0; width: 18%; height: 42%; border: 2px solid rgba(255,255,255,.62); border-bottom: 0; }
+.regional-drive { position: absolute; left: 28%; top: 100%; width: 46%; height: 160px; border-right: 1px solid rgba(255,255,255,.24); border-left: 1px solid rgba(255,255,255,.24); transform: perspective(180px) rotateX(20deg); transform-origin: top; }
+.regional-camera { position: absolute; z-index: 4; width: 12px; height: 12px; border: 2px solid var(--electric); border-radius: 50%; background: var(--night); box-shadow: 0 0 0 5px rgba(99,199,255,.1),0 0 18px rgba(99,199,255,.7); }
+.camera-a { left: 37%; top: 63%; }.camera-b { left: 51%; top: 53%; }.camera-c { right: 23%; top: 34%; }
+.regional-cone { position: absolute; z-index: 1; width: 0; height: 0; opacity: .34; filter: drop-shadow(0 0 12px rgba(99,199,255,.35)); }
+.cone-a { left: 38%; top: 64%; border-top: 165px solid rgba(99,199,255,.42); border-right: 72px solid transparent; border-left: 72px solid transparent; transform: rotate(-10deg); transform-origin: top; }
+.cone-b { left: 52%; top: 54%; border-top: 128px solid rgba(99,199,255,.42); border-right: 54px solid transparent; border-left: 54px solid transparent; transform: rotate(178deg); transform-origin: top; }
+.cone-c { right: 23%; top: 35%; border-top: 150px solid rgba(99,199,255,.38); border-right: 62px solid transparent; border-left: 62px solid transparent; transform: rotate(77deg); transform-origin: top; }
+.regional-point { position: absolute; z-index: 5; padding: 5px 8px; color: #D8EAF6; border: 1px solid rgba(255,255,255,.2); background: rgba(8,17,31,.78); font-size: .68rem; letter-spacing: .04em; }
+.point-a { left: 16%; bottom: 10%; }.point-b { left: 43%; bottom: 19%; }.point-c { right: 7%; top: 19%; }
+.regional-pulse { position: absolute; z-index: 3; left: calc(51% - 36px); top: calc(53% - 36px); width: 84px; height: 84px; border: 1px solid rgba(99,199,255,.8); border-radius: 50%; animation: regional-pulse 3.2s ease-out infinite; }
+@keyframes regional-pulse { 0% { transform: scale(.35); opacity: 0; } 25% { opacity: .75; } 80%,100% { transform: scale(1.45); opacity: 0; } }
+.regional-coverage-stage > p { position: absolute; z-index: 5; right: 22px; bottom: 18px; left: 22px; margin: 0; color: #AFC3D5; font-size: .76rem; }
+@media (max-width: 520px) { .regional-coverage-stage { min-height: 470px; } .regional-property { left: 18%; width: 64%; } .point-a { left: 7%; } .point-c { right: 3%; } }
+.regional-trust { color: var(--white); background: #10263E; }
+.regional-trust-grid { display: grid; gap: var(--space-10); align-items: end; }
+.regional-trust .eyebrow { color: #A8DFFF; }
+.regional-trust h2 { max-width: 15ch; margin-top: 0; color: var(--white); font-size: clamp(2rem,4vw,3.7rem); }
+.regional-trust p { max-width: 58ch; color: #D3E0EB; }
+.regional-trust a { color: var(--electric); font-weight: 700; text-decoration: none; }
+@media (min-width: 800px) { .regional-trust-grid { grid-template-columns: 1fr 1fr; } }
+
 /* ---- Reduced motion: remove all non-essential motion ---- */
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }

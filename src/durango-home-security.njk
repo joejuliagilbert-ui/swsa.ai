@@ -1,67 +1,45 @@
 ---
 layout: layouts/base.njk
 permalink: "/durango-home-security.html"
-title: "Home Security Installation in Durango"
-description: "Home security and camera installation in Durango and surrounding Four Corners communities, with practical planning and local support."
+title: "Security Camera Installation in Durango"
+description: "Installed Google outdoor and doorbell cameras in Durango and the Four Corners, with up-front pricing, practical placement, and local support."
 breadcrumbs:
   - { name: "Home", url: "/" }
-  - { name: "Home Security", url: "/home-security.html" }
+  - { name: "Camera Installation", url: "/security-cameras-new-mexico.html" }
   - { name: "Durango" }
 ---
 {% import "macros.njk" as m %}
 <div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
 
-<section class="hero hero-textled wrap">
-  <div class="hero-text">
-    <p class="eyebrow">Durango, Colorado</p>
-    <h1 class="hero-title">Practical home security in Durango.</h1>
-    <p class="lede">SWSA serves Durango and surrounding Four Corners communities with security and camera systems planned for straightforward daily use.</p>
-    <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+<section class="local-camera-hero regional-camera-hero">
+  <div class="local-camera-hero-grid wrap">
+    <div class="local-camera-copy">
+      <p class="eyebrow">Camera installation · Durango, Colorado</p>
+      <h1>Clear views. Clean installation. Simple control.</h1>
+      <p class="lede">Google outdoor and doorbell cameras planned around the property, installed carefully, and set up for straightforward everyday use.</p>
+      <div class="actions"><a class="cta cta-bright" href="/contact.html?project=durango-camera-installation">Get started</a><a class="cta cta-ghost" href="/security-cameras-new-mexico.html">How installation works</a></div>
+      <ul class="local-camera-signals"><li>Coverage planning</li><li>Professional installation</li><li>App setup</li></ul>
+    </div>
+    {% set coverage_city = "Durango" %}{% include "partials/regional-coverage-visual.njk" %}
   </div>
 </section>
 
-<section class="band wrap">
-  <h2>Common starting points</h2>
-  {{ m.fitList([
-    {h:"Solid entry protection", t:"cover the doors and windows that matter."},
-    {h:"Clear outdoor visibility", t:"cameras at approaches and key areas."},
-    {h:"A new or updated system", t:"planned for how the home is used."},
-    {h:"Simple daily operation", t:"set up so it is easy to run."}
-  ]) }}
+{% include "partials/camera-pricing.njk" %}
+{% include "partials/sticky-start.njk" %}
+
+<section class="local-priority wrap">
+  <div class="local-section-heading"><p class="eyebrow">Start with the outcome</p><h2>Every camera should earn its view.</h2><p>We plan around what you want to see, then work through the angle, light, power, mounting, and connection needed to make that view useful.</p></div>
+  <ol class="local-view-list"><li><span>01</span><div><strong>Front entry</strong><p>See visitors and deliveries at a useful angle.</p></div></li><li><span>02</span><div><strong>Driveway or approach</strong><p>Watch a selected arrival path or parking area.</p></div></li><li><span>03</span><div><strong>Backyard or side access</strong><p>Add visibility where another outdoor view matters.</p></div></li><li><span>04</span><div><strong>Useful alerts</strong><p>Tune notifications around how you use the property.</p></div></li></ol>
 </section>
 
-<section class="wrap">
-  <h2>Cameras and useful convenience</h2>
-  <p>Planning can combine entry protection with useful outdoor coverage and straightforward operation, based on the property and household priorities. See <a href="/security-cameras-new-mexico.html">how camera placement is planned</a>.</p>
-</section>
+<section class="regional-trust"><div class="wrap regional-trust-grid"><div><p class="eyebrow">Professional installation</p><h2>A finished system, not another box to set up.</h2></div><div><p>The installation includes planning the position, mounting the device, connecting it, checking the view, and walking through the Google Home app with you.</p><a href="/recent-installations.html">See how SWSA documents real work →</a></div></div></section>
 
-<section class="wrap">
-  <p class="eyebrow">Recent work</p>
-  <h2>See how SWSA documents installations</h2>
-  <p>Recent work is shown with sanitized detail and no customer-identifying information.</p>
-  <p><a href="/recent-installations.html">See recent work &rarr;</a></p>
-</section>
+<section class="local-process wrap"><div class="local-section-heading"><p class="eyebrow">The process</p><h2>One clear path to working cameras.</h2></div><ol><li><span>01</span><strong>Talk through the property</strong><p>Share your city and the areas you want covered.</p></li><li><span>02</span><strong>Confirm the plan</strong><p>Review placement, power, mounting, and connectivity.</p></li><li><span>03</span><strong>Install and aim</strong><p>Mount, connect, update, and check each view.</p></li><li><span>04</span><strong>Tune and teach</strong><p>Set alerts and walk through everyday use.</p></li></ol></section>
 
-{{ m.processSteps() }}
+<section class="local-security-bridge"><div class="wrap local-security-grid"><div><p class="eyebrow">Security beyond cameras</p><h2>Add monitored protection when it fits.</h2></div><div><p>Cameras can stand alone or support a broader plan with entry protection, life-safety devices, and professionally monitored security.</p><a href="/home-security.html">Explore home security →</a></div></div></section>
 
-<section class="wrap">
-  <h2>Serving Durango and the Colorado Four Corners</h2>
-  <p>Durango is our Colorado-side Four Corners service hub. Service for surrounding communities and specific travel expectations are confirmed directly during scheduling rather than promised online.</p>
-  {{ m.relatedRail("Explore next", [
-    {label:"Home Security", url:"/home-security.html"},
-    {label:"Cameras", url:"/security-cameras-new-mexico.html"},
-    {label:"Farmington", url:"/farmington-home-security.html"},
-    {label:"Recent Work", url:"/recent-installations.html"}
-  ]) }}
-</section>
+<section class="local-area wrap"><div><p class="eyebrow">Four Corners service</p><h2>Durango and surrounding communities.</h2><p>Durango is our Colorado-side Four Corners service hub. Availability, scheduling, and travel expectations are confirmed directly rather than promised online.</p></div>{{ m.relatedRail("Explore next", [{label:"Camera Installation", url:"/security-cameras-new-mexico.html"},{label:"Home Security", url:"/home-security.html"},{label:"Farmington", url:"/farmington-home-security.html"},{label:"Recent Work", url:"/recent-installations.html"}]) }}</section>
 
-{{ m.faqs([
-  {q:"Do you serve areas around Durango?", a:"Yes. We serve Durango and surrounding Four Corners communities; we confirm availability and scheduling directly when you contact us."},
-  {q:"Do you work on both sides of the Four Corners?", a:"Yes. We serve New Mexico and the Colorado side around Durango — see our Farmington page for the New Mexico hub."},
-  {q:"How do I get started?", a:"Call or text with your city and what you want. We ask a few quick questions and suggest a clear next step."}
-]) }}
+{{ m.faqs([{q:"Do you serve areas around Durango?",a:"Yes. We serve Durango and surrounding Four Corners communities; availability and scheduling are confirmed directly."},{q:"Is a camera subscription required?",a:"No subscription is required for live video. Google Home Premium is optional and adds features such as longer recorded video history; features vary by device and plan."},{q:"Do you work on both sides of the Four Corners?",a:"Yes. We serve New Mexico and the Colorado side around Durango, with scheduling and travel expectations confirmed directly."}]) }}
 
-<section class="area wrap">
-  <h2>Talk to SWSA</h2>
-  <div class="actions">{% include "partials/contact-actions.njk" %}</div>
-</section>
+<section class="local-final"><div class="wrap local-final-grid"><div><p class="eyebrow">Ready for clearer coverage?</p><h2>Start with the property and the view.</h2></div><div><p>Share your city, the views you need, and whether you are starting fresh or improving an existing setup.</p><div class="actions"><a class="cta cta-bright" href="/contact.html?project=durango-camera-installation">Request a camera plan</a><a class="cta cta-ghost" href="tel:{{ site.phone_tel }}">Call {{ site.phone_display }}</a></div></div></div></section>
