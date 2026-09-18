@@ -1,110 +1,99 @@
 ---
 layout: layouts/base.njk
 title: "Security Camera Installation in New Mexico & the Four Corners"
-description: "Professional camera installation and security systems with cameras, with local and ADT-monitored options across New Mexico and the Four Corners."
+description: "Straightforward security camera installation with clear pricing, careful placement, and local support across New Mexico and the Four Corners."
 ---
-<section class="camera-hero">
+<section class="camera-hero home-hero">
   <div class="wrap camera-hero-grid">
     <div class="camera-hero-copy">
-      <p class="eyebrow">Local camera installation</p>
-      <h1>Security cameras, professionally installed.</h1>
-      <p class="lede">Doorbell and outdoor cameras for New Mexico and the Four Corners.</p>
+      <p class="eyebrow">Local installation · New Mexico + Four Corners</p>
+      <h1>See what matters.<br><span>We’ll handle the rest.</span></h1>
+      <p class="lede">Security cameras professionally placed, installed, connected, and explained—in plain English.</p>
       <div class="hero-offer-row">
-        <div class="hero-starting-price" aria-label="Installed camera packages start at 349 dollars">
-          <span>Installed from</span>
-          <strong><sup>$</sup>349</strong>
-        </div>
-        <a class="cta cta-bright" href="/contact.html#camera-packages">See camera packages</a>
+        <a class="cta cta-bright" href="#pricing">See installed prices</a>
+        <a class="hero-quiet-link" href="tel:{{ site.phone_tel }}">Call {{ site.phone_display }}</a>
       </div>
+      <ul class="hero-trust" aria-label="Service promises">
+        <li>Up-front pricing</li><li>Local support</li><li>No required camera subscription</li>
+      </ul>
     </div>
-
-    <div class="camera-stage" aria-label="Professional exterior camera installation">
-      {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Professionally installed outdoor security camera beneath an eave", "(min-width: 900px) 46vw, 100vw", "camera-stage-image", true %}
-      <div class="camera-status">Installed by SWSA · Santa Fe, New Mexico</div>
-    </div>
+    <figure class="camera-stage home-hero-stage">
+      {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Professionally installed outdoor security camera beneath a Santa Fe home eave", "(min-width: 900px) 48vw, 100vw", "camera-stage-image", true %}
+      <figcaption class="camera-status"><i aria-hidden="true"></i> Real installation · Santa Fe</figcaption>
+    </figure>
   </div>
+  <a class="hero-scroll" href="#pricing" aria-label="Scroll to installed prices"><span>Explore</span><i aria-hidden="true"></i></a>
 </section>
 
 <div class="local-service-rail" aria-label="SWSA service area">
   <div class="wrap">
-    <strong>Owner-led in New Mexico</strong>
+    <strong>Serving your corner of the Southwest</strong>
     <span>Albuquerque</span><span>Santa Fe</span><span>Farmington</span><span>Durango</span><span>Four Corners</span>
-    <a href="/recent-installations.html">See recent work &rarr;</a>
   </div>
 </div>
 
-{% include "partials/camera-pricing.njk" %}
+<div id="pricing">{% include "partials/camera-pricing.njk" %}</div>
 {% include "partials/sticky-start.njk" %}
 
-<section class="proof home-install-story">
+<section class="home-proof" aria-labelledby="home-proof-title">
   <div class="wrap">
-    <div class="home-install-heading">
-      <p class="eyebrow">Real work in Rio Rancho</p>
-      <h2>Cameras and comfort, connected.</h2>
+    <div class="section-intro section-intro-light" data-reveal>
+      <p class="eyebrow">Installed here. Supported here.</p>
+      <h2 id="home-proof-title">Real homes.<br>Real work.</h2>
+      <a href="/recent-installations.html">View every recent installation <span aria-hidden="true">↗</span></a>
     </div>
-    <div class="proof-lead">
-      <div class="home-install-image">
-        {% image "src/assets/img-src/recent-work/rio-rancho-outdoor-camera.jpg", "Google outdoor camera installed on a Rio Rancho home", "(min-width: 900px) 58vw, 100vw", "media-frame" %}
-        <span>Installed by SWSA · Rio Rancho</span>
-      </div>
-      <div class="proof-body">
-        <p class="proof-outcome">Useful views. Simple control.</p>
-        <p>This Rio Rancho project paired exterior cameras with an in-home camera view and a Nest thermostat.</p>
-        <a class="text-link-strong" href="/installs/rio-rancho-camera-smart-home-june-2026.html">View this installation &rarr;</a>
-      </div>
+    <div class="proof-gallery">
+      <a class="proof-tile proof-tile-main" href="/installs/rio-rancho-camera-smart-home-june-2026.html" data-reveal>
+        {% image "src/assets/img-src/recent-work/rio-rancho-outdoor-camera.jpg", "Outdoor camera installed on a Rio Rancho home", "(min-width: 800px) 62vw, 100vw", "proof-tile-image" %}
+        <span><small>Rio Rancho</small><strong>Exterior cameras + smart home</strong><em>View project →</em></span>
+      </a>
+      <a class="proof-tile" href="/installs/albuquerque-security-installation-june-2026.html" data-reveal>
+        {% image "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg", "Doorbell camera installed in Albuquerque", "(min-width: 800px) 34vw, 100vw", "proof-tile-image" %}
+        <span><small>Albuquerque</small><strong>A better front-door view</strong><em>View project →</em></span>
+      </a>
+      <a class="proof-tile" href="/installs/bosque-farms-camera-security-june-2026.html" data-reveal>
+        {% image "src/assets/img-src/recent-work/bosque-farms-outdoor-camera.jpg", "Outdoor camera installed in Bosque Farms", "(min-width: 800px) 34vw, 100vw", "proof-tile-image" %}
+        <span><small>Bosque Farms</small><strong>Clean outdoor coverage</strong><em>View project →</em></span>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="business-paths wrap" aria-labelledby="business-paths-title">
-  <div class="business-paths-heading">
-    <p class="eyebrow">Two ways to get started</p>
-    <h2 id="business-paths-title">Cameras first. More protection when you want it.</h2>
-    <p>Choose camera installation, or a complete security system with cameras.</p>
+<section class="home-process" aria-labelledby="process-title">
+  <div class="wrap process-grid">
+    <div class="section-intro" data-reveal>
+      <p class="eyebrow">Simple from the start</p>
+      <h2 id="process-title">You don’t need to be a tech person.</h2>
+      <p>Tell us what you want to see. We plan the view, complete the installation, and show you how everything works.</p>
+    </div>
+    <ol class="process-steps">
+      <li data-reveal><span>01</span><div><h3>Choose your view</h3><p>Front door, driveway, backyard—or all three.</p></div></li>
+      <li data-reveal><span>02</span><div><h3>We install it cleanly</h3><p>Thoughtful placement, careful setup, no guesswork.</p></div></li>
+      <li data-reveal><span>03</span><div><h3>Leave confident</h3><p>We connect your phone and walk through every control with you.</p></div></li>
+    </ol>
   </div>
+</section>
 
-  <div class="business-path-grid">
-    <article class="business-path business-path-primary">
-      <span class="business-path-number">01 / Cameras</span>
-      <h3>Professional camera installation</h3>
-      <p class="business-path-price"><small>Installed from</small>$349</p>
-      <p>Google outdoor cameras and video doorbells, placed for useful views and set up for daily use.</p>
-      <ul>
-        <li>Doorbell and outdoor cameras</li>
-        <li>Up-front installed pricing</li>
-        <li>No subscription required for live video</li>
-      </ul>
-      <a href="/security-cameras-new-mexico.html">See camera options &rarr;</a>
-    </article>
-
-    <article class="business-path business-path-system" id="security-systems">
-      <span class="business-path-number">02 / Security systems + cameras</span>
-      <h3>Local or ADT-monitored.</h3>
-      <p>Build beyond the camera view with sensors, safety devices, and smart-home controls.</p>
-      <div class="system-choice-grid">
-        <div>
-          <span>Local system</span>
-          <strong>No monitoring required</strong>
-          <p>Cameras and protection devices you control from your phone.</p>
-          <a href="/home-security.html">See local systems &rarr;</a>
+<section class="home-paths" aria-labelledby="paths-title">
+  <div class="wrap">
+    <div class="section-intro section-intro-center" data-reveal>
+      <p class="eyebrow">Start where you are</p>
+      <h2 id="paths-title">A camera today.<br>A complete system when you’re ready.</h2>
+    </div>
+    <div class="home-path-grid">
+      <a class="home-path home-path-camera" href="/security-cameras-new-mexico.html" data-reveal>
+        <span>01 / Cameras</span><h3>Keep it simple.</h3><p>Professional camera installation from $349. No monitoring required.</p><strong>Explore cameras →</strong>
+      </a>
+      <article class="home-path home-path-security" data-reveal>
+        <span>02 / Security systems + cameras</span><h3>Protect more.</h3><p>Add sensors, life safety, smart-home control, and optional professional monitoring.</p>
+        <div class="home-system-links">
+          <a href="/home-security.html"><b>Local system</b><small>No monitoring required</small><em>Explore →</em></a>
+          <a href="/adt-installation-new-mexico.html"><b>ADT monitored</b><small>$69.99/mo or less · cameras included</small><em>Explore →</em></a>
         </div>
-        <div>
-          <span>ADT monitored</span>
-          <strong>$69.99<small>/mo or less</small></strong>
-          <p>A complete professionally monitored system with cameras included.</p>
-          <a href="/adt-installation-new-mexico.html">See ADT systems &rarr;</a>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <div class="system-components" aria-label="Available security system components">
-    <p>Security system components</p>
-    <ul>
-      <li><span>01</span>Door &amp; window sensors</li>
-      <li><span>02</span>Life-safety devices</li>
-      <li><span>03</span>Motion detection</li>
-      <li><span>04</span>Flood &amp; extreme-temperature detection</li>
+      </article>
+    </div>
+    <ul class="home-components" aria-label="Available security system components" data-reveal>
+      <li>Door &amp; window sensors</li><li>Life-safety devices</li><li>Motion detection</li><li>Flood &amp; extreme-temperature detection</li>
     </ul>
   </div>
 </section>

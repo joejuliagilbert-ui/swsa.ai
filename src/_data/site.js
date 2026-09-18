@@ -6,7 +6,7 @@ export default {
   brand: "SWSA.ai",                              // public wordmark + site/OG identity
   name: "Southwest Security & Automation LLC",    // full legal name (entity context only)
   origin: "https://swsa.ai",
-  asset_version: "20260918.90",
+  asset_version: "20260918.100",
   phone_display: "505-331-7834",
   phone_tel: "5053317834",
   email: "joe@swsa.ai",
@@ -16,9 +16,9 @@ export default {
 
   // Camera installation is primary; security systems with cameras are second.
   nav: [
-    { label: "Camera Installation", url: "/security-cameras-new-mexico.html" },
-    { label: "Security Systems", url: "/home-security.html" },
-    { label: "Recent Work", url: "/recent-installations.html" },
+    { label: "Cameras", url: "/security-cameras-new-mexico.html" },
+    { label: "Security", url: "/home-security.html" },
+    { label: "Work", url: "/recent-installations.html" },
     { label: "About", url: "/about.html" }
   ],
 

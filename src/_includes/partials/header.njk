@@ -17,8 +17,8 @@
     <nav class="primary-nav desktop-nav" aria-label="Primary">
       <ul>{{ navlinks | safe }}</ul>
       <span class="header-actions">
-        <a class="header-cta" href="tel:{{ site.phone_tel }}">Call</a>
-        <a class="header-cta header-cta-quiet" href="sms:{{ site.phone_tel }}">Text</a>
+        <a class="header-phone" href="tel:{{ site.phone_tel }}">{{ site.phone_display }}</a>
+        <a class="header-cta" href="/contact.html#camera-packages">See pricing</a>
       </span>
     </nav>
 
@@ -28,8 +28,8 @@
       <nav class="mobile-nav-panel" aria-label="Primary">
         <ul>{{ navlinks | safe }}</ul>
         <span class="header-actions">
-          <a class="header-cta" href="tel:{{ site.phone_tel }}">Call</a>
-          <a class="header-cta header-cta-quiet" href="sms:{{ site.phone_tel }}">Text</a>
+          <a class="header-cta header-cta-quiet" href="tel:{{ site.phone_tel }}">Call {{ site.phone_display }}</a>
+          <a class="header-cta" href="/contact.html#camera-packages">See pricing</a>
         </span>
       </nav>
     </details>
