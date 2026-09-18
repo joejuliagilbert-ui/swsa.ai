@@ -1,70 +1,103 @@
 ---
 layout: layouts/base.njk
 permalink: "/security-assessments.html"
-title: "Commercial Security Assessments in New Mexico"
-description: "Practical commercial security assessments for existing systems, camera coverage, entry points, alarm needs, and future improvements."
+title: "Camera & Security Site Assessments"
+description: "Walk the property with SWSA before choosing equipment. Assess camera sightlines, entries, existing systems, and practical priorities."
 breadcrumbs:
   - { name: "Home", url: "/" }
   - { name: "Business Security", url: "/commercial-security.html" }
   - { name: "Security Assessments" }
 ---
-{% import "macros.njk" as m %}
-<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+<div class="wrap assessment-breadcrumbs">{% include "partials/breadcrumbs.njk" %}</div>
 
-<section class="hero hero-textled wrap">
-  <div class="hero-text">
-    <p class="eyebrow">Business Security · Planning</p>
-    <h1 class="hero-title">Start with the property, not a product list.</h1>
-    <p class="lede">A practical assessment helps identify useful coverage, existing gaps, priorities, and the improvements that make sense now.</p>
-    <div class="actions">
-      <a class="cta" href="/contact.html">Plan a business assessment</a>
-      {% include "partials/contact-actions.njk" %}
+<section class="assessment-hero">
+  <div class="wrap assessment-hero-grid">
+    <div>
+      <p class="eyebrow">Camera &amp; security site assessment</p>
+      <h1>Walk the property before choosing equipment.</h1>
+      <p class="lede">Start with the views you need, the entries that matter, the way the property is used, and the equipment already in place. Then decide what deserves attention now.</p>
+      <div class="actions">
+        <a class="cta cta-bright" href="/contact.html">Plan a property walkthrough</a>
+        {% include "partials/contact-actions.njk" %}
+      </div>
+    </div>
+
+    <div class="assessment-map" aria-label="Illustration of a camera and security property walkthrough">
+      <div class="assessment-map-grid">
+        <span class="assessment-map-building">Property</span>
+        <span class="assessment-map-entry">Entry</span>
+        <span class="assessment-map-parking">Approach</span>
+        <i class="assessment-point assessment-point-one"><b>01</b></i>
+        <i class="assessment-point assessment-point-two"><b>02</b></i>
+        <i class="assessment-point assessment-point-three"><b>03</b></i>
+        <i class="assessment-route"></i>
+      </div>
+      <div class="assessment-map-key"><span>01 · Sightline</span><span>02 · Entry</span><span>03 · Existing system</span></div>
     </div>
   </div>
 </section>
 
-<section class="band wrap">
-  <h2>When an assessment helps</h2>
-  {{ m.fitList([
-    {h:"Uncertain camera placement", t:"you are not sure where coverage matters."},
-    {h:"An old or inherited system", t:"you want to know what is worth keeping."},
-    {h:"Phased improvements", t:"you want a sensible order of priorities."},
-    {h:"A new space or comparing priorities", t:"before committing to equipment."}
-  ]) }}
+<section class="wrap assessment-signals">
+  <div class="section-heading">
+    <p class="eyebrow">When a walkthrough helps</p>
+    <h2>Clarity before the equipment conversation.</h2>
+    <p>An assessment is useful when the problem is visible but the right combination of placement, reuse, replacement, and timing is not.</p>
+  </div>
+  <div class="assessment-signal-grid">
+    <article><span>01</span><h3>Camera placement is uncertain</h3><p>You know the areas that matter but not which views, heights, or locations will be useful.</p></article>
+    <article><span>02</span><h3>The system came with the property</h3><p>You want to understand what is installed and what may be worth keeping or changing.</p></article>
+    <article><span>03</span><h3>Improvements need an order</h3><p>You want to separate the first priority from additions that can reasonably wait.</p></article>
+    <article><span>04</span><h3>The space or operation is changing</h3><p>You want to think through coverage before committing to equipment or a layout.</p></article>
+  </div>
 </section>
 
-<section class="wrap">
-  <h2>How an assessment works</h2>
-  {{ m.principles([
-    "<strong>Goals and concerns</strong> — what you are trying to protect and why.",
-    "<strong>Property walk-through</strong> — entries, activity areas, and conditions.",
-    "<strong>Existing system review</strong> — what is worth keeping or changing.",
-    "<strong>Priorities and constraints</strong> — what matters now and what can wait.",
-    "<strong>Recommended next step</strong> — a clear, practical path forward."
-  ]) }}
+<section class="assessment-walk">
+  <div class="wrap assessment-walk-grid">
+    <div>
+      <p class="eyebrow">What the walkthrough considers</p>
+      <h2>From the property edge to the daily routine.</h2>
+    </div>
+    <ol>
+      <li><span>01</span><div><strong>Goals &amp; concerns</strong><p>Start with what you need to see, protect, understand, or simplify.</p></div></li>
+      <li><span>02</span><div><strong>Approaches &amp; sightlines</strong><p>Look at exterior movement, mounting conditions, light, distance, and obstructions.</p></div></li>
+      <li><span>03</span><div><strong>Entries &amp; active areas</strong><p>Follow how people, deliveries, customers, and staff move through the property.</p></div></li>
+      <li><span>04</span><div><strong>Existing equipment</strong><p>Identify what is present and discuss where reuse or change may make sense.</p></div></li>
+      <li><span>05</span><div><strong>Priorities &amp; constraints</strong><p>Separate what matters now from what can wait and what the property can support.</p></div></li>
+    </ol>
+  </div>
 </section>
 
-<section class="wrap">
-  <p class="eyebrow">How we work</p>
-  <h2>Planning first, then a clean install</h2>
-  <p>A business assessment starts with your property and how your team operates, then becomes a practical plan and a clean installation. SWSA documents recent work with sanitized detail and no customer-identifying information; those examples are residential.</p>
-  <p><a href="/recent-installations.html">See recent SWSA installations &rarr;</a></p>
+<section class="wrap assessment-outcome">
+  <div>
+    <p class="eyebrow">The useful outcome</p>
+    <h2>A clearer next step—not a larger shopping list.</h2>
+  </div>
+  <div>
+    <p>The conversation should narrow the problem. You may need a focused camera project, a broader security plan, a phased approach, or no change in an area that is already working.</p>
+    <div class="assessment-decisions">
+      <span><b>Keep</b>Equipment or coverage that still serves the goal</span>
+      <span><b>Improve</b>Placement, access, or operation that creates friction</span>
+      <span><b>Add</b>A new layer only where it has a clear purpose</span>
+      <span><b>Phase</b>Later priorities that do not need to happen now</span>
+    </div>
+  </div>
 </section>
 
-<section class="wrap">
-  {{ m.relatedRail("Related decisions", [
-    {label:"Business Security overview", url:"/commercial-security.html"},
-    {label:"Video surveillance", url:"/video-surveillance.html"},
-    {label:"Commercial alarm systems", url:"/commercial-alarm-systems.html"},
-    {label:"Access control", url:"/access-control.html"}
-  ]) }}
+<section class="assessment-next">
+  <div class="wrap assessment-next-grid">
+    <div><p class="eyebrow">Explore the likely next decisions</p><h2>Cameras remain the practical starting point.</h2></div>
+    <nav aria-label="Services related to a property assessment">
+      <a href="/video-surveillance.html"><span>01</span><strong>Business camera installation</strong><small>Views, recording, review, and handoff</small></a>
+      <a href="/commercial-alarm-systems.html"><span>02</span><strong>Commercial alarm systems</strong><small>Entries, motion areas, and routines</small></a>
+      <a href="/access-control.html"><span>03</span><strong>Access control</strong><small>Doors, users, permissions, and changes</small></a>
+      <a href="/commercial-security.html"><span>04</span><strong>Business Security overview</strong><small>See how the layers fit together</small></a>
+    </nav>
+  </div>
 </section>
 
-<section class="area wrap">
-  <h2>Serving New Mexico &amp; the Four Corners</h2>
-  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
-  <div class="actions">
-    <a class="cta" href="/contact.html">Plan a business assessment</a>
-    {% include "partials/contact-actions.njk" %}
+<section class="assessment-final">
+  <div class="wrap assessment-final-grid">
+    <div><p class="eyebrow">New Mexico &amp; the Four Corners</p><h2>Start with a walk and a conversation.</h2></div>
+    <div><p>Tell SWSA where the property is, what you are concerned about, and whether equipment is already installed.</p><div class="actions"><a class="cta cta-bright" href="/contact.html">Plan a property walkthrough</a>{% include "partials/contact-actions.njk" %}</div></div>
   </div>
 </section>
