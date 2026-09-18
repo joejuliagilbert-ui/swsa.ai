@@ -7,62 +7,59 @@ breadcrumbs:
   - { name: "Home", url: "/" }
   - { name: "About" }
 ---
-<div class="wrap about-breadcrumbs">{% include "partials/breadcrumbs.njk" %}</div>
+<div class="about-editorial">
+  <div class="wrap about-breadcrumbs">{% include "partials/breadcrumbs.njk" %}</div>
 
-<section class="about-hero">
-  <div class="wrap about-hero-grid">
-    <div class="about-hero-copy">
-      <p class="eyebrow">New Mexico owned · Owner-led</p>
-      <h1>Local work. One accountable owner.</h1>
-      <p class="lede">Joseph Gilbert leads SWSA from the first conversation through installation and support.</p>
-      <div class="actions">
-        <a class="cta cta-bright" href="/contact.html">Talk to Joseph</a>
-        <a class="hero-quiet-link" href="/recent-installations.html">See recent work &rarr;</a>
+  <section class="about-hero">
+    <div class="wrap about-hero-grid">
+      <div class="about-hero-copy">
+        <p class="eyebrow">Meet SWSA</p>
+        <h1>A local company should feel local.</h1>
+        <p class="lede">When you call SWSA, you reach the person responsible for the work—not a call center or a handoff chain.</p>
+        <a class="about-inline-call" href="tel:{{ site.phone_tel }}">Call Joseph · {{ site.phone_display }} <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="about-owner-card">
+        {% image "src/assets/img-src/joseph-gilbert-about.jpg", "Joseph Gilbert, owner of SWSA.ai", "(min-width: 900px) 44vw, 100vw", "about-owner-image", true %}
+        <figcaption><strong>Joseph Gilbert</strong><span>Owner · SWSA.ai</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="about-letter">
+    <div class="wrap about-letter-grid">
+      <p class="about-letter-kicker">A note from Joseph</p>
+      <div>
+        <h2>Security should make life simpler—not give you another system to fight with.</h2>
+        <p>I started SWSA to give homes and small businesses a more direct kind of help: careful placement, clean installation, a patient walkthrough, and one accountable person when you have a question later.</p>
+        <p>We begin with what you actually want to see or protect. Sometimes that means one camera. Sometimes it means a complete security system. The right answer is the one that fits the property and feels easy to use.</p>
+        <p class="about-signoff">Joseph Gilbert <span>Owner, SWSA.ai</span></p>
       </div>
     </div>
-    <figure class="about-owner-card">
-      {% image "src/assets/img-src/joseph-gilbert-about.jpg", "Joseph Gilbert, owner of SWSA.ai", "(min-width: 900px) 38vw, 90vw", "about-owner-image", true %}
-      <figcaption><strong>Joseph Gilbert</strong><span>Owner · Southwest Security &amp; Automation LLC</span></figcaption>
-    </figure>
-  </div>
-</section>
+  </section>
 
-<section class="about-focus">
-  <div class="wrap about-focus-grid">
-    <div>
-      <p class="eyebrow">The focus</p>
-      <h2>Cameras first. Security when the property calls for more.</h2>
-    </div>
-    <div>
-      <p>Outdoor cameras and video doorbells are the primary focus: useful placement, clean installation, dependable connection, and alerts that fit daily life.</p>
-      <p>When cameras are only part of the need, SWSA also installs complete security systems with local and professionally monitored options.</p>
-      <div class="actions">
-        <a class="cta cta-bright" href="/security-cameras-new-mexico.html">Explore camera installation</a>
-        <a class="cta cta-ghost" href="/home-security.html">Explore security systems</a>
+  <section class="about-promises">
+    <div class="wrap">
+      <h2>What you can expect.</h2>
+      <div class="about-promise-grid">
+        <article><span>01</span><h3>Plain answers</h3><p>No need to learn industry language before you call.</p></article>
+        <article><span>02</span><h3>Useful placement</h3><p>Views are planned around what you need to recognize and understand.</p></article>
+        <article><span>03</span><h3>A clean handoff</h3><p>Your phone is connected, controls are explained, and questions are welcome.</p></article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="wrap about-model">
-  <p class="eyebrow">How projects are staffed</p>
-  <div>
-    <h2>Owner-led, with the right help for the project.</h2>
-    <p>SWSA is owner-led, supported by a small operating team and qualified contractors as projects require. Joseph Gilbert is the owner and the accountable point of contact for the work.</p>
-  </div>
-</section>
-
-<section class="about-area">
-  <div class="wrap about-area-grid">
-    <div><p class="eyebrow">Service area</p><h2>Based in New Mexico. Working across the Four Corners.</h2></div>
-    <div>
-      <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
-      <nav class="about-links" aria-label="Explore SWSA services">
-        <a href="/commercial-security.html">Business security &rarr;</a>
-        <a href="/home-security.html">Security systems &rarr;</a>
-        <a href="/recent-installations.html">Recent work &rarr;</a>
-        <a href="/contact.html">Contact &rarr;</a>
-      </nav>
+  <section class="about-scope">
+    <div class="wrap about-scope-grid">
+      <div><p class="eyebrow">The work</p><h2>Cameras first. More protection when it makes sense.</h2></div>
+      <div>
+        <p>SWSA is owner-led, supported by a small operating team and qualified contractors as projects require. Joseph remains the accountable point of contact.</p>
+        <nav aria-label="Explore SWSA">
+          <a href="/recent-installations.html">See recent work <span>→</span></a>
+          <a href="/home-security.html">Explore security systems <span>→</span></a>
+          <a href="/commercial-security.html">Business security <span>→</span></a>
+          <a href="/contact.html">Start a conversation <span>→</span></a>
+        </nav>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
