@@ -354,7 +354,8 @@ section { padding-block: var(--space-12); }
 /* Contact / camera-quote handoff */
 .contact-hero { color: var(--white); background: linear-gradient(145deg, var(--night), #102A49); }
 .contact-hero, .contact-packages, .contact-package-list > a, .contact-security-options > a { scroll-margin-top: 88px; }
-.contact-hero-grid { display: grid; gap: var(--space-12); align-items: start; }
+.contact-hero-grid { display: grid; align-items: start; }
+.contact-intro { max-width: 1100px; }
 .contact-intro .eyebrow { color: #A8DFFF; }
 .contact-intro h1 { max-width: 10ch; color: var(--white); font-size: clamp(2.8rem, 6vw, 5.7rem); letter-spacing: -.055em; }
 .contact-intro .lede { max-width: 54ch; color: #D3E0EB; }
@@ -366,7 +367,7 @@ section { padding-block: var(--space-12); }
 .contact-method > span { grid-row: 1 / 3; color: #B8C8D8; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .contact-method strong { min-width: 0; overflow-wrap: anywhere; }
 .contact-method small { color: #B8C8D8; font-size: .84rem; }
-.quote-note { padding: clamp(24px, 4vw, 42px); color: var(--ink); background: var(--white); box-shadow: 0 28px 70px rgba(0,0,0,.28); }
+.quote-note { display: grid; gap: clamp(24px, 4vw, 52px); margin-top: clamp(48px, 7vw, 84px); padding: clamp(24px, 4vw, 42px); color: var(--ink); background: var(--white); }
 .quote-note-kicker { color: var(--action); font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .quote-note h2 { margin-top: 0; }
 .quote-note ol { list-style: none; margin: var(--space-6) 0 0; padding: 0; }
@@ -374,7 +375,13 @@ section { padding-block: var(--space-12); }
 .quote-note li > span { color: var(--action); font-size: .72rem; font-weight: 700; }
 .quote-note li p { display: grid; gap: 1px; margin: 0; }
 .quote-note li small { color: var(--slate); font-size: .85rem; }
-@media (min-width: 900px) { .contact-hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(360px, .68fr); } }
+@media (min-width: 900px) {
+  .contact-primary-actions { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .contact-method { grid-template-columns: 52px minmax(0,1fr); }
+  .quote-note { grid-template-columns: minmax(200px,.55fr) minmax(0,1.45fr); align-items: start; }
+  .quote-note ol { display: grid; grid-template-columns: 1fr 1fr; margin-top: 0; }
+  .quote-note li { padding: var(--space-4); }
+}
 .contact-packages { color: var(--white); background: #0B1727; }
 .contact-package-heading { max-width: 760px; margin-bottom: var(--space-12); }
 .contact-package-heading .eyebrow { color: #A8DFFF; }
