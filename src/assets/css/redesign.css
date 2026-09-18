@@ -1036,3 +1036,18 @@ h1, h2, h3 { letter-spacing: -.04em; }
   backdrop-filter: none;
 }
 .work-feature-copy h2 { font-size: clamp(2rem, 3.7vw, 3.5rem); line-height: 1; }
+
+/* Keep the two high-value mobile actions readable at a glance. */
+.mobile-nav-panel .header-actions {
+  display: grid;
+  grid-template-columns: 1.18fr .82fr;
+}
+.mobile-nav-panel .header-cta {
+  width: 100%;
+  min-width: 0;
+  padding-inline: 10px;
+  white-space: nowrap;
+}
+@media (max-width: 360px) {
+  .mobile-nav-panel .header-actions { grid-template-columns: 1fr; }
+}
