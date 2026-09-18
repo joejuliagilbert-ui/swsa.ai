@@ -2,64 +2,45 @@
 layout: layouts/base.njk
 permalink: "/remote-monitoring.html"
 title: "Commercial Monitoring Options in New Mexico"
-description: "Discuss commercial alarm and camera monitoring needs, alert expectations, and practical response planning with SWSA.ai."
+description: "Discuss commercial alarm monitoring, camera context, alert expectations, and practical response planning with SWSA.ai."
 breadcrumbs:
   - { name: "Home", url: "/" }
   - { name: "Business Security", url: "/commercial-security.html" }
   - { name: "Remote Monitoring" }
 ---
-{% import "macros.njk" as m %}
-<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+<div class="wrap monitoring-breadcrumbs">{% include "partials/breadcrumbs.njk" %}</div>
 
-<section class="hero hero-textled wrap">
-  <div class="hero-text">
-    <p class="eyebrow">Business Security · Monitoring</p>
-    <h1 class="hero-title">Know what needs attention after hours.</h1>
-    <p class="lede">SWSA helps businesses discuss monitoring needs, alerts, and response expectations as part of a practical security plan.</p>
-    <div class="actions">
-      <a class="cta" href="/contact.html">Discuss monitoring needs</a>
-      {% include "partials/contact-actions.njk" %}
+<section class="monitoring-hero">
+  <div class="wrap monitoring-hero-grid">
+    <div class="monitoring-copy">
+      <p class="eyebrow">Business alerts · Monitoring decisions · Camera context</p>
+      <h1>Know what needs attention after hours.</h1>
+      <p class="lede">Plan which alarm events matter, who should know, and how useful camera views fit the broader response conversation.</p>
+      <div class="actions"><a class="cta cta-bright" href="/contact.html?project=business-monitoring">Discuss monitoring needs</a><a class="cta cta-ghost" href="/video-surveillance.html">Explore business cameras</a></div>
+      <ul class="monitoring-signals"><li>Event priorities</li><li>Alert expectations</li><li>Camera context</li></ul>
+    </div>
+    <div class="monitoring-stage" role="img" aria-label="Planning diagram connecting an alarm event, a camera view, and a responsible contact">
+      <span class="monitoring-stage-label">Alert planning sequence</span>
+      <span class="monitoring-line" aria-hidden="true"></span>
+      <div class="monitor-node node-event"><span>01</span><strong>Event</strong><small>Selected alarm activity</small></div>
+      <div class="monitor-node node-context"><span>02</span><strong>Context</strong><small>Related camera view</small></div>
+      <div class="monitor-node node-contact"><span>03</span><strong>Contact</strong><small>Defined responsibility</small></div>
+      <div class="monitoring-camera" aria-hidden="true"><span></span></div>
+      <span class="monitoring-pulse" aria-hidden="true"></span>
+      <p>Decide the response path before an event occurs</p>
     </div>
   </div>
 </section>
 
-<section class="band wrap">
-  <h2>What monitoring decisions involve</h2>
-  {{ m.principles([
-    "<strong>What you want to know about</strong> — which events actually need attention.",
-    "<strong>Alert and escalation questions</strong> — who is notified, in what order, and how.",
-    "<strong>Day-to-day practicality</strong> so alerts stay useful instead of ignored."
-  ]) }}
+<section class="monitoring-decisions wrap">
+  <div class="monitoring-section-heading"><p class="eyebrow">Plan the expectations</p><h2>An alert is only useful when the next step is clear.</h2><p>The monitoring conversation should begin with business priorities, not a generic list of every possible notification.</p></div>
+  <ol><li><span>01</span><div><strong>Which events matter?</strong><p>Identify the openings, alarm conditions, or selected activity that deserves attention.</p></div></li><li><span>02</span><div><strong>Who needs to know?</strong><p>Define responsible contacts and the order that makes sense.</p></div></li><li><span>03</span><div><strong>What context helps?</strong><p>Choose camera views that can support later review of an event.</p></div></li><li><span>04</span><div><strong>How should staff use it?</strong><p>Make the plan understandable during opening, closing, and after-hours routines.</p></div></li></ol>
 </section>
 
-<section class="wrap">
-  <h2>How this connects to your alarm and camera plan</h2>
-  <p>Monitoring choices depend on how your <a href="/commercial-alarm-systems.html">alarm coverage</a> and <a href="/video-surveillance.html">cameras</a> are planned. We look at these together so the monitoring conversation fits the rest of the system rather than sitting apart from it. For a broader view, start with <a href="/commercial-security.html">Business Security</a> or a <a href="/security-assessments.html">security assessment</a>.</p>
-</section>
+<section class="monitoring-camera-band"><div class="wrap monitoring-camera-grid"><div><p class="eyebrow">Camera context</p><h2>Plan the view before relying on it.</h2></div><div><p>A camera can help show an approach, an entry, or the activity around a selected area. The usefulness of that context depends on placement, lighting, connectivity, and a view that answers a specific question.</p><a href="/video-surveillance.html">Plan business camera coverage →</a></div></div></section>
 
-<section class="wrap">
-  <h2>What we confirm during an assessment</h2>
-  {{ m.outcomes([
-    "Which events matter for your property.",
-    "How alerts should reach the right people.",
-    "How monitoring fits your alarm and camera plan.",
-    "The practical next step for your situation."
-  ]) }}
-</section>
+<section class="monitoring-boundary"><div class="wrap monitoring-boundary-grid"><div><p class="eyebrow">Clear service boundary</p><h2>Monitoring discussions are not remote guarding.</h2></div><div class="monitoring-boundary-note" role="note"><p><strong>Future-service boundary:</strong> Video remote guarding is a planned future service and is not currently offered.</p><p>The current conversation focuses on alarm and camera monitoring needs, alert expectations, and the practical next step for the property.</p></div></div></section>
 
-<section class="band wrap">
-  <div class="boundary-note" role="note">
-    <p><strong>Future-service boundary:</strong> Video remote guarding is a planned future service and is not currently offered.</p>
-  </div>
-</section>
+<section class="monitoring-plan"><div class="wrap monitoring-plan-grid"><div><p class="eyebrow">Connect the layers</p><h2>Make the monitoring decision in context.</h2><p>Alarm coverage, cameras, property layout, and staff routines should inform the plan together.</p><a class="cta cta-bright" href="/security-assessments.html">Start with an assessment</a></div><nav aria-label="Related business security decisions"><a href="/commercial-alarm-systems.html"><span>01</span><strong>Commercial alarms</strong><small>Map the event layer</small></a><a href="/video-surveillance.html"><span>02</span><strong>Video surveillance</strong><small>Plan the camera views</small></a><a href="/commercial-security.html"><span>03</span><strong>Business security</strong><small>See the broader plan</small></a></nav></div></section>
 
-{{ m.processSteps() }}
-
-<section class="area wrap">
-  <h2>Serving New Mexico &amp; the Four Corners</h2>
-  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
-  <div class="actions">
-    <a class="cta" href="/contact.html">Discuss monitoring needs</a>
-    {% include "partials/contact-actions.njk" %}
-  </div>
-</section>
+<section class="monitoring-final"><div class="wrap monitoring-final-grid"><div><p class="eyebrow">New Mexico &amp; the Four Corners</p><h2>Start with the event and the people responsible.</h2></div><div><p>Share the property, the concerns after hours, and the alarm or camera system already in place.</p><div class="actions"><a class="cta cta-bright" href="/contact.html?project=business-monitoring">Discuss monitoring needs</a><a class="cta cta-ghost" href="tel:{{ site.phone_tel }}">Call {{ site.phone_display }}</a></div></div></div></section>
