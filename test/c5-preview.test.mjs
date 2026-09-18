@@ -87,6 +87,22 @@ test("homepage presents the two core services and both security-system paths", (
   assert.ok(h.includes('href="/adt-installation-new-mexico.html"'), "ADT-monitored path missing");
 });
 
+test("security-systems page names both paths, camera-inclusive pricing, and core components", () => {
+  const h = readSite("home-security.html");
+  for (const copy of [
+    "Local system",
+    "ADT monitored",
+    "$69.99",
+    "/mo or less",
+    "cameras included",
+    "Door &amp; window sensors",
+    "Life-safety devices",
+    "Motion detection",
+    "Flood &amp; extreme temperatures"
+  ]) assert.ok(h.toLowerCase().includes(copy.toLowerCase()), `security-systems page missing: ${copy}`);
+  assert.ok(h.includes("Secure24, an ADT Authorized Dealer"), "ADT referral relationship missing");
+});
+
 test("evidence-bearing routes reference only approved project crops", () => {
   const approved = new Set([
     "src/assets/img-src/recent-work/santa-fe-camera.jpg",
