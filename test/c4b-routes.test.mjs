@@ -37,7 +37,7 @@ const SVG = "/assets/partners/secure24-adt-authorized-dealer-blue.svg";
 test("ADT route contains the two exact approved relationship statements", () => {
   const h = read(ADT);
   assert.ok(h.includes("If you're looking for an ADT system, you've found the right place. SWSA helps homeowners discuss their security needs and handles ADT referrals through Secure24, an ADT Authorized Dealer."), "lead statement missing");
-  assert.ok(h.includes("SWSA is your local point of contact for the initial conversation. Secure24 is the ADT Authorized Dealer associated with the referral."), "boundary statement missing");
+  assert.ok(h.includes("SWSA is your local point of contact for the consultation. Our local, professional installer will complete the work. Secure24 is the ADT Authorized Dealer associated with the referral."), "boundary statement missing");
 });
 
 test("ADT route contains the owner-approved monthly camera-inclusive offer", () => {
