@@ -657,6 +657,10 @@ section { padding-block: var(--space-12); }
 .home-smart-devices strong { color: var(--navy); }
 .home-smart-devices small { color: var(--slate); }
 @media (hover:hover) { .home-smart-devices li:hover { padding-left: 8px; background: rgba(114,183,225,.07); } }
+@supports (animation-timeline: view()) {
+  .home-smart-devices li { animation: smart-device-in linear both; animation-timeline: view(); animation-range: entry 0% cover 28%; }
+  @keyframes smart-device-in { from { opacity: .25; transform: translateX(14px); } to { opacity: 1; transform: translateX(0); } }
+}
 @media (min-width: 820px) { .home-smart-band { grid-template-columns: .92fr 1.08fr; align-items: end; } }
 @media (max-width: 520px) { .home-smart-devices li { grid-template-columns: 34px 1fr; } .home-smart-devices small { grid-column: 2; } }
 .security-system-options { color: var(--white); background: #0B1727; }
