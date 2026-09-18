@@ -766,3 +766,95 @@ h1, h2, h3 { letter-spacing: -.04em; }
 @media (max-width: 700px) {
   .sticky-start { display: none; }
 }
+
+/* ========================================================================
+   Release 7 — business pages become editorial briefs, not dashboards
+   ======================================================================== */
+
+.surveillance-hero { background: #f2f0eb; }
+.assessment-hero { background: #edf0f1; }
+.access-hero { background: #f2eee8; }
+.alarm-hero { background: #eaf0ed; }
+.monitoring-hero { background: #eceff3; }
+
+/* The right side is a quiet field note. Removing the dark faux-interface
+   treatment keeps the information useful without suggesting software UI. */
+.business-plan,
+.surveillance-console,
+.assessment-map,
+.access-stage,
+.alarm-stage,
+.monitoring-stage {
+  align-self: end;
+  min-height: 0;
+  padding: 0 0 0 clamp(26px, 4vw, 56px);
+  overflow: visible;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-left: 1px solid #aeb9ba;
+  border-radius: 0;
+  box-shadow: none;
+}
+.business-plan::after,
+.surveillance-console::after,
+.assessment-map::after,
+.access-stage::after,
+.alarm-stage::after,
+.monitoring-stage::after { display: none; }
+
+.business-plan-top,
+.surveillance-console-bar,
+.assessment-map-head,
+.access-stage-top,
+.alarm-stage-head,
+.monitoring-stage-head { color: var(--action); border-color: #c6cecf; }
+.business-plan-top b,
+.access-stage-top b { padding: 0; color: var(--action); background: transparent; border-radius: 0; }
+.business-plan-summary > strong,
+.business-plan-summary span,
+.surveillance-console-bar strong,
+.assessment-map-head strong,
+.assessment-map-lead,
+.access-stage-title,
+.access-stage li strong,
+.alarm-stage-head strong,
+.alarm-stage-list strong,
+.monitoring-stage-head strong,
+.monitoring-stage-lead,
+.monitoring-stage-list strong { color: var(--navy); }
+.business-plan-summary p,
+.business-plan-note,
+.surveillance-view-list small,
+.surveillance-review-line span,
+.surveillance-review-line strong,
+.assessment-map-list small,
+.access-stage li small,
+.access-stage-note,
+.alarm-stage-list small,
+.alarm-stage > p,
+.monitoring-stage-list small { color: var(--slate); }
+.business-plan-zones,
+.business-plan-zones li,
+.surveillance-view-list > div,
+.access-stage ol,
+.access-stage li,
+.alarm-stage-list > div,
+.monitoring-stage-list > div { border-color: #c6cecf; }
+.business-plan-zones li { color: var(--navy); }
+.business-plan-zones span,
+.surveillance-view-list span,
+.assessment-map-list span,
+.access-stage li > span,
+.alarm-stage-list span,
+.monitoring-stage-list span { color: var(--action); }
+.surveillance-view-list strong { color: var(--navy); }
+
+@media (max-width: 759px) {
+  .business-plan,
+  .surveillance-console,
+  .assessment-map,
+  .access-stage,
+  .alarm-stage,
+  .monitoring-stage { padding: 30px 0 0; border-top: 1px solid #aeb9ba; border-left: 0; }
+}
