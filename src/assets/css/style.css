@@ -399,8 +399,9 @@ section { padding-block: var(--space-12); }
 .contact-package-featured span { color: #A8DFFF; }
 .contact-package-featured strong, .contact-package-featured b { color: var(--white); }
 .contact-package-featured small { color: var(--night); background: var(--electric); }
-.contact-package-featured::after { content: "BEST COVERAGE"; position: absolute; top: 20px; right: 20px; padding: 6px 9px; color: var(--night); background: var(--electric); border-radius: 2px; font-size: .75rem; font-weight: 800; letter-spacing: .06em; }
+.contact-package-featured::after { content: "3 CAMERAS"; position: absolute; top: 20px; right: 20px; padding: 6px 9px; color: var(--night); background: var(--electric); border-radius: 2px; font-size: .75rem; font-weight: 800; letter-spacing: .06em; }
 .contact-package-note { max-width: 80ch; margin: var(--space-8) 0 0; color: #AEBFCC; font-size: .82rem; }
+.contact-package-note a { display: inline-block; margin-left: 4px; color: var(--electric); font-weight: 700; }
 @media (min-width: 780px) { .contact-package-list { grid-template-columns: repeat(3,1fr); } }
 .contact-security-start { margin-top: clamp(64px,9vw,112px); padding-top: clamp(48px,7vw,84px); border-top: 1px solid rgba(255,255,255,.2); }
 .contact-security-heading { display: grid; gap: var(--space-4); margin-bottom: var(--space-10); }
@@ -1091,7 +1092,7 @@ section { padding-block: var(--space-12); }
 .pricing-featured > p:not(.pricing-label):not(.pricing-price) { color: #D3E0EB !important; }
 .pricing-featured a { color: var(--night); background: var(--electric); }
 .pricing-featured a:hover { background: #93D9FF; }
-.pricing-featured::before { content: "BEST COVERAGE"; position: absolute; top: 20px; right: 20px; padding: 6px 9px; color: var(--night); background: var(--electric); border-radius: 2px; font-size: .75rem; font-weight: 800; letter-spacing: .06em; }
+.pricing-featured::before { content: "3 CAMERAS"; position: absolute; top: 20px; right: 20px; padding: 6px 9px; color: var(--night); background: var(--electric); border-radius: 2px; font-size: .75rem; font-weight: 800; letter-spacing: .06em; }
 .pricing-note { display: grid; gap: var(--space-4); padding-top: var(--space-8); color: var(--slate); font-size: .9rem; }
 .pricing-note p { max-width: 80ch; margin: 0; }
 .pricing-note strong { color: var(--navy); }
