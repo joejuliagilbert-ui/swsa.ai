@@ -125,6 +125,18 @@ test("regional camera pages bridge to both local and professionally monitored sy
   }
 });
 
+test("customer-facing navigation labels use Security Systems consistently", () => {
+  const routes = [
+    "index.html", "home-security.html", "about.html", "404.html",
+    "albuquerque-home-security.html", "santa-fe-home-security.html",
+    "farmington-home-security.html", "durango-home-security.html"
+  ];
+  for (const route of routes) {
+    const h = readSite(route);
+    assert.ok(h.includes("Security Systems"), `${route} missing Security Systems label`);
+  }
+});
+
 test("evidence-bearing routes reference only approved project crops", () => {
   const approved = new Set([
     "src/assets/img-src/recent-work/santa-fe-camera.jpg",
