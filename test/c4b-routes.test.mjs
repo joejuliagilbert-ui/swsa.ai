@@ -28,6 +28,7 @@ const STORIES = [
   "installs/albuquerque-security-installation-march-2026.html",
   "installs/santa-fe-security-installation-march-2026.html",
   "installs/bosque-farms-camera-security-june-2026.html",
+  "installs/durango-security-installation-february-2026.html",
   "installs/rio-rancho-camera-doorbell-march-2026.html",
   "installs/rio-rancho-camera-smart-home-june-2026.html"
 ];
@@ -112,7 +113,7 @@ test("transition routes: meta refresh + canonical to Recent Work, no customer na
   }
 });
 
-test("six retained stories are anonymous full pages, self-canonical, one H1", () => {
+test("seven retained stories are anonymous full pages, self-canonical, one H1", () => {
   for (const s of STORIES) {
     const h = read(s);
     assert.equal((h.match(/<h1\b/gi) || []).length, 1, `${s} H1`);

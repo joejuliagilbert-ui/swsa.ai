@@ -198,5 +198,45 @@
       "approvalDate": "2026-09-18",
       "privacyReview": "passed"
     }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/durango-adt-touchscreen.jpg",
+    "approval": {
+      "sourceId": "durango-february-28-2026-img-2799",
+      "provenance": "Full-resolution owner-supplied original from the February 28, 2026 Durango installation via iCloud share; tightly cropped to exclude tools and identifiable sticker details, then re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/durango-key-fob.jpg",
+    "approval": {
+      "sourceId": "durango-february-28-2026-img-2800",
+      "provenance": "Full-resolution owner-supplied original from the February 28, 2026 Durango installation via iCloud share; device-focused crop retained and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/durango-entry-sensor.jpg",
+    "approval": {
+      "sourceId": "durango-february-28-2026-img-2801",
+      "provenance": "Full-resolution owner-supplied original from the February 28, 2026 Durango installation via iCloud share; entry-device framing retained and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/durango-life-safety.jpg",
+    "approval": {
+      "sourceId": "durango-february-28-2026-img-2802",
+      "provenance": "Full-resolution owner-supplied original from the February 28, 2026 Durango installation via iCloud share; life-safety-device crop retained and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
   }
 ]
