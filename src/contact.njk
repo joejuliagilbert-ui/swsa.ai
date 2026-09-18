@@ -1,18 +1,55 @@
 ---
 layout: layouts/base.njk
 permalink: "/contact.html"
-title: "Contact"
-description: "Call, text, or email SWSA.ai about security, camera, and smart-home installation across New Mexico and the Four Corners region."
+title: "Contact for Camera & Security Installation"
+description: "Call, text, or email SWSA.ai about outdoor camera, video doorbell, and monitored security installation across New Mexico and the Four Corners."
 ---
-<div class="wrap prose">
-  <p class="eyebrow">Contact</p>
-  <h1>Call, text, or email</h1>
-  <p class="lede">Call or text is the fastest way to reach us. Email is available when you would rather send the details in writing.</p>
+<section class="contact-hero">
+  <div class="wrap contact-hero-grid">
+    <div class="contact-intro">
+      <p class="eyebrow">Camera &amp; security installation</p>
+      <h1>Tell me what you want to see.</h1>
+      <p class="lede">Call or text for the fastest response. A few useful details are enough to start planning your camera or security installation.</p>
+      <div class="contact-primary-actions">
+        <a class="contact-method contact-method-primary" href="tel:{{ site.phone_tel }}"><span>Call</span><strong>{{ site.phone_display }}</strong><small>Talk through the property</small></a>
+        <a class="contact-method" href="sms:{{ site.phone_tel }}"><span>Text</span><strong>{{ site.phone_display }}</strong><small>Send the details and photos</small></a>
+        <a class="contact-method" href="mailto:{{ site.email }}"><span>Email</span><strong>{{ site.email }}</strong><small>Use email for a longer note</small></a>
+      </div>
+    </div>
 
-  <div class="actions">
-    {% include "partials/contact-actions.njk" %}
-    <a class="cta cta-quiet" href="mailto:{{ site.email }}">Email {{ site.email }}</a>
+    <aside class="quote-note" aria-labelledby="quote-note-title">
+      <p class="quote-note-kicker">A helpful first message</p>
+      <h2 id="quote-note-title">Send these four things.</h2>
+      <ol>
+        <li><span>01</span><p><strong>Your city</strong><small>So travel and scheduling can be confirmed.</small></p></li>
+        <li><span>02</span><p><strong>What you want covered</strong><small>Front entry, driveway, yard, gate, business, or another area.</small></p></li>
+        <li><span>03</span><p><strong>What equipment you have</strong><small>Include the camera model if you already purchased it.</small></p></li>
+        <li><span>04</span><p><strong>A photo if it helps</strong><small>A wide view of the mounting area can answer several questions.</small></p></li>
+      </ol>
+    </aside>
   </div>
+</section>
 
-  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
-</div>
+<section class="wrap contact-next">
+  <div class="section-heading">
+    <p class="eyebrow">What happens next</p>
+    <h2>A clear next step, not a sales maze.</h2>
+    <p>We will talk through the property, the view you need, the equipment, and any connection or power questions. If the project is a fit, the next step is scheduling or a closer look at the property.</p>
+  </div>
+  <div class="contact-next-grid">
+    <article><span>01</span><h3>Quick conversation</h3><p>Describe the property and what you want cameras or security to accomplish.</p></article>
+    <article><span>02</span><h3>Practical plan</h3><p>Confirm likely placement, equipment, power, connection, and installation needs.</p></article>
+    <article><span>03</span><h3>Schedule the work</h3><p>Choose a time for the installation or an on-site assessment when one is needed.</p></article>
+  </div>
+</section>
+
+<section class="contact-area">
+  <div class="wrap contact-area-grid">
+    <div><p class="eyebrow">Local service</p><h2>New Mexico &amp; the Four Corners.</h2></div>
+    <div>
+      <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
+      <p class="contact-area-note">Include your city when you reach out so availability can be confirmed quickly.</p>
+      <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+    </div>
+  </div>
+</section>
