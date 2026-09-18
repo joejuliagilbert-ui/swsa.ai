@@ -148,7 +148,10 @@ test("evidence-bearing routes reference only approved project crops", () => {
     "src/assets/img-src/recent-work/rio-rancho-nest-thermostat.jpg",
     "src/assets/img-src/recent-work/rio-rancho-eave-camera.jpg",
     "src/assets/img-src/recent-work/rio-rancho-doorbell-camera.jpg",
-    "src/assets/img-src/recent-work/rio-rancho-smart-lock.jpg"
+    "src/assets/img-src/recent-work/rio-rancho-smart-lock.jpg",
+    "src/assets/img-src/recent-work/bosque-farms-adt-panel.jpg",
+    "src/assets/img-src/recent-work/bosque-farms-door-sensor.jpg",
+    "src/assets/img-src/recent-work/bosque-farms-outdoor-camera.jpg"
   ]);
   const files = ["index", "home-security", "security-cameras-new-mexico", "albuquerque-home-security", "santa-fe-home-security"];
   for (const f of files) {

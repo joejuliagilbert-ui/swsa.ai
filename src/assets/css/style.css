@@ -998,9 +998,15 @@ section { padding-block: var(--space-12); }
 .story-media-rio figure { aspect-ratio: 4 / 5; }
 .story-media-detail-pair figure { aspect-ratio: 4 / 3; }
 .story-media-detail-pair figure:last-child img { object-position: 50% 62%; }
+.story-media-bosque { display: grid; gap: var(--space-4); }
+.story-media-bosque figure:first-child { aspect-ratio: 4 / 3; }
+.story-media-bosque figure:last-child { aspect-ratio: 4 / 5; }
+.story-media-bosque-detail figure { aspect-ratio: 16 / 10; }
+.story-media-bosque-detail img { object-position: 65% 50%; }
 @media (min-width: 640px) {
   .story-media-rio { grid-template-columns: 1.08fr .92fr; }
   .story-media-detail-pair { grid-template-columns: 1.2fr .8fr; }
+  .story-media-bosque { grid-template-columns: 1.15fr .65fr; align-items: stretch; }
 }
 .media-caption { color: var(--slate); font-size: .8125rem; margin-top: var(--space-2); }
 

@@ -108,5 +108,35 @@
       "approvalDate": "2026-09-18",
       "privacyReview": "passed"
     }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/bosque-farms-adt-panel.jpg",
+    "approval": {
+      "sourceId": "bosque-farms-june-2026-adt-panel",
+      "provenance": "Owner-supplied photo from the June 2026 Bosque Farms installation via iCloud share; tightly cropped to exclude the business card and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/bosque-farms-door-sensor.jpg",
+    "approval": {
+      "sourceId": "bosque-farms-june-2026-door-sensor",
+      "provenance": "Owner-supplied photo from the June 2026 Bosque Farms installation via iCloud share; selected for device-focused framing and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/bosque-farms-outdoor-camera.jpg",
+    "approval": {
+      "sourceId": "bosque-farms-june-2026-outdoor-camera",
+      "provenance": "Owner-supplied photo from the June 2026 Bosque Farms installation via iCloud share; selected for device-focused framing and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
   }
 ]
