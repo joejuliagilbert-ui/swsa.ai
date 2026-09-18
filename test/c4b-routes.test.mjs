@@ -40,9 +40,16 @@ test("ADT route contains the two exact approved relationship statements", () => 
   assert.ok(h.includes("SWSA is your local point of contact for the initial conversation. Secure24 is the ADT Authorized Dealer associated with the referral."), "boundary statement missing");
 });
 
-test("ADT route has no prohibited authorization / pricing / offer / guarantee language", () => {
+test("ADT route contains the owner-approved monthly camera-inclusive offer", () => {
   const h = read(ADT);
-  const banned = [/\bguarantee/i, /\bofficial\b/i, /\bexclusive\b/i, /\bpreferred\b/i, /\bcertified\b/i, /\bbest\b/i, /\bpricing\b/i, /\bsavings\b/i, /\bpromotion/i, /response time/i, /\bcontract\b/i,
+  assert.ok(h.includes("Complete ADT security systems, including cameras"), "camera-inclusive offer missing");
+  assert.ok(h.includes("69.99"), "monthly amount missing");
+  assert.ok(h.includes("/mo or less"), "monthly qualifier missing");
+});
+
+test("ADT route has no prohibited authorization / guarantee language", () => {
+  const h = read(ADT);
+  const banned = [/\bguarantee/i, /\bofficial\b/i, /\bexclusive\b/i, /\bpreferred\b/i, /\bcertified\b/i, /\bbest\b/i, /\bsavings\b/i, /\bpromotion/i, /response time/i, /\bcontract\b/i,
     // SWSA must never be claimed as the authorized dealer (the mark belongs to Secure24)
     /SWSA(?:\s+is)?,?\s+(?:an?|the)\s+(?:ADT\s+)?Authorized Dealer/i];
   for (const re of banned) {
