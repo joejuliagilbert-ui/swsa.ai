@@ -110,6 +110,46 @@
     }
   },
   {
+    "file": "src/assets/img-src/recent-work/rio-rancho-march-exterior-camera.jpg",
+    "approval": {
+      "sourceId": "rio-rancho-march-17-2026-img-3041",
+      "provenance": "Full-resolution owner-supplied original from the March 17, 2026 Rio Rancho installation via iCloud share; device-focused frame selected and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/rio-rancho-march-front-entry.jpg",
+    "approval": {
+      "sourceId": "rio-rancho-march-17-2026-img-3048",
+      "provenance": "Full-resolution owner-supplied original from the March 17, 2026 Rio Rancho installation via iCloud share; privacy-safe entry frame selected and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/rio-rancho-march-doorbell-context.jpg",
+    "approval": {
+      "sourceId": "rio-rancho-march-17-2026-img-3050",
+      "provenance": "Full-resolution owner-supplied original from the March 17, 2026 Rio Rancho installation via iCloud share; doorbell-focused frame selected and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/rio-rancho-march-doorbell-detail.jpg",
+    "approval": {
+      "sourceId": "rio-rancho-march-17-2026-img-3051",
+      "provenance": "Full-resolution owner-supplied original from the March 17, 2026 Rio Rancho installation via iCloud share; tight device detail selected and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
     "file": "src/assets/img-src/recent-work/bosque-farms-adt-panel.jpg",
     "approval": {
       "sourceId": "bosque-farms-june-2026-adt-panel",

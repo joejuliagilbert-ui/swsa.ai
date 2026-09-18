@@ -27,6 +27,8 @@ const STORIES = [
   "installs/albuquerque-security-installation-june-2026.html",
   "installs/albuquerque-security-installation-march-2026.html",
   "installs/santa-fe-security-installation-march-2026.html",
+  "installs/bosque-farms-camera-security-june-2026.html",
+  "installs/rio-rancho-camera-doorbell-march-2026.html",
   "installs/rio-rancho-camera-smart-home-june-2026.html"
 ];
 const TRANSITIONS = [
@@ -110,13 +112,13 @@ test("transition routes: meta refresh + canonical to Recent Work, no customer na
   }
 });
 
-test("four retained stories are anonymous full pages, self-canonical, one H1", () => {
+test("six retained stories are anonymous full pages, self-canonical, one H1", () => {
   for (const s of STORIES) {
     const h = read(s);
     assert.equal((h.match(/<h1\b/gi) || []).length, 1, `${s} H1`);
     assert.ok(h.includes(`<link rel="canonical" href="${ORIGIN}/${s}">`), `${s} canonical`);
-    assert.ok(h.includes('class="sticky-start"'), `${s} camera pricing action`);
-    assert.ok(h.includes("From $349 installed"), `${s} camera starting price`);
+    assert.match(h, /class="sticky-start(?: sticky-security)?"/, `${s} pricing action`);
+    assert.match(h, /From \$349 installed|\$69\.99\/mo or less/, `${s} relevant starting price`);
     const sm = read("sitemap.xml");
     assert.equal(sm.split(`<loc>${ORIGIN}/${s}</loc>`).length - 1, 1, `${s} sitemap once`);
   }
