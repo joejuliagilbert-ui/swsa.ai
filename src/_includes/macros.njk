@@ -43,11 +43,15 @@
 </nav>
 {% endmacro %}
 
-{# Compact FAQ (native headings, no accordion JS). items = [{q, a}] #}
+{# Compact FAQ (native details, no accordion JS). items = [{q, a}] #}
 {% macro faqs(items) %}
 <section class="faq wrap">
-  <h2>Questions</h2>
-{% for it in items %}  <h3>{{ it.q }}</h3>
-  <p>{{ it.a }}</p>
-{% endfor %}</section>
+  <div class="faq-heading"><p class="eyebrow">Good to know</p><h2>Questions, answered plainly.</h2></div>
+  <div class="faq-list">
+{% for it in items %}    <details>
+      <summary>{{ it.q }}<span aria-hidden="true">+</span></summary>
+      <p>{{ it.a }}</p>
+    </details>
+{% endfor %}  </div>
+</section>
 {% endmacro %}

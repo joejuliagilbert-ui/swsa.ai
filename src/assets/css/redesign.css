@@ -702,3 +702,67 @@ h1, h2, h3 { letter-spacing: -.04em; }
   .camera-detail-stage { margin-top: 14px; }
   .adt-layer-grid article { min-height: 250px; }
 }
+
+/* ========================================================================
+   Release 6 — quieter interaction, useful details
+   ======================================================================== */
+
+/* FAQs behave like a calm reference page, not a stack of cards. */
+.faq {
+  display: grid;
+  grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(50px, 9vw, 140px);
+  padding-block: clamp(90px, 12vw, 165px);
+}
+.faq-heading { position: sticky; top: 120px; align-self: start; }
+.faq-heading h2 { max-width: 9ch; margin: 12px 0 0; font-size: clamp(2.5rem, 4.5vw, 4.8rem); line-height: .95; letter-spacing: -.055em; }
+.faq-list { border-top: 1px solid #cbd2d3; }
+.faq-list details { border-bottom: 1px solid #cbd2d3; }
+.faq-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 92px;
+  padding: 22px 0;
+  color: var(--navy);
+  font-size: clamp(1.08rem, 1.45vw, 1.3rem);
+  font-weight: 680;
+  letter-spacing: -.025em;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary span { color: var(--action); font-size: 1.6rem; font-weight: 400; transition: transform .28s ease; }
+.faq-list details[open] summary span { transform: rotate(45deg); }
+.faq-list details p { max-width: 62ch; margin: -4px 50px 28px 0; color: var(--slate); font-size: 1rem; line-height: 1.7; }
+.faq-list summary:focus-visible { outline: 3px solid rgba(14, 99, 156, .35); outline-offset: 6px; }
+
+/* A lost visitor gets four clear ways forward. */
+.not-found { min-height: calc(100svh - 74px); padding-block: clamp(100px, 14vw, 190px); background: #e8edeb; }
+.not-found-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr); align-items: end; gap: clamp(70px, 12vw, 180px); }
+.not-found-copy h1 { max-width: 8ch; margin: 14px 0 26px; font-size: clamp(4.3rem, 9vw, 9rem); line-height: .84; letter-spacing: -.075em; }
+.not-found-copy > p:not(.eyebrow) { max-width: 48ch; margin: 0 0 34px; color: var(--slate); font-size: clamp(1.05rem, 1.4vw, 1.22rem); line-height: 1.6; }
+.not-found-links { border-top: 1px solid #bcc6c5; }
+.not-found-links > p { margin: 22px 0 12px; color: #667371; font-size: .72rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+.not-found-links a { display: flex; justify-content: space-between; gap: 20px; padding: 19px 0; color: var(--navy); border-bottom: 1px solid #bcc6c5; font-weight: 670; text-decoration: none; }
+.not-found-links a span:last-child { color: var(--action); transition: transform .22s ease; }
+.not-found-links a:hover span:last-child { transform: translate(3px, -3px); }
+
+/* Mobile navigation reads as a compact page rather than a dropdown widget. */
+.mobile-nav-panel { width: min(92vw, 420px); padding: 16px; border: 1px solid rgba(7, 19, 33, .1); border-radius: 2px; box-shadow: 0 26px 70px rgba(7, 19, 33, .18); }
+.mobile-nav-panel a { min-height: 54px; padding: 14px 10px; border-bottom: 1px solid #dfe4e4; font-size: 1.05rem; font-weight: 650; }
+.mobile-nav-panel a:last-child { border-bottom: 0; }
+
+@media (max-width: 759px) {
+  .faq { grid-template-columns: 1fr; gap: 46px; padding-block: 78px 100px; }
+  .faq-heading { position: static; }
+  .faq-heading h2 { max-width: 10ch; }
+  .faq-list summary { min-height: 80px; }
+  .not-found-grid { grid-template-columns: 1fr; align-items: start; gap: 70px; }
+  .not-found-copy h1 { font-size: clamp(4rem, 20vw, 6rem); }
+}
+
+@media (max-width: 700px) {
+  .sticky-start { display: none; }
+}
