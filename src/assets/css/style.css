@@ -549,18 +549,15 @@ section { padding-block: var(--space-12); }
 .about-hero .eyebrow { color: #A8DFFF; }
 .about-hero h1 { max-width: 12ch; color: var(--white); font-size: clamp(2.8rem, 5.7vw, 5.4rem); line-height: .96; letter-spacing: -.055em; }
 .about-hero .lede { max-width: 48ch; color: #D3E0EB; font-size: clamp(1.05rem, 1.5vw, 1.22rem); }
+.about-hero-copy { animation: core-copy-enter .72s cubic-bezier(.22,.7,.2,1) both; }
 .about-owner-card { position: relative; margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.18); border-radius: 22px; background: #142B43; box-shadow: 0 36px 90px rgba(0,0,0,.32); }
 .about-owner-card picture { overflow: hidden; aspect-ratio: 4 / 5; }
-.about-owner-image { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.9) contrast(1.04); }
+.about-owner-image { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.9) contrast(1.04); transition: transform 1.1s cubic-bezier(.2,.7,.2,1), filter .8s ease; }
+.about-owner-card { animation: core-visual-enter .88s .08s cubic-bezier(.22,.7,.2,1) both; }
+.about-owner-card:hover .about-owner-image { filter: saturate(.96) contrast(1.04); transform: scale(1.02); }
 .about-owner-card figcaption { position: absolute; right: 18px; bottom: 18px; left: 18px; display: grid; padding: 14px 16px; color: var(--white); background: rgba(8,17,31,.82); border: 1px solid rgba(255,255,255,.18); border-radius: 12px; backdrop-filter: blur(12px); }
 .about-owner-card figcaption span { color: #B8C8D8; font-size: .78rem; }
 @media (min-width: 900px) { .about-hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(330px, .62fr); } .about-owner-card { max-width: 450px; margin-left: auto; } }
-.about-accountability { padding-block: clamp(72px, 10vw, 128px); }
-.about-principles { display: grid; gap: 1px; border: 1px solid #D9DFE2; background: #D9DFE2; }
-.about-principles article { padding: clamp(24px, 4vw, 38px); background: var(--white); }
-.about-principles article > span { display: block; margin-bottom: var(--space-12); color: var(--action); font-size: .8rem; font-weight: 700; letter-spacing: .1em; }
-.about-principles article p { color: var(--slate); }
-@media (min-width: 760px) { .about-principles { grid-template-columns: repeat(4, 1fr); } }
 .about-focus { color: var(--white); background: var(--navy); }
 .about-focus-grid { display: grid; gap: var(--space-12); align-items: start; }
 .about-focus .eyebrow { color: #A8DFFF; }
