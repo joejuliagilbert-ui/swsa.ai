@@ -66,6 +66,14 @@ test("contact page: working tel/sms/mailto, no form, no disabled control, no for
   assert.ok(!/message form|coming soon|not yet active/i.test(h), "contact must not claim a form is available");
 });
 
+test("contact page offers prefilled local and ADT-monitored security-system texts", () => {
+  const h = readSite("contact.html");
+  assert.ok(h.includes("local%20security%20system%20with%20cameras"), "local-system text link missing");
+  assert.ok(h.includes("ADT-monitored%20security%20system%20with%20cameras%20included"), "ADT-system text link missing");
+  assert.ok(h.includes("%2469.99%2Fmo%20or%20less"), "ADT text link must carry approved price");
+  assert.ok(h.includes("Secure24, an ADT Authorized Dealer"), "contact page must explain the referral path");
+});
+
 test("homepage emits the camera-first production title", () => {
   const h = readSite("index.html");
   assert.match(h, /<title>Security Camera Installation in New Mexico &amp; the Four Corners \| SWSA\.ai<\/title>/);
