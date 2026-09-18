@@ -288,10 +288,6 @@ section { padding-block: var(--space-12); }
   .section-heading .eyebrow { grid-column: 1 / -1; }
   .service-grid { grid-template-columns: repeat(3, 1fr); }
 }
-.camera-callout { padding-block: 0; background: #DDF1FC; border-block: 1px solid #BEDCEB; }
-.camera-callout-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); padding-block: var(--space-6); }
-.camera-callout p { margin: 0; }
-.camera-callout .actions { margin: 0; }
 
 /* Dedicated camera-installation page */
 .camera-breadcrumbs { position: relative; z-index: 2; }
