@@ -375,3 +375,207 @@ h1, h2, h3 { letter-spacing: -.04em; }
   .about-promise-grid article { min-height: 250px; }
   .about-promise-grid h3 { margin-top: 70px; }
 }
+
+/* ========================================================================
+   Release 3 — commercial pages as one precise editorial system
+   ======================================================================== */
+
+/* Light architectural canvas; dark panels carry the technical detail. */
+.business-breadcrumbs,
+.surveillance-breadcrumbs,
+.assessment-breadcrumbs,
+.access-breadcrumbs,
+.alarm-breadcrumbs,
+.monitoring-breadcrumbs { background: #e9edec; }
+
+.business-breadcrumbs .breadcrumbs a,
+.business-breadcrumbs .breadcrumbs [aria-current="page"],
+.surveillance-breadcrumbs .breadcrumbs a,
+.surveillance-breadcrumbs .breadcrumbs [aria-current="page"],
+.assessment-breadcrumbs .breadcrumbs a,
+.assessment-breadcrumbs .breadcrumbs [aria-current="page"],
+.access-breadcrumbs .breadcrumbs a,
+.access-breadcrumbs .breadcrumbs [aria-current="page"],
+.alarm-breadcrumbs .breadcrumbs a,
+.alarm-breadcrumbs .breadcrumbs [aria-current="page"],
+.monitoring-breadcrumbs .breadcrumbs a,
+.monitoring-breadcrumbs .breadcrumbs [aria-current="page"] { color: #5c6870; }
+
+.business-hero,
+.surveillance-hero,
+.assessment-hero,
+.access-hero,
+.alarm-hero,
+.monitoring-hero {
+  margin-top: 0;
+  padding-block: clamp(64px, 9vw, 126px);
+  color: var(--ink);
+  background: #e9edec;
+}
+.business-hero::before,
+.surveillance-hero::before,
+.assessment-hero::before,
+.access-hero::before,
+.alarm-hero::before,
+.monitoring-hero::before { display: none; }
+
+.business-hero .eyebrow,
+.surveillance-hero .eyebrow,
+.assessment-hero .eyebrow,
+.access-hero .eyebrow,
+.alarm-hero .eyebrow,
+.monitoring-hero .eyebrow { color: var(--action); }
+
+.business-hero h1,
+.surveillance-hero h1,
+.assessment-hero h1,
+.access-hero h1,
+.alarm-hero h1,
+.monitoring-hero h1 {
+  max-width: 10.5ch;
+  color: var(--ink);
+  font-size: clamp(3.2rem, 6.4vw, 6.4rem);
+  line-height: .91;
+  letter-spacing: -.063em;
+}
+.business-hero .lede,
+.surveillance-hero .lede,
+.assessment-hero .lede,
+.access-hero .lede,
+.alarm-hero .lede,
+.monitoring-hero .lede { max-width: 45ch; color: var(--slate); }
+
+.business-hero .cta-ghost,
+.surveillance-hero .cta-ghost,
+.assessment-hero .cta-ghost,
+.access-hero .cta-ghost,
+.alarm-hero .cta-ghost,
+.monitoring-hero .cta-ghost { color: var(--navy); border-color: #9aa8ae; }
+.business-hero .cta-ghost:hover,
+.surveillance-hero .cta-ghost:hover,
+.assessment-hero .cta-ghost:hover,
+.access-hero .cta-ghost:hover,
+.alarm-hero .cta-ghost:hover,
+.monitoring-hero .cta-ghost:hover { color: var(--navy); background: white; border-color: var(--navy); }
+
+.access-signals, .alarm-signals, .monitoring-signals { color: var(--slate); }
+
+.business-plan,
+.surveillance-console,
+.assessment-map,
+.access-stage,
+.alarm-stage,
+.monitoring-stage {
+  min-height: 520px;
+  color: white;
+  background: var(--night);
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 34px 80px rgba(7,19,33,.18);
+}
+.business-plan::before,
+.surveillance-console::before,
+.assessment-map::before,
+.access-stage::before,
+.access-stage::after,
+.alarm-stage::before,
+.monitoring-stage::before { display: none; }
+
+/* Remove the generated-card rhythm from decision grids. */
+.business-question-grid,
+.surveillance-question-grid,
+.assessment-signal-grid,
+.access-use-grid,
+.alarm-layer-grid {
+  gap: 0;
+  background: transparent;
+  border: 0;
+}
+.business-question-grid article,
+.surveillance-question-grid article,
+.assessment-signal-grid article,
+.access-use-grid article,
+.alarm-layer-grid article {
+  min-height: 310px;
+  padding: clamp(28px, 4vw, 46px) 0;
+  background: transparent;
+  border-top: 1px solid #cdd3d3;
+}
+.business-question-grid article > span,
+.surveillance-question-grid article > span,
+.assessment-signal-grid article > span,
+.access-use-grid article > span,
+.alarm-layer-grid article > span { margin-bottom: clamp(70px, 8vw, 110px); }
+.business-question-grid article p,
+.surveillance-question-grid article p,
+.assessment-signal-grid article p,
+.access-use-grid article p,
+.alarm-layer-grid article p { max-width: 30ch; color: var(--slate); }
+
+/* Section headings get breathing room, not extra chrome. */
+.business-priorities,
+.surveillance-questions,
+.assessment-signals,
+.access-questions,
+.alarm-map,
+.monitoring-decisions { padding-block: clamp(90px, 12vw, 170px); }
+.business-priorities .section-heading,
+.surveillance-questions .section-heading,
+.assessment-signals .section-heading,
+.access-section-heading,
+.alarm-section-heading,
+.monitoring-section-heading { margin-bottom: clamp(54px, 7vw, 88px); }
+.business-priorities .section-heading h2,
+.surveillance-questions .section-heading h2,
+.assessment-signals .section-heading h2,
+.access-section-heading h2,
+.alarm-section-heading h2,
+.monitoring-section-heading h2 { max-width: 16ch; font-size: clamp(2.6rem, 5vw, 5rem); line-height: .95; }
+
+/* Long service bands behave like magazine spreads. */
+.business-operation,
+.surveillance-planning,
+.assessment-walk,
+.access-camera-band,
+.alarm-camera-band,
+.monitoring-camera-band { padding-block: clamp(90px, 11vw, 150px); }
+.business-operation h2,
+.surveillance-planning h2,
+.assessment-walk h2,
+.access-camera-band h2,
+.alarm-camera-band h2,
+.monitoring-camera-band h2 { font-size: clamp(2.6rem, 5vw, 5rem); line-height: .95; }
+
+/* Numbered related-service navigation is intentionally flat and scannable. */
+.business-layer-links a,
+.assessment-next nav a,
+.access-plan nav a,
+.alarm-decisions nav a,
+.monitoring-plan nav a { min-height: 84px; align-items: center; }
+
+@media (min-width: 760px) {
+  .business-question-grid,
+  .surveillance-question-grid,
+  .assessment-signal-grid,
+  .access-use-grid,
+  .alarm-layer-grid { grid-template-columns: repeat(4, 1fr); }
+  .business-question-grid article + article,
+  .surveillance-question-grid article + article,
+  .assessment-signal-grid article + article,
+  .access-use-grid article + article,
+  .alarm-layer-grid article + article { padding-left: clamp(20px, 3vw, 38px); border-left: 1px solid #cdd3d3; }
+}
+
+@media (max-width: 759px) {
+  .business-plan,
+  .surveillance-console,
+  .assessment-map,
+  .access-stage,
+  .alarm-stage,
+  .monitoring-stage { min-height: 0; }
+  .business-question-grid article,
+  .surveillance-question-grid article,
+  .assessment-signal-grid article,
+  .access-use-grid article,
+  .alarm-layer-grid article { min-height: 250px; }
+}
