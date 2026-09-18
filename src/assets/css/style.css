@@ -1039,11 +1039,14 @@ section { padding-block: var(--space-12); }
 .sticky-start p span { display: block; color: #A8DFFF; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .sticky-start p strong { display: block; margin-top: 3px; color: var(--white); font-size: 1.08rem; }
 .sticky-start > a { grid-column: 2; grid-row: 1; align-self: center; padding: 9px 13px; color: var(--night); background: var(--electric); font-size: .82rem; font-weight: 700; text-decoration: none; }
+.sticky-security { width: min(430px, calc(100vw - 28px)); }
+.sticky-security p span { color: #b9e7ff; }
+.sticky-security > a { text-align: center; }
 @supports (animation-timeline: scroll()) {
   .sticky-start { transform: translateY(calc(100% + 40px)); opacity: 0; animation: sticky-start-reveal linear both; animation-timeline: scroll(root); animation-range: 360px 520px; }
   @keyframes sticky-start-reveal { to { transform: translateY(0); opacity: 1; } }
 }
-@media (max-width: 430px) { .sticky-start { padding: 14px 15px; } .sticky-start p strong { font-size: .98rem; } }
+@media (max-width: 430px) { .sticky-start { padding: 14px 15px; } .sticky-start p strong { font-size: .98rem; } .sticky-security > a { max-width: 120px; } }
 
 /* Camera-first local landing pages */
 .local-camera-hero { position: relative; overflow: hidden; color: var(--white); background: radial-gradient(circle at 78% 18%, rgba(99,199,255,.17), transparent 31%), linear-gradient(135deg, var(--night), #0D2138 62%, #123657); }
