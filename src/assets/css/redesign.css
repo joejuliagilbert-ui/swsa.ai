@@ -650,3 +650,55 @@ h1, h2, h3 { letter-spacing: -.04em; }
   .install-story > .related-rail { margin-right: 0; }
   .install-story > .related-rail ul { grid-template-columns: 1fr; }
 }
+
+/* ========================================================================
+   Release 5 — three unmistakable buying paths
+   ======================================================================== */
+
+/* Cameras: a bright, tangible product-and-installation page. */
+.camera-breadcrumbs { background: white; }
+.camera-breadcrumbs .breadcrumbs a,
+.camera-breadcrumbs .breadcrumbs [aria-current="page"] { color: #5d6972; }
+.camera-detail-hero { margin-top: 0; color: var(--ink); background: white; }
+.camera-detail-hero .eyebrow { color: var(--action); }
+.camera-detail-hero h1 { max-width: 10.5ch; color: var(--ink); font-size: clamp(3.2rem, 6.5vw, 6.5rem); line-height: .9; letter-spacing: -.065em; }
+.camera-detail-hero .lede { color: var(--slate); }
+.camera-detail-price > span { color: var(--action); }
+.camera-detail-price strong { color: var(--navy); }
+.camera-detail-price sup { color: var(--action); }
+.camera-detail-stage { border-radius: 2px; box-shadow: 0 30px 75px rgba(7,19,33,.18); }
+.camera-detail-stage > span { border-radius: 999px; letter-spacing: .05em; text-transform: none; }
+
+/* Complete security: darker and more protective, but not glossy. */
+.home-system-choice { border-radius: 2px; box-shadow: 0 28px 70px rgba(0,0,0,.2); }
+.home-system-choice article { border-radius: 0; }
+.home-security-fit { padding-block: clamp(90px, 12vw, 160px); }
+.home-security-fit .section-heading h2 { max-width: 14ch; font-size: clamp(2.6rem, 5vw, 5rem); line-height: .95; }
+.home-needs-photo { border-radius: 2px; }
+.home-smart-band { border-radius: 2px; }
+
+/* ADT: transparent offer, clear relationship, no decorative price card. */
+.adt-hero-grid > div:first-child,
+.adt-partner-panel { animation: none; opacity: 1; filter: none; transform: none; }
+.adt-price-lockup { max-width: 660px; padding: 26px 0; border: 0; border-block: 1px solid rgba(255,255,255,.22); border-radius: 0; background: transparent; }
+.adt-partner-panel { border-radius: 2px; box-shadow: 0 28px 70px rgba(0,0,0,.24); }
+.adt-partner-panel .partner-mark { padding-inline: 0; background: transparent; border-radius: 0; }
+.adt-fit { padding-block: clamp(90px, 12vw, 160px); }
+.adt-fit .section-heading h2 { max-width: 14ch; font-size: clamp(2.7rem, 5vw, 5rem); line-height: .95; }
+.adt-layer-grid { gap: 0; background: transparent; border: 0; }
+.adt-layer-grid article { min-height: 300px; padding-inline: 0; background: transparent; border-top: 1px solid #ccd3d4; }
+.adt-layer-grid article > span { margin-bottom: clamp(70px, 8vw, 110px); }
+.adt-layer-grid article p { max-width: 29ch; }
+.adt-camera-bridge { padding-block: clamp(90px, 12vw, 160px); }
+.adt-camera-bridge h2 { font-size: clamp(2.6rem, 5vw, 5rem); line-height: .95; }
+
+@media (min-width: 760px) {
+  .adt-layer-grid article + article { padding-left: clamp(20px, 3vw, 38px); border-left: 1px solid #ccd3d4; }
+}
+
+@media (max-width: 759px) {
+  .camera-detail-hero { padding-block: 58px 82px; }
+  .camera-detail-hero h1 { font-size: clamp(3rem, 14vw, 4.5rem); }
+  .camera-detail-stage { margin-top: 14px; }
+  .adt-layer-grid article { min-height: 250px; }
+}
