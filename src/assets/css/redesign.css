@@ -1113,3 +1113,29 @@ h1, h2, h3 { letter-spacing: -.04em; }
   .home-hero .hero-trust,
   .home-hero-stage { animation: none; }
 }
+
+/* ========================================================================
+   Release 15 — remove the last dashboard-like choice panel
+   ======================================================================== */
+
+.home-system-choice {
+  gap: 0;
+  overflow: visible;
+  padding: 0;
+  background: transparent;
+  border-top: 1px solid rgba(255,255,255,.28);
+  border-radius: 0;
+  box-shadow: none;
+}
+.home-system-choice > p {
+  padding: 16px 0;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,.28);
+}
+.home-system-choice article {
+  padding-inline: clamp(26px, 3vw, 40px);
+  border-bottom: 1px solid rgba(255,255,255,.28);
+  border-radius: 0;
+  box-shadow: none;
+}
+.home-system-choice-monitored { border-bottom-color: #c7cecf !important; }
