@@ -6,7 +6,7 @@ export default {
   brand: "SWSA.ai",                              // public wordmark + site/OG identity
   name: "Southwest Security & Automation LLC",    // full legal name (entity context only)
   origin: "https://swsa.ai",
-  asset_version: "20260918.240",
+  asset_version: "20260918.250",
   phone_display: "505-331-7834",
   phone_tel: "5053317834",
   email: "joe@swsa.ai",
