@@ -454,9 +454,17 @@ section { padding-block: var(--space-12); }
 
 .adt-fit { padding-block: clamp(72px, 10vw, 128px); }
 .adt-layer-grid { display: grid; gap: 1px; border: 1px solid #D9DFE2; background: #D9DFE2; }
-.adt-layer-grid article { padding: clamp(24px, 4vw, 38px); background: var(--white); }
+.adt-layer-grid article { padding: clamp(24px, 4vw, 38px); background: var(--white); transition: background-color .22s ease; }
 .adt-layer-grid article > span { display: block; margin-bottom: var(--space-12); color: var(--action); font-size: .8rem; font-weight: 700; letter-spacing: .1em; }
 .adt-layer-grid article p { color: var(--slate); }
+@media (hover:hover) { .adt-layer-grid article:hover { background: #F2F7FA; } }
+@supports (animation-timeline: view()) {
+  .adt-layer-grid article { animation: adt-layer-in linear both; animation-timeline: view(); animation-range: entry 0% cover 26%; }
+  .adt-layer-grid article:nth-child(2) { animation-range: entry 4% cover 30%; }
+  .adt-layer-grid article:nth-child(3) { animation-range: entry 8% cover 34%; }
+  .adt-layer-grid article:nth-child(4) { animation-range: entry 12% cover 38%; }
+  @keyframes adt-layer-in { from { opacity: .28; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+}
 @media (min-width: 760px) { .adt-layer-grid { grid-template-columns: repeat(4, 1fr); } }
 .adt-camera-bridge { display: grid; gap: var(--space-6); padding-block: clamp(72px, 10vw, 128px); }
 .adt-camera-bridge h2 { max-width: 18ch; margin-top: 0; font-size: clamp(2rem, 4vw, 3.7rem); letter-spacing: -.035em; }
