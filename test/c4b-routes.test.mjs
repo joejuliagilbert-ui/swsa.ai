@@ -115,7 +115,7 @@ test("three retained stories are anonymous full pages, self-canonical, one H1", 
     assert.equal((h.match(/<h1\b/gi) || []).length, 1, `${s} H1`);
     assert.ok(h.includes(`<link rel="canonical" href="${ORIGIN}/${s}">`), `${s} canonical`);
     assert.ok(h.includes('class="sticky-start"'), `${s} camera pricing action`);
-    assert.ok(h.includes("Installed from $349"), `${s} camera starting price`);
+    assert.ok(h.includes("From $349 installed"), `${s} camera starting price`);
     const sm = read("sitemap.xml");
     assert.equal(sm.split(`<loc>${ORIGIN}/${s}</loc>`).length - 1, 1, `${s} sitemap once`);
   }
