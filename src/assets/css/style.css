@@ -1270,20 +1270,19 @@ section { padding-block: var(--space-12); }
 .alarm-copy .lede { max-width: 58ch; color: #D3E0EB; }
 .alarm-signals { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: var(--space-8) 0 0; padding: 0; color: #B8C8D8; font-size: .86rem; list-style: none; }
 .alarm-signals li { position: relative; padding-left: 14px; }.alarm-signals li::before { content: ""; position: absolute; left: 0; top: .7em; width: 5px; height: 5px; border-radius: 50%; background: var(--electric); box-shadow: 0 0 11px var(--electric); }
-.alarm-stage { position: relative; min-height: 580px; overflow: hidden; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.04); box-shadow: 0 30px 80px rgba(0,0,0,.35); }
-.alarm-stage::before { content: ""; position: absolute; inset: 0; opacity: .13; background-image: linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px); background-size: 42px 42px; }
-.alarm-stage-label { position: absolute; z-index: 5; top: 22px; left: 22px; padding: 7px 10px; color: #CBEAFF; border: 1px solid rgba(255,255,255,.24); background: rgba(8,17,31,.74); font-size: .68rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
-.alarm-building { position: absolute; z-index: 2; left: 19%; top: 22%; width: 62%; height: 57%; border: 2px solid rgba(255,255,255,.72); background: rgba(12,42,69,.35); }
-.alarm-room { position: absolute; border: 1px solid rgba(255,255,255,.38); }.room-a { left: 0; top: 0; width: 45%; height: 48%; }.room-b { right: 0; top: 0; width: 55%; height: 48%; }.room-c { left: 0; right: 0; bottom: 0; height: 52%; }
-.alarm-entry { position: absolute; width: 34px; height: 8px; background: var(--night); border-right: 2px solid var(--electric); border-left: 2px solid var(--electric); }.entry-a { left: 42%; bottom: -4px; }.entry-b { right: -4px; top: 28%; transform: rotate(90deg); }
-.alarm-zone { position: absolute; z-index: 5; display: flex; gap: 7px; align-items: center; padding: 7px 9px; color: #D8EAF6; border: 1px solid rgba(255,255,255,.22); background: rgba(8,17,31,.84); font-size: .69rem; animation: alarm-zone-pulse 5.2s ease-in-out infinite; }
-.alarm-zone i { width: 7px; height: 7px; border-radius: 50%; background: var(--electric); box-shadow: 0 0 9px var(--electric); }.zone-a { left: 31%; bottom: 9%; }.zone-b { right: 3%; top: 34%; animation-delay: .9s; }.zone-c { left: 41%; top: 44%; animation-delay: 1.8s; }
-@keyframes alarm-zone-pulse { 0%,20%,100% { transform: translateY(0); border-color: rgba(255,255,255,.22); } 8% { transform: translateY(-3px); border-color: rgba(99,199,255,.85); box-shadow: 0 0 18px rgba(99,199,255,.15); } }
-.alarm-camera { position: absolute; z-index: 5; right: 12%; top: 15%; width: 58px; height: 36px; border: 2px solid rgba(255,255,255,.76); border-radius: 4px; transform: rotate(9deg); }.alarm-camera::after { content: ""; position: absolute; right: -19px; top: 12px; width: 18px; height: 8px; border-top: 2px solid rgba(255,255,255,.76); transform: rotate(28deg); }.alarm-camera span { position: absolute; left: 20px; top: 9px; width: 13px; height: 13px; border: 2px solid var(--electric); border-radius: 50%; box-shadow: 0 0 12px rgba(99,199,255,.8); }
-.alarm-cone { position: absolute; z-index: 1; right: 14%; top: 21%; width: 0; height: 0; opacity: .3; border-top: 260px solid rgba(99,199,255,.36); border-right: 120px solid transparent; border-left: 120px solid transparent; transform: rotate(28deg); transform-origin: top; }
-.alarm-stage > p { position: absolute; z-index: 5; right: 22px; bottom: 18px; left: 22px; margin: 0; color: #AFC3D5; font-size: .76rem; }
+.alarm-stage { position: relative; display: flex; min-height: 580px; overflow: hidden; flex-direction: column; padding: clamp(24px,4vw,42px); border: 1px solid rgba(255,255,255,.22); background: linear-gradient(150deg,rgba(255,255,255,.075),rgba(255,255,255,.025)); box-shadow: 0 30px 80px rgba(0,0,0,.35); }
+.alarm-stage::before { content: ""; position: absolute; right: -22%; bottom: -34%; width: 72%; aspect-ratio: 1; border: 1px solid rgba(99,199,255,.18); border-radius: 50%; box-shadow: 0 0 0 54px rgba(99,199,255,.035),0 0 0 108px rgba(99,199,255,.025); pointer-events: none; }
+.alarm-stage-head { position: relative; z-index: 1; display: flex; align-items: baseline; justify-content: space-between; padding-bottom: var(--space-5); border-bottom: 1px solid rgba(255,255,255,.22); }
+.alarm-stage-head span { color: #A8DFFF; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.alarm-stage-head strong { color: var(--white); font-size: .88rem; }
+.alarm-stage-list { position: relative; z-index: 1; margin: auto 0; }
+.alarm-stage-list > div { display: grid; grid-template-columns: 42px 1fr auto; gap: 10px; align-items: center; padding: clamp(16px,2.5vw,22px) 0; border-bottom: 1px solid rgba(255,255,255,.15); }
+.alarm-stage-list span { color: var(--electric); font-size: .7rem; font-weight: 700; letter-spacing: .08em; }
+.alarm-stage-list strong { color: var(--white); font-size: clamp(1.05rem,2vw,1.3rem); }
+.alarm-stage-list small { color: #AFC3D5; text-align: right; }
+.alarm-stage > p { position: relative; z-index: 1; max-width: 33ch; margin: var(--space-6) 0 0; color: #B8C8D8; font-size: .82rem; }
 @media (min-width: 900px) { .alarm-hero-grid { grid-template-columns: minmax(0,1.1fr) minmax(380px,.72fr); } }
-@media (max-width: 520px) { .alarm-stage { min-height: 470px; } .alarm-building { left: 14%; width: 70%; } .zone-b { right: 1%; } }
+@media (max-width: 520px) { .alarm-stage { min-height: 0; } .alarm-stage-list { margin: var(--space-7) 0; } .alarm-stage-list > div { grid-template-columns: 34px 1fr; } .alarm-stage-list small { grid-column: 2; text-align: left; } }
 .alarm-map { display: grid; gap: var(--space-12); }
 .alarm-section-heading { max-width: 650px; }.alarm-section-heading h2 { margin-top: 0; font-size: clamp(2rem,4.5vw,4rem); letter-spacing: -.035em; }.alarm-section-heading > p:last-child { color: var(--slate); }
 .alarm-map ol { margin: 0; padding: 0; list-style: none; }.alarm-map li { display: grid; grid-template-columns: 52px 1fr; gap: var(--space-3); padding: var(--space-4) 0; border-top: 1px solid #D9DFE2; }.alarm-map li > span { color: var(--action); font-size: .75rem; font-weight: 700; letter-spacing: .08em; }.alarm-map strong { color: var(--navy); }.alarm-map p { margin: 2px 0 0; color: var(--slate); }
