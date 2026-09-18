@@ -18,7 +18,7 @@ export default {
   nav: [
     { label: "Camera Installation", url: "/security-cameras-new-mexico.html" },
     { label: "Security Systems", url: "/home-security.html" },
-    { label: "Business Security", url: "/commercial-security.html" },
+    { label: "For Businesses", url: "/commercial-security.html" },
     { label: "Recent Work", url: "/recent-installations.html" },
     { label: "About", url: "/about.html" }
   ],
