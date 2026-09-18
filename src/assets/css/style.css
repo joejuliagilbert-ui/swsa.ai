@@ -371,20 +371,9 @@ section { padding-block: var(--space-12); }
 .contact-method > span { grid-row: 1 / 3; color: #B8C8D8; font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .contact-method strong { min-width: 0; overflow-wrap: anywhere; }
 .contact-method small { color: #B8C8D8; font-size: .84rem; }
-.quote-note { display: grid; gap: clamp(24px, 4vw, 52px); margin-top: clamp(48px, 7vw, 84px); padding: clamp(24px, 4vw, 42px); color: var(--ink); background: var(--white); }
-.quote-note-kicker { color: var(--action); font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-.quote-note h2 { margin-top: 0; }
-.quote-note ol { list-style: none; margin: var(--space-6) 0 0; padding: 0; }
-.quote-note li { display: grid; grid-template-columns: 42px 1fr; gap: var(--space-3); padding-block: var(--space-4); border-top: 1px solid #E1E4E5; }
-.quote-note li > span { color: var(--action); font-size: .8rem; font-weight: 700; }
-.quote-note li p { display: grid; gap: 1px; margin: 0; }
-.quote-note li small { color: var(--slate); font-size: .85rem; }
 @media (min-width: 900px) {
   .contact-primary-actions { grid-template-columns: repeat(3, minmax(0,1fr)); }
   .contact-method { grid-template-columns: 52px minmax(0,1fr); }
-  .quote-note { grid-template-columns: minmax(200px,.55fr) minmax(0,1.45fr); align-items: start; }
-  .quote-note ol { display: grid; grid-template-columns: 1fr 1fr; margin-top: 0; }
-  .quote-note li { padding: var(--space-4); }
 }
 .contact-packages { color: var(--white); background: #0B1727; }
 .contact-package-heading { max-width: 760px; margin-bottom: var(--space-12); }
