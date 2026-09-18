@@ -6,7 +6,7 @@ export default {
   brand: "SWSA.ai",                              // public wordmark + site/OG identity
   name: "Southwest Security & Automation LLC",    // full legal name (entity context only)
   origin: "https://swsa.ai",
-  asset_version: "20260918.260",
+  asset_version: "20260918.300",
   phone_display: "505-331-7834",
   phone_tel: "5053317834",
   email: "joe@swsa.ai",
@@ -18,6 +18,7 @@ export default {
   nav: [
     { label: "Cameras", url: "/security-cameras-new-mexico.html" },
     { label: "Security", url: "/home-security.html" },
+    { label: "Business", url: "/commercial-security.html" },
     { label: "Work", url: "/recent-installations.html" },
     { label: "About", url: "/about.html" }
   ],
