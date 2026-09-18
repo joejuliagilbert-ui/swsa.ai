@@ -892,6 +892,7 @@ section { padding-block: var(--space-12); }
 
 /* Proof module */
 .proof-lead { display: grid; gap: var(--space-6); }
+.proof { padding-bottom: 0; }
 @media (min-width: 900px) { .proof-lead { grid-template-columns: 1.1fr 1fr; align-items: center; } }
 .proof-outcome { font-family: var(--font-serif); font-size: 1.375rem; color: var(--navy); }
 
