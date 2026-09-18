@@ -936,7 +936,7 @@ section { padding-block: var(--space-12); }
 @media (min-width: 560px) { .install-card { flex-direction: row; align-items: center; } .install-card img { width: 160px; flex-shrink: 0; } }
 
 /* ---- Footer ---- */
-.site-footer { position: relative; margin-top: var(--space-16); overflow: hidden; color: var(--white); background: var(--night); }
+.site-footer { position: relative; margin-top: 0; overflow: hidden; color: var(--white); background: var(--night); }
 .site-footer::before { content: ""; position: absolute; right: clamp(-280px,-13vw,-100px); bottom: -260px; width: min(58vw,760px); aspect-ratio: 1; pointer-events: none; background: center / contain no-repeat var(--zia-watermark); opacity: .055; transform: rotate(3deg); }
 .site-footer > .wrap { position: relative; z-index: 1; }
 .footer-start { display: grid; gap: var(--space-10); padding-block: clamp(64px,9vw,112px); border-bottom: 1px solid rgba(255,255,255,.18); }
