@@ -579,3 +579,74 @@ h1, h2, h3 { letter-spacing: -.04em; }
   .access-use-grid article,
   .alarm-layer-grid article { min-height: 250px; }
 }
+
+/* ========================================================================
+   Release 4 — regional clarity and project stories with editorial scale
+   ======================================================================== */
+
+.local-camera-copy,
+.local-camera-stage,
+.regional-offer-stage { animation: none; opacity: 1; filter: none; transform: none; }
+
+.local-camera-hero { padding-block: clamp(64px, 9vw, 124px); }
+.local-camera-hero h1 { max-width: 10.5ch; font-size: clamp(3.1rem, 6.5vw, 6.3rem); line-height: .91; letter-spacing: -.063em; }
+.local-camera-stage,
+.regional-offer-stage { border-radius: 2px; }
+.local-camera-stage { padding: 0; border: 0; box-shadow: 0 34px 80px rgba(0,0,0,.3); }
+.local-camera-stage figcaption { right: 18px; bottom: 18px; left: 18px; }
+.regional-offer-stage { box-shadow: none; }
+
+.local-priority,
+.local-area { padding-block: clamp(90px, 12vw, 160px); }
+.local-section-heading h2,
+.local-area h2 { font-size: clamp(2.6rem, 5vw, 5rem); line-height: .95; }
+.local-view-list li { padding-block: 24px; }
+.local-proof-band,
+.regional-trust,
+.local-security-bridge,
+.local-final { padding-block: clamp(80px, 10vw, 130px); }
+.local-proof-band h2,
+.regional-trust h2,
+.local-security-bridge h2,
+.local-final h2 { font-size: clamp(2.5rem, 4.8vw, 4.7rem); line-height: .96; }
+
+/* Project pages are photo essays, not narrow blog posts. */
+.install-story { max-width: var(--max-wide); padding-block: clamp(72px, 10vw, 140px); }
+.install-story > .eyebrow,
+.install-story > h1 { max-width: 940px; }
+.install-story > h1 { margin-bottom: clamp(52px, 7vw, 90px); font-size: clamp(3rem, 6vw, 6rem); line-height: .93; letter-spacing: -.06em; }
+.install-story .story-media { gap: clamp(12px, 2vw, 28px); margin: 0 0 18px; }
+.install-story .story-media + .media-caption { margin-bottom: clamp(70px, 9vw, 120px); }
+.install-story .story-media figure { border-radius: 2px; background: #dfe4e5; }
+.install-story .story-media img { border-radius: 0; transition: transform 1s cubic-bezier(.2,.7,.2,1), filter .5s ease; }
+.install-story .story-media figure:hover img { filter: saturate(1.03); transform: scale(1.018); }
+.install-story > h2,
+.install-story > p:not(.eyebrow):not(.media-caption),
+.install-story > .actions,
+.install-story > .related-rail { width: min(100%, 720px); margin-right: clamp(0px, 8vw, 110px); margin-left: auto; }
+.install-story > h2 { margin-top: clamp(70px, 9vw, 120px); font-size: clamp(2.2rem, 4vw, 3.8rem); line-height: .98; }
+.install-story > p:not(.eyebrow):not(.media-caption) { color: var(--slate); font-size: clamp(1.05rem, 1.25vw, 1.18rem); }
+.install-story > .media-caption { margin-top: 0; color: #6a747d; font-size: .74rem; }
+.install-story > .actions { margin-top: 42px; }
+.install-story > .related-rail { margin-top: 90px; padding-top: 30px; border-top: 1px solid #d2d7d7; }
+.install-story > .related-rail h2 { margin: 0 0 24px; font-size: .8rem; letter-spacing: .11em; text-transform: uppercase; }
+.install-story > .related-rail ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }
+.install-story > .related-rail a { display: block; padding: 14px 0; color: var(--navy); border-bottom: 1px solid #d2d7d7; text-decoration: none; }
+
+/* Footer: fewer boxes, stronger contact hierarchy. */
+.footer-choice-grid { gap: 0; border-top: 1px solid rgba(255,255,255,.2); }
+.footer-choice { padding: 22px 50px 22px 0; background: transparent; border: 0; border-bottom: 1px solid rgba(255,255,255,.2); border-radius: 0; }
+.footer-choice-camera { background: transparent; }
+.footer-choice:hover { padding-left: 14px; background: rgba(255,255,255,.045); border-color: rgba(255,255,255,.2); transform: none; }
+.footer-identity .footer-brand { font-size: clamp(2rem, 3vw, 3.2rem); letter-spacing: -.055em; }
+.footer-contact > a:first-of-type { font-size: clamp(1.35rem, 2vw, 2rem); font-weight: 700; letter-spacing: -.03em; }
+
+@media (max-width: 700px) {
+  .install-story { padding-block: 66px 100px; }
+  .install-story > h1 { font-size: clamp(2.8rem, 13vw, 4.2rem); }
+  .install-story > h2,
+  .install-story > p:not(.eyebrow):not(.media-caption),
+  .install-story > .actions,
+  .install-story > .related-rail { margin-right: 0; }
+  .install-story > .related-rail ul { grid-template-columns: 1fr; }
+}
