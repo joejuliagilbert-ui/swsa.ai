@@ -6,7 +6,7 @@ export default {
   brand: "SWSA.ai",                              // public wordmark + site/OG identity
   name: "Southwest Security & Automation LLC",    // full legal name (entity context only)
   origin: "https://swsa.ai",
-  asset_version: "20260918.18",
+  asset_version: "20260918.19",
   phone_display: "505-331-7834",
   phone_tel: "5053317834",
   email: "joe@swsa.ai",
@@ -14,11 +14,11 @@ export default {
   areaServed: ["Albuquerque, NM", "Santa Fe, NM", "Farmington, NM", "Durango, CO", "Four Corners Region"],
   message_territory: "Professional camera installation for New Mexico and the Four Corners.",
 
-  // Camera installation is the primary offer; monitored security supports it.
+  // Camera installation is primary; camera-inclusive security systems are second.
   nav: [
     { label: "Camera Installation", url: "/security-cameras-new-mexico.html" },
+    { label: "Security Systems", url: "/home-security.html" },
     { label: "Business Security", url: "/commercial-security.html" },
-    { label: "Home Security", url: "/home-security.html" },
     { label: "Recent Work", url: "/recent-installations.html" },
     { label: "About", url: "/about.html" }
   ],

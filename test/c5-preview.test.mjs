@@ -71,6 +71,22 @@ test("homepage emits the camera-first production title", () => {
   assert.match(h, /<title>Security Camera Installation in New Mexico &amp; the Four Corners \| SWSA\.ai<\/title>/);
 });
 
+test("homepage presents the two core services and both security-system paths", () => {
+  const h = readSite("index.html");
+  for (const copy of [
+    "01 / Cameras",
+    "02 / Security systems + cameras",
+    "Local system",
+    "ADT monitored",
+    "Door &amp; window sensors",
+    "Life-safety devices",
+    "Motion detection",
+    "Flood &amp; extreme-temperature detection"
+  ]) assert.ok(h.includes(copy), `homepage missing core-service copy: ${copy}`);
+  assert.ok(h.includes('href="/home-security.html"'), "local system path missing");
+  assert.ok(h.includes('href="/adt-installation-new-mexico.html"'), "ADT-monitored path missing");
+});
+
 test("evidence-bearing routes reference only approved project crops", () => {
   const approved = new Set([
     "src/assets/img-src/recent-work/santa-fe-camera.jpg",
