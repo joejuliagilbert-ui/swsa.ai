@@ -1,41 +1,82 @@
 ---
 layout: layouts/base.njk
 permalink: "/recent-installations.html"
-title: "Recent Work"
-description: "A small, edited set of recent SWSA.ai residential projects across New Mexico, shown with sanitized detail and no customer-identifying information."
+title: "Recent Camera & Security Installations"
+description: "A focused set of recent SWSA.ai camera and residential security projects across New Mexico, shown with privacy-safe detail."
 breadcrumbs:
   - { name: "Home", url: "/" }
   - { name: "Recent Work" }
 ---
-{% import "macros.njk" as m %}
-<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+<div class="wrap work-breadcrumbs">{% include "partials/breadcrumbs.njk" %}</div>
 
-<section class="wrap prose-wide">
-  <p class="eyebrow">Recent Work</p>
-  <h1>Recent work</h1>
-  <p class="lede">A small, edited set of recent SWSA.ai projects. Each is shown with sanitized detail and leads with the situation and outcome — no customer names, addresses, or identifying property views.</p>
+<section class="work-hero">
+  <div class="wrap work-hero-grid">
+    <div>
+      <p class="eyebrow">Recent field work</p>
+      <h1>Real installations. Useful outcomes.</h1>
+    </div>
+    <div>
+      <p class="lede">A focused look at camera and security work completed across New Mexico. The photos show installation details while protecting customer names, addresses, and identifiable property views.</p>
+      <a class="cta cta-bright" href="/contact.html">Plan a similar project</a>
+    </div>
+  </div>
 </section>
 
-<section class="wrap">
-  <ul class="proof-grid">
-    <li class="proof-card">
-      <h2><a href="/installs/albuquerque-security-installation-june-2026.html">Albuquerque — coordinated security and low-voltage</a></h2>
-      <p>Intrusion protection and cameras planned together, life-safety planning, low-voltage improvements, and a clear handoff.</p>
-    </li>
-    <li class="proof-card">
-      {% image "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg", "Installed doorbell camera at a residential entry", "(min-width: 700px) 33vw, 100vw", "media-frame" %}
-      <h2><a href="/installs/albuquerque-security-installation-march-2026.html">Albuquerque — cameras and smart entry</a></h2>
-      <p>Doorbell and outdoor cameras, smart entry, intrusion protection, and customer training.</p>
-    </li>
-    <li class="proof-card">
-      {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Installed exterior camera under an eave", "(min-width: 700px) 33vw, 100vw", "media-frame" %}
-      <h2><a href="/installs/santa-fe-security-installation-march-2026.html">Santa Fe — security upgrade</a></h2>
-      <p>An upgrade that reused suitable existing wiring, updated camera coverage, and added life-safety devices.</p>
-    </li>
-  </ul>
+<section class="wrap work-showcase">
+  <article class="work-feature work-feature-camera">
+    <a class="work-image-link" href="/installs/santa-fe-security-installation-march-2026.html" aria-label="View Santa Fe security upgrade">
+      {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Outdoor camera installed beneath an eave in Santa Fe", "(min-width: 860px) 60vw, 100vw", "work-image" %}
+      <span class="work-image-index">01 / Santa Fe</span>
+    </a>
+    <div class="work-feature-copy">
+      <p class="eyebrow">Camera coverage · Existing wiring · Life safety</p>
+      <h2><a href="/installs/santa-fe-security-installation-march-2026.html">A security upgrade built around what could be reused.</a></h2>
+      <p>Suitable existing wiring was reused, exterior camera coverage was updated, and life-safety devices were added as part of one practical upgrade.</p>
+      <a class="text-link-strong" href="/installs/santa-fe-security-installation-march-2026.html">See the project details &rarr;</a>
+    </div>
+  </article>
+
+  <article class="work-feature work-feature-doorbell">
+    <a class="work-image-link" href="/installs/albuquerque-security-installation-march-2026.html" aria-label="View Albuquerque camera and smart-entry installation">
+      {% image "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg", "Video doorbell installed at an Albuquerque front entry", "(min-width: 860px) 50vw, 100vw", "work-image" %}
+      <span class="work-image-index">02 / Albuquerque</span>
+    </a>
+    <div class="work-feature-copy">
+      <p class="eyebrow">Video doorbell · Outdoor cameras · Smart entry</p>
+      <h2><a href="/installs/albuquerque-security-installation-march-2026.html">Clearer entry coverage with a straightforward handoff.</a></h2>
+      <p>Doorbell and outdoor cameras, smart entry, intrusion protection, and customer training were planned as one usable system.</p>
+      <a class="text-link-strong" href="/installs/albuquerque-security-installation-march-2026.html">See the project details &rarr;</a>
+    </div>
+  </article>
+
+  <article class="work-brief">
+    <span class="work-brief-index">03</span>
+    <div>
+      <p class="eyebrow">Albuquerque · Coordinated project</p>
+      <h2><a href="/installs/albuquerque-security-installation-june-2026.html">Security and low-voltage planned together.</a></h2>
+    </div>
+    <p>Intrusion protection and cameras were coordinated with life-safety planning, low-voltage improvements, and a clear customer handoff.</p>
+    <a href="/installs/albuquerque-security-installation-june-2026.html">Read the project &rarr;</a>
+  </article>
 </section>
 
-<section class="area wrap">
-  <h2>Have a similar project?</h2>
-  <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+<section class="work-standards">
+  <div class="wrap work-standards-grid">
+    <div><p class="eyebrow">How work is shown</p><h2>Proof without exposing the customer.</h2></div>
+    <ul>
+      <li><span>01</span><strong>Real work only</strong><small>Installation photos come from completed field work.</small></li>
+      <li><span>02</span><strong>Useful detail</strong><small>The crop shows workmanship and equipment placement.</small></li>
+      <li><span>03</span><strong>Privacy protected</strong><small>No names, addresses, or identifying property views are published.</small></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap work-final">
+  <p class="eyebrow">Have a similar property?</p>
+  <h2>Start with what you want to see.</h2>
+  <p>Call or text with your city, the areas you want covered, and whether you already have cameras.</p>
+  <div class="actions">
+    {% include "partials/contact-actions.njk" %}
+    <a class="cta cta-quiet" href="/contact.html">View contact options</a>
+  </div>
 </section>
