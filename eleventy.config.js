@@ -16,6 +16,9 @@ export async function imageShortcode(src, alt, sizes = "100vw", className = "", 
   const metadata = await Image(src, {
     widths: [400, 800, 1200, 1600],
     formats: ["avif", "webp", "jpeg"],
+    sharpAvifOptions: { quality: 70, effort: 5 },
+    sharpWebpOptions: { quality: 84 },
+    sharpJpegOptions: { quality: 86, mozjpeg: true },
     outputDir: "./_site/assets/img/opt/",
     urlPath: "/assets/img/opt/"
   });
