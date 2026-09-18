@@ -41,7 +41,7 @@ export default {
       "Home security systems",
       "Smart lock integration",
       "Garage controls",
-      "Nest thermostat integration"
+      "Smart thermostat integration"
     ]
   }
 };
