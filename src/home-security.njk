@@ -1,64 +1,102 @@
 ---
 layout: layouts/base.njk
 permalink: "/home-security.html"
-title: "Home Security"
-description: "Straightforward home protection, clean installation, and patient setup for daily life across New Mexico and the Four Corners region."
+title: "Home Security · Cameras, Entry Protection & Monitoring"
+description: "Plan cameras, entry protection, and monitored home security around the way your household actually lives. Serving New Mexico and the Four Corners."
 breadcrumbs:
   - { name: "Home", url: "/" }
   - { name: "Home Security" }
 ---
-<div class="wrap">
+<div class="wrap home-security-breadcrumbs">
   {% include "partials/breadcrumbs.njk" %}
 </div>
 
-<section class="hero hero-textled wrap">
-  <div class="hero-text">
-    <p class="eyebrow">Home Security</p>
-    <h1 class="hero-title">Protection that fits daily life</h1>
-    <p class="lede">Straightforward home security and cameras, installed cleanly and set up patiently — so the system is easy to live with and simple to use.</p>
-    <div class="actions">
-      {% include "partials/contact-actions.njk" %}
-      <a class="cta cta-quiet" href="/contact.html">Send a message</a>
+<section class="home-security-hero">
+  <div class="wrap home-security-hero-grid">
+    <div>
+      <p class="eyebrow">Home security, planned in layers</p>
+      <h1>See what is happening. Protect what matters.</h1>
+      <p class="lede">Start with useful camera coverage. Add entry protection and professionally monitored security when the home and the household call for more.</p>
+      <div class="actions">
+        <a class="cta cta-bright" href="/contact.html">Talk through your home</a>
+        <a class="cta cta-ghost" href="/security-cameras-new-mexico.html">Start with cameras</a>
+      </div>
+    </div>
+
+    <div class="home-system-map" aria-label="A home security plan with camera, entry, and monitoring layers">
+      <div class="home-map-house">
+        <span class="home-map-roof"></span>
+        <span class="home-map-door"></span>
+        <span class="home-map-window home-map-window-left"></span>
+        <span class="home-map-window home-map-window-right"></span>
+        <span class="home-map-camera"><i></i></span>
+        <span class="home-map-signal home-map-signal-one"></span>
+        <span class="home-map-signal home-map-signal-two"></span>
+      </div>
+      <ol class="home-map-key">
+        <li><span>01</span><strong>Camera view</strong></li>
+        <li><span>02</span><strong>Entry layer</strong></li>
+        <li><span>03</span><strong>Monitoring option</strong></li>
+      </ol>
     </div>
   </div>
 </section>
 
-<section class="band wrap">
-  <h2>Common situations</h2>
-  <ul class="feature-list">
-    <li><strong>Just moved in</strong> — start with entry protection and a doorbell or front-entry camera.</li>
-    <li><strong>Recent concern</strong> — add coverage where it actually matters day to day.</li>
-    <li><strong>Old or partial system</strong> — modernize without over-buying equipment.</li>
-    <li><strong>Cameras and convenience</strong> — clear visibility and simple smart-home basics that help.</li>
-  </ul>
-  <p>Looking specifically for an ADT system? <a href="/adt-installation-new-mexico.html">Start with a local conversation about ADT options</a>.</p>
-</section>
-
-<section class="proof wrap">
-  <p class="eyebrow">Recent work</p>
-  <h2>Cameras and smart entry, planned as one system</h2>
-  <div class="proof-lead">
-    {% image "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg", "Installed doorbell camera at a residential entry", "(min-width: 900px) 45vw, 100vw", "media-frame" %}
-    <div class="proof-body">
-      <p class="proof-outcome">Albuquerque — cameras and smart entry</p>
-      <p>Doorbell and outdoor cameras, smart entry, intrusion protection, and customer training were planned as one straightforward system.</p>
-      <a href="/installs/albuquerque-security-installation-march-2026.html">See the Albuquerque project &rarr;</a>
-    </div>
+<section class="wrap home-security-fit">
+  <div class="section-heading">
+    <p class="eyebrow">A system that fits the household</p>
+    <h2>Begin with the daily routine—not a device list.</h2>
+    <p>The right plan depends on who comes and goes, what you want to see, when the home is empty, and how much interaction you want from the system.</p>
+  </div>
+  <div class="home-needs-grid">
+    <article><span>01</span><h3>See the approach</h3><p>Cover the driveway, walkway, front door, side access, or other views that answer a real question.</p></article>
+    <article><span>02</span><h3>Know when something opens</h3><p>Consider exterior doors and accessible windows when awareness needs to extend beyond the camera view.</p></article>
+    <article><span>03</span><h3>Protect an empty home</h3><p>Discuss monitored-system options when you want an additional response layer while away or asleep.</p></article>
   </div>
 </section>
 
-<section class="process wrap">
-  <h2>How SWSA.ai works</h2>
-  <ol class="steps">
-    <li><span class="step-n">1</span><strong>Assess</strong><span>Understand the home, entry points, and goals.</span></li>
-    <li><span class="step-n">2</span><strong>Plan</strong><span>Decide what matters and where it goes.</span></li>
-    <li><span class="step-n">3</span><strong>Install</strong><span>Clean placement and careful setup.</span></li>
-    <li><span class="step-n">4</span><strong>Support</strong><span>A patient walkthrough so you can use it.</span></li>
-  </ol>
+<section class="home-camera-first">
+  <div class="wrap home-camera-first-grid">
+    <div class="home-camera-first-copy">
+      <p class="eyebrow">The practical starting point</p>
+      <h2>Outdoor cameras and a video doorbell solve the first visibility gap.</h2>
+      <p>Thoughtful placement matters more than putting a camera everywhere. SWSA plans views, installs the hardware cleanly, connects the app, and helps tune alerts for everyday use.</p>
+      <a href="/security-cameras-new-mexico.html">Explore professional camera installation &rarr;</a>
+    </div>
+    <figure class="home-security-proof">
+      {% image "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg", "Installed video doorbell at an Albuquerque home", "(min-width: 900px) 45vw, 100vw", "home-security-proof-image" %}
+      <figcaption><span>Installed entry view</span><strong>Albuquerque, New Mexico</strong></figcaption>
+    </figure>
+  </div>
 </section>
 
-<section class="area wrap">
-  <h2>Serving your area</h2>
-  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
-  <div class="actions">{% include "partials/contact-actions.njk" %}</div>
+<section class="wrap home-security-path">
+  <div>
+    <p class="eyebrow">When cameras are one part of the plan</p>
+    <h2>Add monitored protection when it earns its place.</h2>
+  </div>
+  <div>
+    <p>A monitored system may fit when you also want protection around entry points, interior detection, life-safety needs, and a clear arm/disarm routine.</p>
+    <p>SWSA can start that conversation locally and discuss ADT system options through Secure24, an ADT Authorized Dealer.</p>
+    <a class="cta" href="/adt-installation-new-mexico.html">How the ADT referral works</a>
+  </div>
+</section>
+
+<section class="home-security-process">
+  <div class="wrap home-security-process-grid">
+    <div><p class="eyebrow">From concern to working system</p><h2>A clear four-step process.</h2></div>
+    <ol>
+      <li><span>01</span><div><strong>Walk through the concern</strong><p>Explain what is happening, what you want to know, and what would make daily life easier.</p></div></li>
+      <li><span>02</span><div><strong>Plan the layers</strong><p>Separate camera coverage, entry protection, and monitoring so each part has a purpose.</p></div></li>
+      <li><span>03</span><div><strong>Install and connect</strong><p>Place equipment carefully, connect the system, and test the important routines.</p></div></li>
+      <li><span>04</span><div><strong>Learn how to use it</strong><p>Leave with a practical walkthrough of alerts, access, arming, and the app.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="home-security-final">
+  <div class="wrap home-security-final-grid">
+    <div><p class="eyebrow">New Mexico &amp; the Four Corners</p><h2>Start with the home, not a package.</h2></div>
+    <div><p>Tell SWSA what you want to see, protect, or simplify. The next step can be a camera plan, a broader security conversation, or both.</p><div class="actions">{% include "partials/contact-actions.njk" %}<a class="cta cta-ghost" href="/contact.html">Send project details</a></div></div>
+  </div>
 </section>
