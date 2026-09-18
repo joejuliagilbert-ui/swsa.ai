@@ -1021,3 +1021,18 @@ h1, h2, h3 { letter-spacing: -.04em; }
   color: white;
   border-color: rgba(255,255,255,.72);
 }
+
+/* Portfolio images are evidence, not cards. */
+.work-image-link {
+  border-radius: 2px;
+  box-shadow: none;
+}
+.work-image-index {
+  bottom: 0;
+  left: 0;
+  padding: 9px 13px;
+  background: var(--night);
+  border: 0;
+  backdrop-filter: none;
+}
+.work-feature-copy h2 { font-size: clamp(2rem, 3.7vw, 3.5rem); line-height: 1; }
