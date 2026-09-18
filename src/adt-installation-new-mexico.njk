@@ -8,41 +8,73 @@ breadcrumbs:
   - { name: "Home Security", url: "/home-security.html" }
   - { name: "ADT referrals" }
 ---
-{% import "macros.njk" as m %}
-<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+<div class="wrap adt-breadcrumbs">{% include "partials/breadcrumbs.njk" %}</div>
 
-<section class="wrap prose-wide">
-  <p class="eyebrow">Home Security · ADT referrals</p>
-  <h1>Looking for an ADT system? Start with a local conversation.</h1>
-  <p class="lede">If you're looking for an ADT system, you've found the right place. SWSA helps homeowners discuss their security needs and handles ADT referrals through Secure24, an ADT Authorized Dealer.</p>
-  <div class="actions">
-    <a class="cta" href="/contact.html">Ask about ADT options</a>
-    {% include "partials/contact-actions.njk" %}
+<section class="adt-hero">
+  <div class="wrap adt-hero-grid">
+    <div>
+      <p class="eyebrow">Professionally monitored home security</p>
+      <h1>Cameras show you more. Monitoring adds another layer.</h1>
+      <p class="lede">If you're looking for an ADT system, you've found the right place. SWSA helps homeowners discuss their security needs and handles ADT referrals through Secure24, an ADT Authorized Dealer.</p>
+      <div class="actions">
+        <a class="cta cta-bright" href="/contact.html">Ask about ADT options</a>
+        {% include "partials/contact-actions.njk" %}
+      </div>
+    </div>
+    <aside class="adt-partner-panel">
+      <p>Referral relationship</p>
+      <div class="partner-mark">
+        <img src="/assets/partners/secure24-adt-authorized-dealer-blue.svg" alt="ADT Authorized Dealer — Secure24" width="340" height="75">
+      </div>
+      <p class="partner-note">SWSA is your local point of contact for the initial conversation. Secure24 is the ADT Authorized Dealer associated with the referral.</p>
+    </aside>
   </div>
 </section>
 
-<section class="band wrap">
-  <div class="partner-mark">
-    <img src="/assets/partners/secure24-adt-authorized-dealer-blue.svg" alt="ADT Authorized Dealer — Secure24" width="340" height="75">
+<section class="wrap adt-fit">
+  <div class="section-heading">
+    <p class="eyebrow">When monitoring fits</p>
+    <h2>Security beyond the camera view.</h2>
+    <p>Cameras are valuable for awareness and review. A monitored system can be discussed when you also want protection built around entry points, interior detection, life safety, and a clear arm/disarm routine.</p>
   </div>
-  <p class="partner-note">SWSA is your local point of contact for the initial conversation. Secure24 is the ADT Authorized Dealer associated with the referral.</p>
+  <div class="adt-layer-grid">
+    <article><span>01</span><h3>Entry protection</h3><p>Talk through exterior doors, accessible windows, and the parts of the home that matter most.</p></article>
+    <article><span>02</span><h3>Interior detection</h3><p>Consider how the household moves through the home and where an additional layer makes sense.</p></article>
+    <article><span>03</span><h3>Life-safety needs</h3><p>Discuss the broader safety devices that may belong in the overall system plan.</p></article>
+    <article><span>04</span><h3>Daily usability</h3><p>Plan for a system the household can arm, disarm, understand, and use with confidence.</p></article>
+  </div>
 </section>
 
-<section class="wrap">
-  <h2>How a referral works</h2>
-  {{ m.principles([
-    "<strong>Discuss the property and priorities</strong> with SWSA.",
-    "<strong>Determine whether ADT options fit</strong> what you're looking for.",
-    "<strong>Connect through the Secure24 referral relationship</strong> when it's the right fit.",
-    "<strong>Confirm next steps directly</strong> so you know what happens next."
-  ]) }}
+<section class="adt-path">
+  <div class="wrap adt-path-grid">
+    <div>
+      <p class="eyebrow">How the referral works</p>
+      <h2>One local conversation to find the right next step.</h2>
+    </div>
+    <ol>
+      <li><span>01</span><div><strong>Discuss the property</strong><p>Start with the home, the concerns, and what you want the system to accomplish.</p></div></li>
+      <li><span>02</span><div><strong>Consider the fit</strong><p>Determine whether ADT options fit what you are looking for.</p></div></li>
+      <li><span>03</span><div><strong>Connect through Secure24</strong><p>Use the established referral relationship when it is the right path.</p></div></li>
+      <li><span>04</span><div><strong>Confirm the next step</strong><p>Know who is involved and what happens from there.</p></div></li>
+    </ol>
+  </div>
 </section>
 
-<section class="area wrap">
-  <h2>Ask about ADT options</h2>
-  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
-  <div class="actions">
-    <a class="cta" href="/contact.html">Ask about ADT options</a>
-    {% include "partials/contact-actions.njk" %}
+<section class="wrap adt-camera-bridge">
+  <p class="eyebrow">Camera-first, system-ready</p>
+  <div>
+    <h2>Start with cameras. Add monitored protection when it makes sense.</h2>
+    <p>Some homes only need better camera coverage. Others benefit from cameras plus a monitored security system. The conversation should start with the property and the outcome—not a predetermined equipment list.</p>
+    <div class="actions">
+      <a class="cta" href="/security-cameras-new-mexico.html">Explore camera installation</a>
+      <a class="cta cta-quiet" href="/contact.html">Talk through both options</a>
+    </div>
+  </div>
+</section>
+
+<section class="adt-final">
+  <div class="wrap adt-final-grid">
+    <div><p class="eyebrow">New Mexico &amp; the Four Corners</p><h2>Ask about monitored security.</h2></div>
+    <div><p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p><div class="actions">{% include "partials/contact-actions.njk" %}</div></div>
   </div>
 </section>
