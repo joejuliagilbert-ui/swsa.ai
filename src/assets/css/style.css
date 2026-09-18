@@ -900,10 +900,29 @@ section { padding-block: var(--space-12); }
 .audience-path a { font-weight: 600; }
 
 /* Proof module */
-.proof-lead { display: grid; gap: var(--space-6); }
-.proof { padding-bottom: 0; }
-@media (min-width: 900px) { .proof-lead { grid-template-columns: 1.1fr 1fr; align-items: center; } }
-.proof-outcome { font-family: var(--font-serif); font-size: 1.375rem; color: var(--navy); }
+.home-install-story { padding-block: clamp(80px, 11vw, 144px); overflow: hidden; color: var(--white); background: var(--night); }
+.home-install-heading { display: grid; gap: var(--space-4); margin-bottom: var(--space-10); }
+.home-install-heading .eyebrow { color: #A8DFFF; }
+.home-install-heading h2 { max-width: 13ch; margin: 0; color: var(--white); font-size: clamp(2.4rem, 5vw, 4.8rem); letter-spacing: -.045em; }
+.proof-lead { display: grid; gap: var(--space-8); align-items: end; }
+.home-install-image { position: relative; min-width: 0; overflow: hidden; border-radius: 20px; background: #1A2B3D; box-shadow: 0 28px 80px rgba(0,0,0,.28); }
+.home-install-image picture { display: block; aspect-ratio: 16 / 10; }
+.home-install-image .media-frame { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.home-install-image > span { position: absolute; left: 18px; bottom: 18px; padding: 7px 10px; color: var(--white); background: rgba(7,17,30,.82); backdrop-filter: blur(10px); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.home-install-image:hover .media-frame { transform: scale(1.025); }
+.proof-body { max-width: 500px; padding-bottom: var(--space-4); }
+.proof-body > p:not(.proof-outcome) { color: #B8C8D8; }
+.proof-body a { color: var(--electric); text-decoration: none; }
+.proof-outcome { margin-top: 0; color: var(--white); font-family: var(--font-serif); font-size: clamp(1.65rem, 3vw, 2.55rem); line-height: 1.1; }
+@media (min-width: 900px) {
+  .home-install-heading { grid-template-columns: 1fr 1fr; align-items: end; }
+  .home-install-heading .eyebrow { grid-column: 1 / -1; }
+  .proof-lead { grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr); gap: clamp(48px, 7vw, 96px); }
+}
+@supports (animation-timeline: view()) {
+  .home-install-image { animation: install-image-in linear both; animation-timeline: view(); animation-range: entry 0% cover 38%; }
+  @keyframes install-image-in { from { opacity: .35; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
+}
 
 /* Process steps (continuous rhythm, not floating tiles) */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
