@@ -447,7 +447,7 @@ section { padding-block: var(--space-12); }
 .adt-price-lockup > p:first-child { margin: 0; color: #B8C8D8; font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .adt-price-lockup strong { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--space-3); margin: 8px 0; color: var(--white); font-size: clamp(3.2rem,6vw,5.4rem); line-height: .9; letter-spacing: -.055em; }
 .adt-price-lockup strong > span { color: var(--electric); font-size: .38em; align-self: flex-start; }
-.adt-price-lockup strong small { color: #D3E0EB; font-size: .23em; letter-spacing: 0; }
+.adt-price-lockup strong small { color: #D3E0EB; font-size: .28em; letter-spacing: 0; }
 .adt-price-lockup .adt-price-note { max-width: 68ch; margin: 0; color: #91A7BA; font-size: .78rem; }
 .adt-hero-actions { align-items: center; }
 .adt-call-link { color: var(--white); font-weight: 700; text-underline-offset: 4px; }
