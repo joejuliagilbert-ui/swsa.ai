@@ -47,6 +47,16 @@ test("ADT route contains the owner-approved monthly camera-inclusive offer", () 
   assert.ok(h.includes("/mo or less"), "monthly qualifier missing");
 });
 
+test("ADT route names the four owner-specified security component groups", () => {
+  const h = read(ADT);
+  for (const component of [
+    "Door &amp; window sensors",
+    "Life-safety devices",
+    "Motion detection",
+    "Flood &amp; extreme temperatures"
+  ]) assert.ok(h.includes(component), `ADT route missing ${component}`);
+});
+
 test("ADT route has no prohibited authorization / guarantee language", () => {
   const h = read(ADT);
   const banned = [/\bguarantee/i, /\bofficial\b/i, /\bexclusive\b/i, /\bpreferred\b/i, /\bcertified\b/i, /\bbest\b/i, /\bsavings\b/i, /\bpromotion/i, /response time/i, /\bcontract\b/i,

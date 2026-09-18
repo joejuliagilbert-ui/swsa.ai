@@ -111,6 +111,20 @@ test("security-systems page names both paths, camera-inclusive pricing, and core
   assert.ok(h.includes("Secure24, an ADT Authorized Dealer"), "ADT referral relationship missing");
 });
 
+test("regional camera pages bridge to both local and professionally monitored systems", () => {
+  for (const route of [
+    "albuquerque-home-security.html",
+    "santa-fe-home-security.html",
+    "farmington-home-security.html",
+    "durango-home-security.html"
+  ]) {
+    const h = readSite(route);
+    assert.ok(h.includes("local system"), `${route} missing local-system path`);
+    assert.ok(h.includes("professionally monitored option"), `${route} missing monitored path`);
+    assert.ok(h.includes('href="/home-security.html"'), `${route} missing system comparison link`);
+  }
+});
+
 test("evidence-bearing routes reference only approved project crops", () => {
   const approved = new Set([
     "src/assets/img-src/recent-work/santa-fe-camera.jpg",
