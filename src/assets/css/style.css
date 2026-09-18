@@ -219,7 +219,7 @@ section { padding-block: var(--space-12); }
 .business-paths-heading h2 { max-width: 16ch; margin: 0; font-size: clamp(2.1rem,4.4vw,4rem); letter-spacing: -.04em; }
 .business-paths-heading > p:last-child { max-width: 58ch; color: var(--slate); }
 .business-path-grid { display: grid; gap: var(--space-4); }
-.business-path { min-width: 0; overflow: hidden; padding: clamp(28px,4.5vw,52px); background: var(--white); border: 1px solid #D9DFE2; border-radius: 20px; box-shadow: 0 18px 48px rgba(37,50,78,.07); }
+.business-path { min-width: 0; overflow: hidden; padding: clamp(28px,4.5vw,52px); background: var(--white); border: 1px solid #D9DFE2; border-radius: 20px; box-shadow: 0 18px 48px rgba(37,50,78,.07); transition: transform .28s cubic-bezier(.2,.7,.2,1), box-shadow .28s ease, border-color .28s ease; }
 .business-path-primary { color: var(--white); background: var(--navy); border-color: var(--navy); box-shadow: 0 20px 54px rgba(11,20,36,.16); }
 .business-path-number { display: block; margin-bottom: clamp(48px,8vw,92px); color: var(--action); font-size: .78rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
 .business-path-primary .business-path-number { color: var(--electric); }
@@ -244,6 +244,14 @@ section { padding-block: var(--space-12); }
 .system-components ul { display: grid; gap: 0; margin: 0; padding: 0; border-top: 1px solid #D9DFE2; list-style: none; }
 .system-components li { display: grid; grid-template-columns: 36px 1fr; gap: var(--space-3); padding: var(--space-4) 0; border-bottom: 1px solid #D9DFE2; color: var(--navy); font-weight: 650; }
 .system-components li span { color: var(--action); font-size: .75rem; letter-spacing: .08em; }
+@media (hover:hover) {
+  .business-path:hover { transform: translateY(-4px); border-color: #B8C9D3; box-shadow: 0 26px 64px rgba(37,50,78,.12); }
+  .business-path-primary:hover { border-color: #334665; box-shadow: 0 28px 68px rgba(11,20,36,.22); }
+}
+@supports (animation-timeline: view()) {
+  .business-path { animation: business-path-in linear both; animation-timeline: view(); animation-range: entry 0% cover 28%; }
+  @keyframes business-path-in { from { opacity: .35; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+}
 @media (min-width: 800px) {
   .business-paths-heading { grid-template-columns: minmax(0,1fr) minmax(320px,.62fr); align-items: end; }
   .business-paths-heading .eyebrow { grid-column: 1 / -1; }
