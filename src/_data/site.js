@@ -11,13 +11,13 @@ export default {
   email: "joe@swsa.ai",
   form_email: "operations@swsa.ai",
   areaServed: ["Albuquerque, NM", "Santa Fe, NM", "Farmington, NM", "Durango, CO", "Four Corners Region"],
-  message_territory: "Practical security. Professionally installed. Supported locally.",
+  message_territory: "Professional camera installation for New Mexico and the Four Corners.",
 
-  // Foundation-Gate-approved primary navigation (Business first, Home equal).
+  // Camera installation is the primary offer; monitored security supports it.
   nav: [
+    { label: "Camera Installation", url: "/security-cameras-new-mexico.html" },
     { label: "Business Security", url: "/commercial-security.html" },
     { label: "Home Security", url: "/home-security.html" },
-    { label: "Cameras", url: "/security-cameras-new-mexico.html" },
     { label: "Recent Work", url: "/recent-installations.html" },
     { label: "About", url: "/about.html" }
   ],

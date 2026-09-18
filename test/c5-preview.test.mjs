@@ -66,9 +66,9 @@ test("contact page: working tel/sms/mailto, no form, no disabled control, no for
   assert.ok(!/message form|coming soon|not yet active/i.test(h), "contact must not claim a form is available");
 });
 
-test("homepage emits the exact production title", () => {
+test("homepage emits the camera-first production title", () => {
   const h = readSite("index.html");
-  assert.match(h, /<title>Security Installation in New Mexico &amp; the Four Corners \| SWSA\.ai<\/title>/);
+  assert.match(h, /<title>Security Camera Installation in New Mexico &amp; the Four Corners \| SWSA\.ai<\/title>/);
 });
 
 test("evidence-bearing routes reference only approved project crops", () => {

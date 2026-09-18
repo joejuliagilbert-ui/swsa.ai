@@ -1,47 +1,86 @@
 ---
 layout: layouts/base.njk
-title: "Security Installation in New Mexico & the Four Corners"
-description: "Practical security, professionally installed and supported locally. Business and home security, cameras, and smart-home installation across New Mexico and the Four Corners region."
+title: "Security Camera Installation in New Mexico & the Four Corners"
+description: "Professional outdoor camera and video doorbell installation for homes and businesses across New Mexico and the Four Corners, with monitored security available."
 ---
-<section class="hero hero-textled wrap">
-  <div class="hero-text">
-    <p class="eyebrow">New Mexico &amp; the Four Corners</p>
-    <h1 class="hero-title">Practical security.<br>Professionally installed.<br>Supported locally.</h1>
-    <p class="lede">Business and home security, cameras, and smart-home setup — planned around what you actually need, installed cleanly, and supported by the person accountable for the work.</p>
-    <div class="actions">
-      {% include "partials/contact-actions.njk" %}
-      <a class="cta cta-quiet" href="/contact.html">Send a message</a>
-    </div>
-    <div class="service-signal" role="group" aria-label="SWSA.ai service overview">
-      <ul>
-        <li><strong>Business security</strong> — Cameras, alarms, and access planning</li>
-        <li><strong>Home security</strong> — Protection, cameras, and smart-home setup</li>
-        <li><strong>Local support</strong> — New Mexico and the Four Corners</li>
+<section class="camera-hero">
+  <div class="wrap camera-hero-grid">
+    <div class="camera-hero-copy">
+      <p class="eyebrow">Professional camera installation · New Mexico &amp; the Four Corners</p>
+      <h1>Security cameras installed for the view you actually need.</h1>
+      <p class="lede">Outdoor cameras and video doorbells, placed with purpose, connected correctly, and set up so your alerts are useful from day one.</p>
+      <div class="actions">
+        <a class="cta cta-bright" href="/contact.html">Plan my camera setup</a>
+        <a class="cta cta-ghost" href="/recent-installations.html">See real installations</a>
+      </div>
+      <ul class="hero-proof" aria-label="Camera installation highlights">
+        <li>Homes &amp; businesses</li>
+        <li>Google outdoor &amp; doorbell cameras</li>
+        <li>Local installation &amp; support</li>
       </ul>
+    </div>
+
+    <div class="camera-stage" aria-label="Professional exterior camera installation">
+      {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Professionally installed outdoor security camera beneath an eave", "(min-width: 900px) 46vw, 100vw", "camera-stage-image", true %}
+      <div class="viewfinder" aria-hidden="true">
+        <span class="corner corner-tl"></span><span class="corner corner-tr"></span>
+        <span class="corner corner-bl"></span><span class="corner corner-br"></span>
+        <span class="focus-point"></span>
+        <span class="scan-line"></span>
+      </div>
+      <div class="camera-status"><span></span> Coverage planned</div>
+      <div class="camera-caption">
+        <strong>Clean placement. Clear sightlines.</strong>
+        <span>Santa Fe camera installation</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="audience wrap" aria-label="Choose your path">
-  <div class="audience-path">
-    <h2>Business Security</h2>
-    <p>Cameras and security for businesses that need visibility without unnecessary complexity.</p>
-    <a href="/commercial-security.html">Explore business security &rarr;</a>
+<section class="camera-services wrap" aria-labelledby="camera-services-title">
+  <div class="section-heading">
+    <p class="eyebrow">Start with what you want to see</p>
+    <h2 id="camera-services-title">Camera coverage that fits the property.</h2>
+    <p>Every installation starts with the view—not a box of equipment. We look at approaches, mounting height, light, Wi-Fi or wiring, and the alerts you want to receive.</p>
   </div>
-  <div class="audience-path">
-    <h2>Home Security</h2>
-    <p>Straightforward protection, clean installation, and patient setup for daily life.</p>
-    <a href="/home-security.html">Explore home security &rarr;</a>
+  <div class="service-grid">
+    <article class="service-card service-card-featured">
+      <span class="service-number">01</span>
+      <h3>Outdoor cameras</h3>
+      <p>Driveways, side yards, gates, garages, and other approaches covered with intentional sightlines.</p>
+      <a href="/security-cameras-new-mexico.html">Explore camera installation &rarr;</a>
+    </article>
+    <article class="service-card">
+      <span class="service-number">02</span>
+      <h3>Video doorbells</h3>
+      <p>Front-door visibility with clean mounting, dependable connectivity, and alerts tuned for daily life.</p>
+      <a href="/security-cameras-new-mexico.html">Plan a doorbell camera &rarr;</a>
+    </article>
+    <article class="service-card">
+      <span class="service-number">03</span>
+      <h3>Monitored security</h3>
+      <p>Add professional monitoring, entry protection, and life-safety devices when cameras are only part of the plan.</p>
+      <a href="/adt-installation-new-mexico.html">Explore ADT-monitored security &rarr;</a>
+    </article>
+  </div>
+</section>
+
+<section class="camera-callout">
+  <div class="wrap camera-callout-inner">
+    <p><strong>Already bought your cameras?</strong> Get help with placement, installation, connection, and app setup.</p>
+    <div class="actions">
+      {% include "partials/contact-actions.njk" %}
+    </div>
   </div>
 </section>
 
 <section class="proof wrap">
-  <p class="eyebrow">Recent work</p>
-  <h2>A security upgrade built around what could be reused</h2>
+  <p class="eyebrow">Installed in the field, not rendered in a studio</p>
+  <h2>Real camera work from a recent Santa Fe project.</h2>
   <div class="proof-lead">
     {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Installed exterior camera under an eave", "(min-width: 900px) 55vw, 100vw", "media-frame" %}
     <div class="proof-body">
-      <p class="proof-outcome">Santa Fe — security upgrade</p>
+      <p class="proof-outcome">Reuse what works. Improve what matters.</p>
       <p>Suitable existing wiring was reused, camera coverage was updated, and life-safety devices were added as part of one practical upgrade.</p>
       <a href="/installs/santa-fe-security-installation-march-2026.html">See the Santa Fe project &rarr;</a>
     </div>
@@ -49,12 +88,13 @@ description: "Practical security, professionally installed and supported locally
 </section>
 
 <section class="process wrap">
-  <h2>How SWSA works</h2>
+  <p class="eyebrow">A better install starts before the ladder comes out</p>
+  <h2>From blind spot to useful view.</h2>
   <ol class="steps">
-    <li><span class="step-n">1</span><strong>Assess</strong><span>Understand the property, entry points, and goals.</span></li>
-    <li><span class="step-n">2</span><strong>Plan</strong><span>Decide what matters and where it goes.</span></li>
-    <li><span class="step-n">3</span><strong>Install</strong><span>Clean placement and careful setup.</span></li>
-    <li><span class="step-n">4</span><strong>Support</strong><span>Walkthrough and clear next-step support.</span></li>
+    <li><span class="step-n">1</span><strong>Walk the property</strong><span>Identify approaches, blind spots, light, power, and connectivity.</span></li>
+    <li><span class="step-n">2</span><strong>Plan the view</strong><span>Choose camera positions based on the detail you need to capture.</span></li>
+    <li><span class="step-n">3</span><strong>Install cleanly</strong><span>Mount, connect, aim, and test every camera.</span></li>
+    <li><span class="step-n">4</span><strong>Tune the alerts</strong><span>Set up the app and make notifications useful instead of noisy.</span></li>
   </ol>
 </section>
 
