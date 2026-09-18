@@ -1058,9 +1058,10 @@ section { padding-block: var(--space-12); }
 /* Scroll-triggered start panel */
 .sticky-start { position: fixed; right: clamp(14px, 2.5vw, 32px); bottom: clamp(14px, 2.5vw, 32px); z-index: 60; display: grid; grid-template-columns: 1fr auto; gap: 4px var(--space-4); width: min(390px, calc(100vw - 28px)); padding: 17px 18px; color: var(--white); background: rgba(8,17,31,.96); border: 1px solid rgba(255,255,255,.2); box-shadow: 0 20px 55px rgba(0,0,0,.32); backdrop-filter: blur(14px); }
 .sticky-start p { margin: 0; line-height: 1.25; }
-.sticky-start p span { display: block; color: #A8DFFF; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.sticky-start p span { display: block; color: #A8DFFF; font-size: .75rem; font-weight: 700; letter-spacing: .075em; text-transform: uppercase; }
 .sticky-start p strong { display: block; margin-top: 3px; color: var(--white); font-size: 1.08rem; }
-.sticky-start > a { grid-column: 2; grid-row: 1; align-self: center; padding: 9px 13px; color: var(--night); background: var(--electric); font-size: .82rem; font-weight: 700; text-decoration: none; }
+.sticky-start > a { grid-column: 2; grid-row: 1; align-self: center; padding: 10px 14px; color: var(--night); background: var(--electric); border-radius: 2px; font-size: .875rem; font-weight: 700; text-decoration: none; }
+.sticky-start > a:hover { background: #93D9FF; }
 .sticky-security { width: min(430px, calc(100vw - 28px)); }
 .sticky-security p span { color: #b9e7ff; }
 .sticky-security > a { text-align: center; }
@@ -1068,7 +1069,7 @@ section { padding-block: var(--space-12); }
   .sticky-start { transform: translateY(calc(100% + 40px)); opacity: 0; animation: sticky-start-reveal linear both; animation-timeline: scroll(root); animation-range: 360px 520px; }
   @keyframes sticky-start-reveal { to { transform: translateY(0); opacity: 1; } }
 }
-@media (max-width: 430px) { .sticky-start { padding: 14px 15px; } .sticky-start p strong { font-size: .98rem; } .sticky-security > a { max-width: 120px; } }
+@media (max-width: 430px) { .sticky-start { gap: 4px var(--space-3); padding: 14px 15px; } .sticky-start p strong { font-size: .98rem; } .sticky-start > a { padding-inline: 12px; } .sticky-security > a { max-width: 120px; } }
 
 /* Camera-first local landing pages */
 .local-camera-hero { position: relative; overflow: hidden; color: var(--white); background: radial-gradient(circle at 78% 18%, rgba(99,199,255,.17), transparent 31%), linear-gradient(135deg, var(--night), #0D2138 62%, #123657); }
