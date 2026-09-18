@@ -1,80 +1,104 @@
 ---
 layout: layouts/base.njk
 permalink: "/video-surveillance.html"
-title: "Video Surveillance for New Mexico Businesses"
-description: "Commercial camera planning and installation focused on useful sightlines, simple operation, and local support across New Mexico and the Four Corners."
+title: "Business Camera Installation & Video Surveillance"
+description: "Commercial camera planning and installation focused on useful sightlines, simple video review, and local support across New Mexico and the Four Corners."
 breadcrumbs:
   - { name: "Home", url: "/" }
   - { name: "Business Security", url: "/commercial-security.html" }
   - { name: "Video Surveillance" }
 ---
-{% import "macros.njk" as m %}
-<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+<div class="wrap surveillance-breadcrumbs">{% include "partials/breadcrumbs.njk" %}</div>
 
-<section class="hero hero-textled wrap">
-  <div class="hero-text">
-    <p class="eyebrow">Business Security · Video</p>
-    <h1 class="hero-title">See what matters. Keep operation simple.</h1>
-    <p class="lede">Camera coverage planned around entries, activity areas, parking, and the way your team actually reviews video — not around the largest possible device count.</p>
-    <div class="actions">
-      <a class="cta" href="/contact.html">Plan a business assessment</a>
-      {% include "partials/contact-actions.njk" %}
+<section class="surveillance-hero">
+  <div class="wrap surveillance-hero-grid">
+    <div>
+      <p class="eyebrow">Business camera installation</p>
+      <h1>Useful views. Fast answers.</h1>
+      <p class="lede">Plan camera coverage around the moments your business may need to understand later—from an arrival at the front door to activity in a work area or parking lot.</p>
+      <div class="actions">
+        <a class="cta cta-bright" href="/contact.html">Plan camera coverage</a>
+        <a class="cta cta-ghost" href="/security-assessments.html">Start with a walkthrough</a>
+      </div>
+    </div>
+
+    <div class="surveillance-console" aria-label="Illustration of organized business camera views">
+      <div class="surveillance-console-bar"><span>Live views</span><i></i><i></i><i></i></div>
+      <div class="surveillance-feeds">
+        <div class="surveillance-feed surveillance-feed-main"><span>01 · Entry</span><b class="feed-door"></b><b class="feed-person"></b><i></i></div>
+        <div class="surveillance-feed"><span>02 · Work area</span><b class="feed-counter"></b><i></i></div>
+        <div class="surveillance-feed"><span>03 · Exterior</span><b class="feed-lane"></b><i></i></div>
+      </div>
+      <div class="surveillance-timeline"><span></span><i></i><small>Review organized by view and time</small></div>
     </div>
   </div>
 </section>
 
-<section class="band wrap">
-  <h2>Where cameras help</h2>
-  {{ m.fitList([
-    {h:"Entry visibility", t:"clear views of who arrives and leaves."},
-    {h:"Customer and work areas", t:"awareness where daily activity happens."},
-    {h:"Parking and perimeter", t:"coverage of approaches and outdoor areas."},
-    {h:"Replacing an unclear system", t:"cameras that are hard to view or trust."}
-  ]) }}
+<section class="wrap surveillance-questions">
+  <div class="section-heading">
+    <p class="eyebrow">Design backward from the question</p>
+    <h2>“There is a camera there” is not the same as a useful view.</h2>
+    <p>Placement, height, distance, lighting, and the expected moment all change what a camera can help you understand.</p>
+  </div>
+  <div class="surveillance-question-grid">
+    <article><span>01</span><h3>Who arrived?</h3><p>Plan entry and approach views around people entering and leaving the property.</p></article>
+    <article><span>02</span><h3>What happened here?</h3><p>Match the view to the customer, work, counter, or storage area that matters.</p></article>
+    <article><span>03</span><h3>Which direction?</h3><p>Use exterior sightlines to understand movement across parking and perimeter areas.</p></article>
+    <article><span>04</span><h3>When did it happen?</h3><p>Organize recording and review around a workflow your team can actually use.</p></article>
+  </div>
 </section>
 
-<section class="wrap">
-  <h2>What SWSA plans first</h2>
-  {{ m.principles([
-    "<strong>Sightlines and lighting</strong> so each camera returns a useful image.",
-    "<strong>Mounting position and image detail</strong> matched to what you need to see.",
-    "<strong>Recording expectations and network constraints</strong> discussed openly.",
-    "<strong>Who needs access</strong> to live and recorded video, and how they will use it."
-  ]) }}
+<section class="surveillance-planning">
+  <div class="wrap surveillance-planning-grid">
+    <div>
+      <p class="eyebrow">Before anything is mounted</p>
+      <h2>Four decisions shape the system.</h2>
+    </div>
+    <ol>
+      <li><span>01</span><div><strong>Sightline &amp; lighting</strong><p>Account for the direction of travel, daytime contrast, nighttime conditions, and obstructions.</p></div></li>
+      <li><span>02</span><div><strong>Image detail</strong><p>Match mounting position and field of view to what the business needs to see.</p></div></li>
+      <li><span>03</span><div><strong>Recording &amp; network</strong><p>Discuss recording expectations, connectivity, and practical constraints before installation.</p></div></li>
+      <li><span>04</span><div><strong>People &amp; access</strong><p>Decide who needs live or recorded video and how they will retrieve it.</p></div></li>
+    </ol>
+  </div>
 </section>
 
-<section class="wrap">
-  <h2>What good coverage enables</h2>
-  {{ m.outcomes([
-    "Useful coverage of the areas that matter.",
-    "Straightforward review for the people who need it.",
-    "Clean, considered placement.",
-    "A staff handoff and training so the system is usable."
-  ]) }}
+<section class="wrap surveillance-review">
+  <div>
+    <p class="eyebrow">The handoff matters</p>
+    <h2>Video is only useful when someone can find it.</h2>
+  </div>
+  <div>
+    <p>SWSA connects the camera system, organizes the views, and walks the right people through live access and recorded review. The goal is a system that remains understandable after installation day.</p>
+    <div class="surveillance-review-steps">
+      <span><b>01</b>Choose the view</span>
+      <span><b>02</b>Narrow the time</span>
+      <span><b>03</b>Review the moment</span>
+      <span><b>04</b>Save what is needed</span>
+    </div>
+  </div>
 </section>
 
-<section class="wrap">
-  <p class="eyebrow">How we work</p>
-  <h2>Planning first, then a clean install</h2>
-  <p>A business assessment starts with your property and how your team operates, then becomes a practical plan and a clean installation. SWSA documents recent work with sanitized detail and no customer-identifying information; those examples are residential.</p>
-  <p><a href="/recent-installations.html">See recent SWSA installations &rarr;</a></p>
+<section class="surveillance-fit">
+  <div class="wrap surveillance-fit-grid">
+    <div>
+      <p class="eyebrow">Camera-first, with room to grow</p>
+      <h2>Start with visibility. Add other security layers when they solve a real problem.</h2>
+    </div>
+    <div>
+      <p>Business cameras can stand on their own or be planned alongside entry protection and access control. A property walkthrough helps separate what is useful now from what can wait.</p>
+      <nav class="surveillance-links" aria-label="Related security decisions">
+        <a href="/commercial-security.html">Business Security overview &rarr;</a>
+        <a href="/security-assessments.html">Security assessments &rarr;</a>
+        <a href="/security-cameras-new-mexico.html">Home and business camera installation &rarr;</a>
+      </nav>
+    </div>
+  </div>
 </section>
 
-<section class="wrap">
-  {{ m.relatedRail("Related decisions", [
-    {label:"Business Security overview", url:"/commercial-security.html"},
-    {label:"Start with a security assessment", url:"/security-assessments.html"},
-    {label:"Cameras for home or business", url:"/security-cameras-new-mexico.html"}
-  ]) }}
-</section>
-
-{{ m.processSteps() }}
-
-<section class="area wrap">
-  <h2>Serving New Mexico &amp; the Four Corners</h2>
-  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
-  <div class="actions">
-    <a class="cta" href="/contact.html">Plan a business assessment</a>
-    {% include "partials/contact-actions.njk" %}
+<section class="surveillance-final">
+  <div class="wrap surveillance-final-grid">
+    <div><p class="eyebrow">New Mexico &amp; the Four Corners</p><h2>Show SWSA the property.</h2></div>
+    <div><p>Send the location, the areas you need to see, and any existing equipment details. That is enough to start a practical camera conversation.</p><div class="actions"><a class="cta cta-bright" href="/contact.html">Start a camera project</a>{% include "partials/contact-actions.njk" %}</div></div>
   </div>
 </section>
