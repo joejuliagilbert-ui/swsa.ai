@@ -113,15 +113,20 @@ p { margin: 0 0 var(--space-4); }
 /* Mobile-first: the compact <details> menu is the default state. */
 .desktop-nav { display: none; }
 .mobile-nav { display: block; position: relative; }
-.nav-summary { cursor: pointer; list-style: none; padding: 8px 14px; border: 1px solid var(--navy); border-radius: var(--radius); color: var(--navy); font-weight: 600; }
+.nav-summary { cursor: pointer; list-style: none; min-height: 44px; padding: 8px 14px; border: 1px solid var(--navy); border-radius: 10px; color: var(--navy); font-weight: 650; transition: color .18s ease, background-color .18s ease; }
 .nav-summary::-webkit-details-marker { display: none; }
+.mobile-nav[open] .nav-summary { color: var(--white); background: var(--navy); }
 .mobile-nav-panel {
   position: absolute; right: 0; top: calc(100% + 8px); z-index: 40;
-  background: var(--white); border: 1px solid #E6E6E0; border-radius: var(--radius);
-  padding: var(--space-4); min-width: 240px; box-shadow: 0 8px 24px rgba(11,20,36,.08);
+  width: min(342px, calc(100vw - 48px)); min-width: 280px; padding: 8px 18px 18px;
+  background: rgba(255,255,255,.98); border: 1px solid #D8DEE2; border-radius: 16px;
+  box-shadow: 0 24px 70px rgba(11,20,36,.2); backdrop-filter: blur(18px);
 }
-.mobile-nav-panel ul { flex-direction: column; gap: var(--space-4); }
-.mobile-nav-panel .header-actions { margin-top: var(--space-4); }
+.mobile-nav-panel ul { flex-direction: column; gap: 0; }
+.mobile-nav-panel li + li { border-top: 1px solid #E6E9EB; }
+.mobile-nav-panel ul a { display: flex; align-items: center; min-height: 49px; font-size: 1rem; }
+.mobile-nav-panel .header-actions { display: flex; width: 100%; margin-top: var(--space-3); padding-top: var(--space-4); border-top: 1px solid #DDE2E5; }
+.mobile-nav-panel .header-cta { flex: 1; min-height: 46px; text-align: center; }
 
 /* Full inline navigation only once it genuinely fits (content-safe breakpoint,
    verified against the widest nav content at 769/800/900/1024/1280). */
