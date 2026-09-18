@@ -896,3 +896,121 @@ h1, h2, h3 { letter-spacing: -.04em; }
     transition-duration: .01ms !important;
   }
 }
+
+/* ========================================================================
+   Release 9 — replace landing-page cards with an architectural price list
+   ======================================================================== */
+
+@supports (animation-timeline: view()) {
+  [data-reveal] {
+    animation-name: swsa-reveal-clean;
+    animation-range: entry 2% cover 30%;
+  }
+  @keyframes swsa-reveal-clean {
+    from { opacity: .82; filter: none; transform: translateY(68px) scale(.985); }
+    to { opacity: 1; filter: none; transform: none; }
+  }
+}
+
+/* Make the primary price decision read like a specification sheet. */
+.pricing-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid #bac4c5;
+}
+.pricing-options article,
+.pricing-options article:hover {
+  display: grid;
+  grid-template-columns: minmax(110px, .55fr) minmax(190px, 1.15fr) minmax(175px, .72fr) minmax(210px, 1fr) auto;
+  gap: clamp(22px, 3vw, 54px);
+  min-height: 210px;
+  align-items: center;
+  padding: 34px 0;
+  color: var(--navy);
+  background: transparent !important;
+  border: 0;
+  border-bottom: 1px solid #bac4c5 !important;
+  border-radius: 0;
+  box-shadow: none !important;
+  transform: none;
+}
+.pricing-options .pricing-featured { padding-inline: clamp(20px, 3vw, 44px); background: #e0e6e5 !important; }
+.pricing-options h3 { max-width: 16ch; margin: 0; font-size: clamp(1.3rem, 2vw, 1.85rem); }
+.pricing-options .pricing-label { margin: 0; }
+.pricing-options .pricing-price { margin: 0; color: var(--navy); font-size: clamp(3.2rem, 4.7vw, 5.2rem); }
+.pricing-options .pricing-featured h3,
+.pricing-options .pricing-featured .pricing-label { color: var(--navy); }
+.pricing-options .pricing-price > span { color: var(--action); }
+.pricing-options .pricing-price small,
+.pricing-featured .pricing-price small { color: var(--slate); }
+.pricing-options ul,
+.pricing-featured ul {
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  color: var(--slate);
+  border: 0;
+}
+.pricing-options a,
+.pricing-featured a { min-width: 174px; color: white; background: var(--action); text-align: center; }
+.pricing-options a:hover { color: white; background: #0e557f; }
+.pricing-featured::before {
+  top: 16px;
+  right: 20px;
+  padding: 0;
+  color: var(--action);
+  background: transparent;
+  border-radius: 0;
+  font-size: .7rem;
+}
+
+/* Two services, expressed as a progression instead of promotional cards. */
+.home-path-grid { gap: 0; border-top: 1px solid #bcc5c6; }
+.home-path {
+  min-height: 520px;
+  padding: clamp(34px, 5vw, 66px);
+  border-radius: 0;
+}
+.home-path + .home-path { border-left: 1px solid #bcc5c6; }
+.home-path:hover { box-shadow: none; transform: none; }
+.home-path-camera { background: var(--night); }
+.home-path-security { background: #edf0ef; }
+.home-path > span { margin-bottom: clamp(100px, 15vw, 190px); }
+.home-path h3 { margin-top: 0; }
+
+/* The full navigation fits comfortably once the phone is withheld. */
+@media (min-width: 1080px) and (max-width: 1199px) {
+  .desktop-nav { display: flex; align-items: center; gap: clamp(16px, 2vw, 28px); }
+  .mobile-nav { display: none; }
+  .desktop-nav .header-phone { display: none; }
+}
+
+@media (max-width: 1040px) {
+  .pricing-options article,
+  .pricing-options article:hover {
+    grid-template-columns: .55fr 1.2fr .7fr;
+  }
+  .pricing-options ul { grid-column: 2; }
+  .pricing-options a { grid-column: 3; grid-row: 2; }
+}
+
+@media (max-width: 700px) {
+  .pricing-options article,
+  .pricing-options article:hover {
+    display: flex;
+    min-height: 0;
+    align-items: stretch;
+    gap: 0;
+    padding: 34px 0;
+  }
+  .pricing-options .pricing-featured { padding-inline: 20px; }
+  .pricing-options h3 { margin: 8px 0 24px; }
+  .pricing-options .pricing-price { margin-bottom: 24px; }
+  .pricing-options ul { margin-bottom: 28px; }
+  .pricing-options a { width: 100%; min-width: 0; }
+  .home-path-grid { border-top: 0; }
+  .home-path { min-height: 420px; }
+  .home-path + .home-path { border-top: 1px solid #bcc5c6; border-left: 0; }
+  .home-path > span { margin-bottom: 80px; }
+}
