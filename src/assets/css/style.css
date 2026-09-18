@@ -383,16 +383,20 @@ section { padding-block: var(--space-12); }
 .contact-package-heading .eyebrow { color: #A8DFFF; }
 .contact-package-heading h2 { max-width: 13ch; margin-top: 0; color: var(--white); font-size: clamp(2.35rem,5vw,4.7rem); letter-spacing: -.045em; }
 .contact-package-heading > p:last-child { max-width: 62ch; color: #C9D6E2; }
-.contact-package-list { display: grid; border-top: 1px solid rgba(255,255,255,.2); }
-.contact-package-list > a { position: relative; display: grid; gap: var(--space-3); padding: var(--space-8) 0; color: var(--white); border-bottom: 1px solid rgba(255,255,255,.2); text-decoration: none; }
-.contact-package-list > a:hover strong, .contact-package-list > a:hover small { color: var(--electric); }
-.contact-package-list span { color: #A8DFFF; font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
-.contact-package-list strong { min-height: 2.5em; color: var(--white); font-size: 1.25rem; line-height: 1.2; transition: color .2s ease; }
-.contact-package-list b { color: var(--white); font-size: clamp(3rem,6vw,5rem); line-height: .9; letter-spacing: -.055em; }
-.contact-package-list small { margin-top: var(--space-4); color: var(--electric); font-weight: 700; transition: color .2s ease; }
-.contact-package-featured::after { content: "BEST COVERAGE"; position: absolute; top: 0; right: 0; padding: 5px 8px; color: var(--night); background: var(--electric); font-size: .64rem; font-weight: 800; letter-spacing: .08em; }
+.contact-package-list { display: grid; gap: var(--space-4); }
+.contact-package-list > a { position: relative; display: flex; min-width: 0; min-height: 360px; flex-direction: column; gap: var(--space-3); padding: clamp(28px,3.5vw,40px); overflow: hidden; color: var(--navy); background: var(--white); border: 1px solid rgba(255,255,255,.2); border-radius: 18px; box-shadow: 0 18px 46px rgba(0,0,0,.16); text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.contact-package-list > a:hover { transform: translateY(-3px); box-shadow: 0 24px 60px rgba(0,0,0,.22); }
+.contact-package-list span { color: var(--action); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.contact-package-list strong { max-width: 17ch; min-height: 2.5em; color: var(--navy); font-size: 1.4rem; line-height: 1.15; }
+.contact-package-list b { margin-top: var(--space-4); color: var(--navy); font-size: clamp(3.4rem,6vw,5rem); line-height: .9; letter-spacing: -.055em; }
+.contact-package-list small { width: fit-content; margin-top: auto; padding: 10px 14px; color: var(--white); background: var(--action); border-radius: 3px; font-size: 1rem; font-weight: 700; }
+.contact-package-featured { color: var(--white) !important; background: var(--navy) !important; }
+.contact-package-featured span { color: #A8DFFF; }
+.contact-package-featured strong, .contact-package-featured b { color: var(--white); }
+.contact-package-featured small { color: var(--night); background: var(--electric); }
+.contact-package-featured::after { content: "BEST COVERAGE"; position: absolute; top: 20px; right: 20px; padding: 6px 9px; color: var(--night); background: var(--electric); border-radius: 2px; font-size: .75rem; font-weight: 800; letter-spacing: .06em; }
 .contact-package-note { max-width: 80ch; margin: var(--space-8) 0 0; color: #AEBFCC; font-size: .82rem; }
-@media (min-width: 780px) { .contact-package-list { grid-template-columns: repeat(3,1fr); } .contact-package-list > a { padding: var(--space-8); border-right: 1px solid rgba(255,255,255,.2); } .contact-package-list > a:first-child { padding-left: 0; } .contact-package-list > a:last-child { padding-right: 0; border-right: 0; } }
+@media (min-width: 780px) { .contact-package-list { grid-template-columns: repeat(3,1fr); } }
 .contact-security-start { margin-top: clamp(64px,9vw,112px); padding-top: clamp(48px,7vw,84px); border-top: 1px solid rgba(255,255,255,.2); }
 .contact-security-heading { display: grid; gap: var(--space-4); margin-bottom: var(--space-10); }
 .contact-security-heading .eyebrow { margin: 0; }
