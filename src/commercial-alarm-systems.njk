@@ -2,80 +2,45 @@
 layout: layouts/base.njk
 permalink: "/commercial-alarm-systems.html"
 title: "Commercial Alarm Systems in New Mexico"
-description: "Commercial alarm planning and installation organized around entry points, property layout, daily use, and clear support across New Mexico and the Four Corners."
+description: "Plan commercial alarm coverage around business entries, daily routines, and camera visibility across New Mexico and the Four Corners."
 breadcrumbs:
   - { name: "Home", url: "/" }
   - { name: "Business Security", url: "/commercial-security.html" }
   - { name: "Commercial Alarm Systems" }
 ---
-{% import "macros.njk" as m %}
-<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+<div class="wrap alarm-breadcrumbs">{% include "partials/breadcrumbs.njk" %}</div>
 
-<section class="hero hero-textled wrap">
-  <div class="hero-text">
-    <p class="eyebrow">Business Security · Alarms</p>
-    <h1 class="hero-title">Alarm coverage planned around the property.</h1>
-    <p class="lede">Start with how the building is entered, used, opened, and closed so protection fits the operation and remains straightforward for staff.</p>
-    <div class="actions">
-      <a class="cta" href="/contact.html">Discuss alarm coverage</a>
-      {% include "partials/contact-actions.njk" %}
+<section class="alarm-hero">
+  <div class="wrap alarm-hero-grid">
+    <div class="alarm-copy">
+      <p class="eyebrow">Business alarms · Entry coverage · Camera context</p>
+      <h1>Protect the opening. See the event.</h1>
+      <p class="lede">Plan alarm coverage around how the building opens, closes, and operates—then use camera views where visual context makes the response more useful.</p>
+      <div class="actions"><a class="cta cta-bright" href="/contact.html?project=commercial-alarm">Discuss alarm coverage</a><a class="cta cta-ghost" href="/video-surveillance.html">Explore business cameras</a></div>
+      <ul class="alarm-signals"><li>Perimeter coverage</li><li>Staff routines</li><li>Camera context</li></ul>
+    </div>
+    <div class="alarm-stage" role="img" aria-label="Business floor plan diagram showing alarm zones and a camera view">
+      <span class="alarm-stage-label">Property coverage map</span>
+      <div class="alarm-building" aria-hidden="true"><span class="alarm-room room-a"></span><span class="alarm-room room-b"></span><span class="alarm-room room-c"></span><i class="alarm-entry entry-a"></i><i class="alarm-entry entry-b"></i></div>
+      <span class="alarm-zone zone-a"><i></i>Main entry</span><span class="alarm-zone zone-b"><i></i>Secondary entry</span><span class="alarm-zone zone-c"><i></i>Interior motion</span>
+      <div class="alarm-camera" aria-hidden="true"><span></span></div><span class="alarm-cone" aria-hidden="true"></span>
+      <p>Alarm events and camera views planned together</p>
     </div>
   </div>
 </section>
 
-<section class="band wrap">
-  <h2>Where alarm coverage fits</h2>
-  {{ m.fitList([
-    {h:"Main and secondary entries", t:"protect the ways people come and go."},
-    {h:"After-hours access", t:"know when a space is opened outside normal hours."},
-    {h:"Storage or restricted areas", t:"add coverage where it matters most."},
-    {h:"Replacing an old or partial system", t:"bring coverage up to how the business runs."}
-  ]) }}
+<section class="alarm-map wrap">
+  <div class="alarm-section-heading"><p class="eyebrow">Map the operation</p><h2>Coverage begins with how the business is used.</h2><p>Entries, after-hours activity, restricted areas, opening routines, and closing routines shape the plan more than a generic equipment count.</p></div>
+  <ol><li><span>01</span><div><strong>Entry points</strong><p>Identify main, secondary, service, and selected emergency openings.</p></div></li><li><span>02</span><div><strong>Interior movement</strong><p>Consider the areas that should add another detection layer.</p></div></li><li><span>03</span><div><strong>Staff routines</strong><p>Plan arming, disarming, notifications, and handoff around real users.</p></div></li><li><span>04</span><div><strong>Useful views</strong><p>Add cameras where seeing the approach or event changes the response.</p></div></li></ol>
 </section>
 
-<section class="wrap">
-  <h2>What SWSA plans first</h2>
-  {{ m.principles([
-    "<strong>Entry points and motion areas</strong> mapped to daily use.",
-    "<strong>Glass and perimeter conditions</strong> considered where relevant.",
-    "<strong>User routines and notification expectations</strong> for staff.",
-    "<strong>A monitoring discussion</strong> so you can decide what fits."
-  ]) }}
+<section class="alarm-camera-band"><div class="wrap alarm-camera-grid"><div><p class="eyebrow">Camera-first awareness</p><h2>An alert tells you to look. A useful camera view helps you understand.</h2></div><div><p>Alarm coverage and video surveillance are different layers. Planning them together can make it easier to review an entry, an approach, or activity around the property.</p><a href="/video-surveillance.html">Plan useful business camera views →</a></div></div></section>
+
+<section class="alarm-layers wrap">
+  <div class="alarm-section-heading"><p class="eyebrow">Coverage layers</p><h2>Use each layer for a clear job.</h2></div>
+  <div class="alarm-layer-grid"><article><span>01</span><h3>Perimeter</h3><p>Door, window, and selected glass conditions considered around the building.</p></article><article><span>02</span><h3>Interior</h3><p>Motion or selected interior detection where another layer belongs.</p></article><article><span>03</span><h3>People</h3><p>User routines, codes, responsibilities, and clear staff handoff.</p></article><article><span>04</span><h3>Visibility</h3><p>Camera coverage for the approaches and events worth reviewing.</p></article></div>
 </section>
 
-<section class="wrap">
-  <h2>What good alarm coverage enables</h2>
-  {{ m.outcomes([
-    "Practical, property-fit coverage.",
-    "Operation staff can understand.",
-    "Clean installation.",
-    "A clear staff handoff."
-  ]) }}
-</section>
+<section class="alarm-decisions"><div class="wrap alarm-decisions-grid"><div><p class="eyebrow">One property walkthrough</p><h2>Make the alarm decision in context.</h2><p>A security assessment can connect alarm zones, camera sightlines, access needs, and the property’s existing infrastructure before equipment is selected.</p><a class="cta cta-bright" href="/security-assessments.html">Start with an assessment</a></div><nav aria-label="Related business security decisions"><a href="/commercial-security.html"><span>01</span><strong>Business security</strong><small>See the full property plan</small></a><a href="/remote-monitoring.html"><span>02</span><strong>Monitoring options</strong><small>Discuss alerts and response</small></a><a href="/video-surveillance.html"><span>03</span><strong>Video surveillance</strong><small>Plan useful camera coverage</small></a></nav></div></section>
 
-<section class="wrap">
-  <p class="eyebrow">How we work</p>
-  <h2>Planning first, then a clean install</h2>
-  <p>A business assessment starts with your property and how your team operates, then becomes a practical plan and a clean installation. SWSA documents recent work with sanitized detail and no customer-identifying information; those examples are residential.</p>
-  <p><a href="/recent-installations.html">See recent SWSA installations &rarr;</a></p>
-</section>
-
-<section class="wrap">
-  {{ m.relatedRail("Related decisions", [
-    {label:"Business Security overview", url:"/commercial-security.html"},
-    {label:"Monitoring options", url:"/remote-monitoring.html"},
-    {label:"Start with a security assessment", url:"/security-assessments.html"},
-    {label:"Video surveillance", url:"/video-surveillance.html"}
-  ]) }}
-</section>
-
-{{ m.processSteps() }}
-
-<section class="area wrap">
-  <h2>Serving New Mexico &amp; the Four Corners</h2>
-  <p>Serving {{ site.areaServed | join(", ") }} and surrounding communities.</p>
-  <div class="actions">
-    <a class="cta" href="/contact.html">Discuss alarm coverage</a>
-    {% include "partials/contact-actions.njk" %}
-  </div>
-</section>
+<section class="alarm-final"><div class="wrap alarm-final-grid"><div><p class="eyebrow">New Mexico &amp; the Four Corners</p><h2>Start with the building and the way it runs.</h2></div><div><p>Share the property type, the entries that matter, and whether cameras, an existing alarm, or both are already in place.</p><div class="actions"><a class="cta cta-bright" href="/contact.html?project=commercial-alarm">Discuss alarm coverage</a><a class="cta cta-ghost" href="tel:{{ site.phone_tel }}">Call {{ site.phone_display }}</a></div></div></div></section>
