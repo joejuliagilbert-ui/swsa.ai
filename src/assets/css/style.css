@@ -344,6 +344,21 @@ section { padding-block: var(--space-12); }
 .quote-note li p { display: grid; gap: 1px; margin: 0; }
 .quote-note li small { color: var(--slate); font-size: .85rem; }
 @media (min-width: 900px) { .contact-hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(360px, .68fr); } }
+.contact-packages { color: var(--white); background: #0B1727; }
+.contact-package-heading { max-width: 760px; margin-bottom: var(--space-12); }
+.contact-package-heading .eyebrow { color: #A8DFFF; }
+.contact-package-heading h2 { max-width: 13ch; margin-top: 0; color: var(--white); font-size: clamp(2.35rem,5vw,4.7rem); letter-spacing: -.045em; }
+.contact-package-heading > p:last-child { max-width: 62ch; color: #C9D6E2; }
+.contact-package-list { display: grid; border-top: 1px solid rgba(255,255,255,.2); }
+.contact-package-list > a { position: relative; display: grid; gap: var(--space-3); padding: var(--space-8) 0; color: var(--white); border-bottom: 1px solid rgba(255,255,255,.2); text-decoration: none; }
+.contact-package-list > a:hover strong, .contact-package-list > a:hover small { color: var(--electric); }
+.contact-package-list span { color: #A8DFFF; font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.contact-package-list strong { min-height: 2.5em; color: var(--white); font-size: 1.25rem; line-height: 1.2; transition: color .2s ease; }
+.contact-package-list b { color: var(--white); font-size: clamp(3rem,6vw,5rem); line-height: .9; letter-spacing: -.055em; }
+.contact-package-list small { margin-top: var(--space-4); color: var(--electric); font-weight: 700; transition: color .2s ease; }
+.contact-package-featured::after { content: "BEST COVERAGE"; position: absolute; top: 0; right: 0; padding: 5px 8px; color: var(--night); background: var(--electric); font-size: .64rem; font-weight: 800; letter-spacing: .08em; }
+.contact-package-note { max-width: 80ch; margin: var(--space-8) 0 0; color: #AEBFCC; font-size: .82rem; }
+@media (min-width: 780px) { .contact-package-list { grid-template-columns: repeat(3,1fr); } .contact-package-list > a { padding: var(--space-8); border-right: 1px solid rgba(255,255,255,.2); } .contact-package-list > a:first-child { padding-left: 0; } .contact-package-list > a:last-child { padding-right: 0; border-right: 0; } }
 
 .contact-next { padding-block: clamp(72px, 10vw, 128px); }
 .contact-next-grid { display: grid; gap: 1px; border: 1px solid #D9DFE2; background: #D9DFE2; }
