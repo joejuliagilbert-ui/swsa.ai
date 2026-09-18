@@ -1,18 +1,53 @@
 <footer class="site-footer">
+  <div class="wrap footer-start">
+    <div>
+      <p class="eyebrow">Ready when you are</p>
+      <h2>Start with the view. Build the system around it.</h2>
+    </div>
+    <div>
+      <p>Camera installation comes first. Local and professionally monitored security systems are available when the property needs more.</p>
+      <div class="actions">
+        <a class="cta cta-bright" href="/contact.html">Plan my installation</a>
+        <a class="cta footer-cta-quiet" href="tel:{{ site.phone_tel }}">Call {{ site.phone_display }}</a>
+      </div>
+    </div>
+  </div>
+
   <div class="wrap footer-inner">
-    <p class="footer-brand">{{ site.name }}</p>
-    <nav class="footer-nav" aria-label="Footer">
+    <div class="footer-identity">
+      <p class="footer-brand">SWSA.ai</p>
+      <p>Southwest Security &amp; Automation LLC</p>
+      <p>Owner-led camera and security installation across New Mexico and the Four Corners.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Services">
+      <p>Services</p>
       <ul>
-      {% for item in site.nav %}
-        <li><a href="{{ item.url }}">{{ item.label }}</a></li>
-      {% endfor %}
+        <li><a href="/security-cameras-new-mexico.html">Camera Installation</a></li>
+        <li><a href="/home-security.html">Security Systems</a></li>
+        <li><a href="/commercial-security.html">Business Security</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-nav" aria-label="Company">
+      <p>Company</p>
+      <ul>
+        <li><a href="/recent-installations.html">Recent Work</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="/contact.html">Contact</a></li>
       </ul>
     </nav>
-    <p class="footer-contact">
-      <a href="tel:{{ site.phone_tel }}">{{ site.phone_display }}</a> ·
-      <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
-      Serving Albuquerque, Santa Fe, Farmington, Durango &amp; the Four Corners region.
-    </p>
+
+    <div class="footer-contact">
+      <p>Contact</p>
+      <a href="tel:{{ site.phone_tel }}">{{ site.phone_display }}</a>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <span>Albuquerque · Santa Fe · Farmington · Durango · Four Corners</span>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>{{ site.name }}</span>
+    <a href="/contact.html">New Mexico &amp; Four Corners service</a>
   </div>
 </footer>
