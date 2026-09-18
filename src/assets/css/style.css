@@ -868,7 +868,7 @@ section { padding-block: var(--space-12); }
 .proof-lead { display: grid; gap: var(--space-8); align-items: end; }
 .home-install-image { position: relative; min-width: 0; overflow: hidden; border-radius: 20px; background: #1A2B3D; box-shadow: 0 28px 80px rgba(0,0,0,.28); }
 .home-install-image picture { display: block; aspect-ratio: 16 / 10; }
-.home-install-image .media-frame { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.home-install-image .media-frame { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
 .home-install-image > span { position: absolute; left: 18px; bottom: 18px; padding: 7px 10px; color: var(--white); background: rgba(7,17,30,.82); backdrop-filter: blur(10px); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .home-install-image:hover .media-frame { transform: scale(1.025); }
 .proof-body { max-width: 500px; padding-bottom: var(--space-4); }
@@ -991,6 +991,17 @@ section { padding-block: var(--space-12); }
 .story-media { margin: var(--space-6) 0; }
 .story-media-pair { display: grid; gap: var(--space-4); }
 @media (min-width: 640px) { .story-media-pair { grid-template-columns: 1fr 1fr; } }
+.story-media figure { margin: 0; overflow: hidden; border-radius: var(--radius); background: #E3E8EB; }
+.story-media figure picture { display: block; height: 100%; }
+.story-media figure img { height: 100%; object-fit: cover; }
+.story-media-rio, .story-media-detail-pair { display: grid; gap: var(--space-4); }
+.story-media-rio figure { aspect-ratio: 4 / 5; }
+.story-media-detail-pair figure { aspect-ratio: 4 / 3; }
+.story-media-detail-pair figure:last-child img { object-position: 50% 62%; }
+@media (min-width: 640px) {
+  .story-media-rio { grid-template-columns: 1.08fr .92fr; }
+  .story-media-detail-pair { grid-template-columns: 1.2fr .8fr; }
+}
 .media-caption { color: var(--slate); font-size: .8125rem; margin-top: var(--space-2); }
 
 /* Transition (moved) page */

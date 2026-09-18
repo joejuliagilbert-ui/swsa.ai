@@ -26,7 +26,8 @@ const ADT = "adt-installation-new-mexico.html";
 const STORIES = [
   "installs/albuquerque-security-installation-june-2026.html",
   "installs/albuquerque-security-installation-march-2026.html",
-  "installs/santa-fe-security-installation-march-2026.html"
+  "installs/santa-fe-security-installation-march-2026.html",
+  "installs/rio-rancho-camera-smart-home-june-2026.html"
 ];
 const TRANSITIONS = [
   "installs/albuquerque-security-installation-june-2026-diego.html",
@@ -109,7 +110,7 @@ test("transition routes: meta refresh + canonical to Recent Work, no customer na
   }
 });
 
-test("three retained stories are anonymous full pages, self-canonical, one H1", () => {
+test("four retained stories are anonymous full pages, self-canonical, one H1", () => {
   for (const s of STORIES) {
     const h = read(s);
     assert.equal((h.match(/<h1\b/gi) || []).length, 1, `${s} H1`);

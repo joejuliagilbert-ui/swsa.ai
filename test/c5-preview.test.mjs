@@ -141,7 +141,11 @@ test("evidence-bearing routes reference only approved project crops", () => {
   const approved = new Set([
     "src/assets/img-src/recent-work/santa-fe-camera.jpg",
     "src/assets/img-src/recent-work/santa-fe-life-safety.jpg",
-    "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg"
+    "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg",
+    "src/assets/img-src/recent-work/rio-rancho-outdoor-camera.jpg",
+    "src/assets/img-src/recent-work/rio-rancho-garage-camera-power.jpg",
+    "src/assets/img-src/recent-work/rio-rancho-camera-display.jpg",
+    "src/assets/img-src/recent-work/rio-rancho-nest-thermostat.jpg"
   ]);
   const files = ["index", "home-security", "security-cameras-new-mexico", "albuquerque-home-security", "santa-fe-home-security"];
   for (const f of files) {

@@ -38,5 +38,45 @@
       "approvalDate": "2026-07-24",
       "privacyReview": "passed"
     }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/rio-rancho-outdoor-camera.jpg",
+    "approval": {
+      "sourceId": "rio-rancho-june-2026-outdoor-camera",
+      "provenance": "Owner-supplied photo from the June 2026 Rio Rancho installation via iCloud share; selected for device-focused framing and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/rio-rancho-garage-camera-power.jpg",
+    "approval": {
+      "sourceId": "rio-rancho-june-2026-camera-power",
+      "provenance": "Owner-supplied photo from the June 2026 Rio Rancho installation via iCloud share; selected for workmanship detail and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/rio-rancho-camera-display.jpg",
+    "approval": {
+      "sourceId": "rio-rancho-june-2026-camera-display",
+      "provenance": "Owner-supplied photo from the June 2026 Rio Rancho installation via iCloud share; selected for device-focused framing and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
+  },
+  {
+    "file": "src/assets/img-src/recent-work/rio-rancho-nest-thermostat.jpg",
+    "approval": {
+      "sourceId": "rio-rancho-june-2026-nest-thermostat",
+      "provenance": "Owner-supplied photo from the June 2026 Rio Rancho installation via iCloud share; selected for device-focused framing and re-encoded without source metadata",
+      "publicUseApproved": true,
+      "approvalDate": "2026-09-18",
+      "privacyReview": "passed"
+    }
   }
 ]
