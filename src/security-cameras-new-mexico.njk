@@ -1,86 +1,116 @@
 ---
 layout: layouts/base.njk
 permalink: "/security-cameras-new-mexico.html"
-title: "Security Camera Installation in New Mexico"
-description: "Camera planning and installation for homes and small businesses across New Mexico and the Four Corners, focused on useful placement and simple operation."
+title: "Security Camera & Doorbell Installation in New Mexico"
+description: "Professional outdoor camera and video doorbell installation for homes and small businesses across New Mexico and the Four Corners."
 breadcrumbs:
   - { name: "Home", url: "/" }
-  - { name: "Cameras" }
+  - { name: "Camera Installation" }
 ---
 {% import "macros.njk" as m %}
-<div class="wrap">{% include "partials/breadcrumbs.njk" %}</div>
+<div class="wrap camera-breadcrumbs">{% include "partials/breadcrumbs.njk" %}</div>
 
-<section class="hero hero-textled wrap">
-  <div class="hero-text">
-    <p class="eyebrow">Security Cameras</p>
-    <h1 class="hero-title">Camera coverage planned around what you need to see.</h1>
-    <p class="lede">Start with the view, the property, and how footage will be used. Then choose cameras and placement that support those needs.</p>
-    <div class="actions">
-      <a class="cta" href="/contact.html">Discuss camera needs</a>
-      <a class="cta cta-quiet" href="/recent-installations.html">View Recent Work</a>
+<section class="camera-detail-hero">
+  <div class="wrap camera-detail-grid">
+    <div>
+      <p class="eyebrow">Outdoor cameras · Video doorbells · App setup</p>
+      <h1>Get the right camera in the right place.</h1>
+      <p class="lede">A clear view depends on more than the camera. Mounting height, angle, light, power, Wi-Fi, and detection zones all shape what you can actually see when it matters.</p>
+      <div class="actions">
+        <a class="cta cta-bright" href="/contact.html">Plan my installation</a>
+        {% include "partials/contact-actions.njk" %}
+      </div>
+    </div>
+
+    <div class="sightline-plan" role="img" aria-label="Illustration of planned camera coverage around a home">
+      <span class="plan-label">Coverage plan</span>
+      <div class="property-shape">
+        <span class="property-roof"></span>
+        <span class="property-door"></span>
+        <span class="property-drive"></span>
+      </div>
+      <span class="plan-camera camera-front"><i></i></span>
+      <span class="plan-camera camera-side"><i></i></span>
+      <span class="coverage-cone cone-front"></span>
+      <span class="coverage-cone cone-side"></span>
+      <span class="plan-point point-entry">Front entry</span>
+      <span class="plan-point point-drive">Driveway</span>
+      <span class="plan-point point-gate">Side gate</span>
+      <span class="plan-scan"></span>
     </div>
   </div>
 </section>
 
-<section class="audience wrap" aria-label="Choose your context">
-  <div class="audience-path">
-    <h2>Business cameras</h2>
-    <p>Coverage for entries, customer and work areas, parking, and operational visibility.</p>
-    <a href="/video-surveillance.html">Business video surveillance &rarr;</a>
+<section class="wrap camera-offers" aria-labelledby="camera-offers-title">
+  <div class="section-heading">
+    <p class="eyebrow">What we install</p>
+    <h2 id="camera-offers-title">Focused camera help, start to finish.</h2>
+    <p>Use cameras you already own or talk through what fits your property. The goal is a useful result, not a higher device count.</p>
   </div>
-  <div class="audience-path">
-    <h2>Home cameras</h2>
-    <p>Front-entry visibility, approaches, and selected exterior areas for daily life.</p>
-    <a href="/home-security.html">Home security &rarr;</a>
+  <div class="camera-offer-list">
+    <article><span>01</span><div><h3>Google outdoor cameras</h3><p>Placement, mounting, power, connection, aiming, detection zones, and app walkthrough for exterior coverage.</p></div></article>
+    <article><span>02</span><div><h3>Google video doorbells</h3><p>Clean front-entry installation with the view, height, wiring or charging plan, notifications, and household access set up.</p></div></article>
+    <article><span>03</span><div><h3>Existing camera systems</h3><p>Help improving placement, reconnecting devices, reducing nuisance alerts, or expanding coverage without starting over.</p></div></article>
+    <article><span>04</span><div><h3>Home and small-business coverage</h3><p>Camera planning for entries, approaches, parking, work areas, deliveries, gates, garages, and selected interior spaces.</p></div></article>
   </div>
 </section>
 
-<section class="band wrap">
-  <h2>How SWSA plans placement</h2>
-  {{ m.principles([
-    "<strong>Sightline and light</strong> so each camera returns a useful image.",
-    "<strong>Useful detail and mounting position</strong> matched to what matters.",
-    "<strong>Privacy and considered placement</strong> — not every area should be recorded.",
-    "<strong>Network and daily review</strong> — how footage is stored and actually used."
-  ]) }}
-</section>
-
-<section class="wrap">
-  <h2>Common home situations</h2>
-  {{ m.outcomes([
-    "Front entry and doorbell visibility.",
-    "Driveways, approaches, and key outdoor areas.",
-    "Selected exterior coverage where it helps.",
-    "Indoor cameras only where they are appropriate."
-  ]) }}
-</section>
-
-<section class="wrap">
-  <h2>Common business situations</h2>
-  {{ m.outcomes([
-    "Entry and exit visibility.",
-    "Customer and work areas.",
-    "Parking and perimeter awareness.",
-    "Operational visibility for the people who review video."
-  ]) }}
-</section>
-
-<section class="proof wrap">
-  <p class="eyebrow">Recent work</p>
-  <h2>Camera coverage updated around the property</h2>
-  <div class="proof-lead">
-    {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Installed exterior camera under an eave", "(min-width: 900px) 45vw, 100vw", "media-frame" %}
-    <div class="proof-body">
-      <p class="proof-outcome">Santa Fe — security upgrade</p>
-      <p>Suitable existing wiring was reused while camera coverage and life-safety devices were updated.</p>
-      <a href="/installs/santa-fe-security-installation-march-2026.html">See the Santa Fe project &rarr;</a>
+<section class="placement-section">
+  <div class="wrap placement-grid">
+    <div class="placement-copy">
+      <p class="eyebrow">Placement is the product</p>
+      <h2>A camera is only useful when the image answers your question.</h2>
+      <p>“Someone was there” is different from seeing a face, a package, a vehicle, or which direction someone went. We plan backward from the detail you need.</p>
     </div>
+    <ul class="placement-checks">
+      <li><span>01</span><strong>See the approach</strong><small>Capture how people or vehicles arrive, not just where they stop.</small></li>
+      <li><span>02</span><strong>Work with the light</strong><small>Avoid glare, deep backlight, and night views that wash out the subject.</small></li>
+      <li><span>03</span><strong>Protect the connection</strong><small>Plan around Wi-Fi strength, power, wiring, weather, and a stable mount.</small></li>
+      <li><span>04</span><strong>Control the noise</strong><small>Set activity zones and notifications around the motion you care about.</small></li>
+    </ul>
   </div>
 </section>
 
-<section class="wrap">
-  {{ m.relatedRail("Related decisions", [
-    {label:"Home Security", url:"/home-security.html"},
+<section class="wrap camera-proof-gallery">
+  <div class="section-heading">
+    <p class="eyebrow">Recent field work</p>
+    <h2>Installed on real homes in New Mexico.</h2>
+    <p>These are actual SWSA installations—not stock scenes or generated product renders.</p>
+  </div>
+  <div class="camera-proof-images">
+    <figure>
+      {% image "src/assets/img-src/recent-work/santa-fe-camera.jpg", "Outdoor security camera installed beneath a roof eave", "(min-width: 760px) 50vw, 100vw", "camera-proof-image" %}
+      <figcaption><strong>Exterior camera</strong><span>Protected mounting position with a clear outward view.</span></figcaption>
+    </figure>
+    <figure>
+      {% image "src/assets/img-src/recent-work/albuquerque-march-doorbell.jpg", "Video doorbell professionally installed beside a front door", "(min-width: 760px) 50vw, 100vw", "camera-proof-image" %}
+      <figcaption><strong>Video doorbell</strong><span>Front-entry visibility and a clean finished installation.</span></figcaption>
+    </figure>
+  </div>
+  <a class="text-link-strong" href="/recent-installations.html">See more recent installations &rarr;</a>
+</section>
+
+<section class="wrap camera-process">
+  <p class="eyebrow">What to expect</p>
+  <h2>One straightforward installation.</h2>
+  <ol>
+    <li><span>01</span><strong>Talk through the property</strong><p>Share what you want to see, where the trouble spots are, and which cameras you have or are considering.</p></li>
+    <li><span>02</span><strong>Confirm the plan</strong><p>Choose locations based on sightlines, mounting, connection, power, and daily use.</p></li>
+    <li><span>03</span><strong>Install and aim</strong><p>Mount each device cleanly, connect it, update it, and check the live and recorded view.</p></li>
+    <li><span>04</span><strong>Set up the app</strong><p>Tune notifications, household access, and the settings you will actually use.</p></li>
+  </ol>
+</section>
+
+{{ m.faqs([
+  {q:"Can you install cameras I already purchased?", a:"Yes. Reach out with the camera model and a quick description of the property so compatibility, power, mounting, and connection needs can be discussed first."},
+  {q:"Do you install both outdoor cameras and video doorbells?", a:"Yes. Outdoor cameras and video doorbells are a primary focus, including placement, mounting, connection, aiming, alerts, and app setup."},
+  {q:"Can cameras be part of a monitored security system?", a:"Yes. Cameras can stand alone or be discussed alongside entry sensors, life-safety devices, and professionally monitored home security."},
+  {q:"Do you work with businesses?", a:"Yes. Camera planning and installation is available for homes and small businesses. Business video surveillance needs can be explored in more detail on the business camera page."}
+]) }}
+
+<section class="wrap camera-related">
+  {{ m.relatedRail("Related services", [
+    {label:"Home security", url:"/home-security.html"},
     {label:"Business video surveillance", url:"/video-surveillance.html"},
     {label:"Recent work", url:"/recent-installations.html"}
   ]) }}
@@ -91,10 +121,14 @@ breadcrumbs:
     <a href="/durango-home-security.html">Durango</a>, plus surrounding communities.</p>
 </section>
 
-<section class="area wrap">
-  <h2>Talk through your cameras</h2>
-  <div class="actions">
-    <a class="cta" href="/contact.html">Discuss camera needs</a>
-    {% include "partials/contact-actions.njk" %}
+<section class="camera-final-cta">
+  <div class="wrap">
+    <p class="eyebrow">Start with a quick conversation</p>
+    <h2>What do you want to see?</h2>
+    <p>Call or text with your city, the areas you want covered, and whether you already have cameras.</p>
+    <div class="actions">
+      {% include "partials/contact-actions.njk" %}
+      <a class="cta cta-ghost" href="/contact.html">View contact options</a>
+    </div>
   </div>
 </section>
